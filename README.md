@@ -8,5 +8,5 @@ Ready to fast-track your project's user interface development?
  
  - [Getting Started with EWF](https://github.com/nys-its/excelsior-web-framework/wiki)
  
-
-More accurately explained as a "meta-framework", Excelsior is built on top of [Zurb Foundation](http://foundation.zurb.com/) and integrates many other open-source solutions. Read more about the [inner workings of Excelsior](Excelsior-Parts).
+## More About Excelsior
+More accurately explained as a "meta-framework", Excelsior is built on top of [Zurb Foundation](http://foundation.zurb.com/) and integrates many other open-source solutions. Read more about the [inner workings of Excelsior](https://github.com/nys-its/excelsior-web-framework/wiki/Inner-Workings).
