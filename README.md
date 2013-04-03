@@ -2,6 +2,9 @@ The Excelsior Web Framework is a collaboratively built front-end framework to en
 
 Excelsior enables teams and projects that previously did not have front-end expertise to leverage a robust responsive framework and also allows expert developers to maintain a level of autonomy to build on top of the foundation as requirements demand.  
 
+## Examples
+- [Go Responsive](): Responsive web design prototypes built on top of EWF
+
 ## Getting Started 
 
 Ready to fast-track your project's user interface development?
