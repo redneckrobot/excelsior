@@ -1,0 +1,456 @@
+// Foundation Overrides
+
+body {
+  font-family: $font-sans;
+}
+
+a {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.gov-pull-down-container,
+#gov-bar,
+#site-bar,
+nav {
+  a,
+  a:hover,
+  a:active {
+    text-decoration: none;
+  }
+}
+
+select,
+textarea,
+button,
+input, // Need to list all of these types to override Foundation's specificity
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  font-family: $font-sans;
+  font-size: 16px; // Prevents iOS from zooming in when an input gains focus
+}
+
+button,
+.button {
+  font-family: $font-sans;
+  font-weight: normal !important;
+  padding-bottom: emCalc(8px);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  // font-family: $font-serif;
+  // font-weight: normal;
+  @include font-serif;
+}
+
+h1 {
+  font-size: emCalc(32px);
+}
+
+h2 {
+  font-size: emCalc(28px);
+}
+
+h3 {
+  font-size: emCalc(24px);
+}
+
+h4 {
+  font-size: emCalc(20px);
+}
+
+h5 {
+  font-size: emCalc(18px);
+}
+
+h6 {
+  font-size: 1em;
+}
+
+p {
+  font-family: $font-sans;
+}
+
+table {
+
+  thead,
+  tfoot {
+    tr {
+      th {
+        font-family: $font-sans-bold;
+        font-weight: normal;
+      }
+    }
+  }
+
+  tr {
+    th {
+      font-family: $font-sans-bold;
+      font-weight: normal;
+    }
+  }
+}
+
+em,
+i {
+  font-family: $font-sans-italic;
+  font-style: normal;
+}
+
+strong,
+b {
+  font-family: $font-sans-bold;
+  font-weight: normal;
+}
+
+strong em,
+em strong {
+  font-family: $font-sans-bold-italic;
+  font-style: normal;
+  font-weight: normal;
+}
+
+legend {
+  font-family: $font-sans-bold;
+  font-weight: normal;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+ul, ol, dl {
+  font-family: inherit;
+}
+
+ul.f-dropdown li {
+  padding: 0;
+}
+
+@media only screen and (min-width: 48em) {
+  li.hide-for-small {
+    list-style-type: disc;
+  }
+}
+
+.button small {
+  font-size: 75%;
+}
+
+.button.large {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.dropdown.button.tiny:before,
+.dropdown.button.small:before,
+.dropdown.button.large:before {
+  border-color: black transparent transparent transparent;
+}
+
+// Panels
+
+.panel h4 a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// Sub nav
+
+.sub-nav {
+  dt:not(.active) a,
+  dd:not(.active) a {
+    padding: emCalc(3px) emCalc(9px);
+
+    &:hover {
+      border-radius: 1000px;
+      background: #999;
+      color: #fff;
+    }
+  }
+}
+
+// Reveal Modal
+
+.close-reveal-modal {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// Breadcrumbs
+
+.breadcrumbs li a,
+.breadcrumbs li span {
+  text-transform: none;
+  font-size: 0.9em;
+}
+
+.breadcrumbs li a {
+  &:hover {
+    text-decoration: none;
+  }
+
+  &[href="#"],
+  &[href="#"]:hover {
+    cursor: default;
+    text-decoration: none;
+  }
+}
+
+// Sections
+
+section .title a,
+.section .title a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.section-container.tabs section .title,
+.section-container.tabs .section .title{
+  font-family: $font-sans-bold;
+  font-weight: normal;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  background-clip: padding-box;
+}
+
+.section-container.auto section .title,
+.section-container.auto .section .title{
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background-clip: padding-box;
+}
+
+/* Same styles as above */
+@media screen and (min-width: emCalc(768px)) {
+  .section-container.auto section .title,
+  .section-container.auto .section .title {
+    font-family: $font-sans-bold;
+    font-weight: normal;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background-clip: padding-box;
+  }
+}
+
+.section-container section .content,
+.section-container .section .content,
+.section-container.auto section .content,
+.section-container.auto .section .content {
+  background-color: transparent; // Bleeds over the border radius
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-clip: padding-box;
+}
+
+.section-container section .title a,
+.section-container .section .title a,
+.section-container.auto section .title a,
+.section-container.auto .section .title a {
+  padding: 8px 14px;
+}
+
+.section-container,
+.section-container.auto {
+  border: none;
+}
+
+// Accordion
+
+.section-container.accordion section .title,
+.section-container.accordion .section .title {
+  font-family: $font-sans;
+}
+
+.auto section.section,
+.accordion section.section {
+  border-radius: 3px;
+  background-clip: padding-box;
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+
+.auto section.section:last-child,
+.accordion section.section:last-child {
+  margin-bottom: 0;
+}
+
+.title a {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.accordion section.auto > .title,
+.accordion section.section > .title {
+  position: relative;
+  padding-right: 26px; /* width of chevron plus its right position offset */
+}
+
+.accordion section.auto .title:after,
+.accordion section.section .title:after {
+  content: "\e75e";
+  position: absolute;
+  top: 6px;
+  right: 18px;
+  font-family: $font-icons;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.accordion section.auto.active .title:after,
+.accordion section.section.active .title:after {
+  top: 8px;
+  right: 18px;
+  -webkit-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+@media screen and (max-width: emCalc(767px)) {
+
+  .auto section {
+    margin-bottom: 0.5em;
+  }
+
+  /* Same styles as above */
+  .auto section.auto .title:after,
+  .auto section.section .title:after {
+    content: "\e75e";
+    position: absolute;
+    top: 8px;
+    right: 18px;
+    font-family: $font-icons;
+    font-style: normal;
+    font-weight: normal;
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+
+  .auto section.auto.active .title:after,
+  .auto section.section.active .title:after {
+    top: 6px;
+    right: 18px;
+    -webkit-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+}
+
+// Orbit
+@media only screen and (max-width: 767px) {
+    .orbit-timer, .orbit-slide-number{
+      display:none;
+    }
+}
+
+.orbit-container {
+
+  .orbit-slide-number {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    color: #fff;
+  }
+
+  & .orbit-slides-container .orbit-caption .hide-for-small,
+  & .orbit-slides-container .orbit-caption .hide-for-small a {
+    color: #aaa;
+  }
+
+  & .orbit-timer .orbit-progress{
+    background: #eee;
+    height: 12px;
+  }
+
+  & .orbit-timer > span{
+    top: 16px;
+    border: solid 4px #fff;
+    border-top: 0;
+    border-bottom: 0;
+  }
+
+  & .orbit-timer.paused > span{
+    border-color: transparent transparent transparent #fff;
+    top: 16px;
+  }
+
+}
+
+.orbit-bullets li{
+  background-color: #eee;
+  box-shadow: inset 0 1px 1px 1px #333;
+  cursor: pointer;
+  border: 0;
+}
+.orbit-bullets li.active {
+  background-color: #444;
+  box-shadow: inset 0 1px 1px 1px #111;
+}
+.orbit-bullets{
+  display: none;
+}
+
+
+// Do not show bullets on touch
+@media #{$small} {
+  .touch {
+    .orbit-bullets { display: none; }
+  }
+}
+
+// Clearing (Lightbox)
+
+.clearing-blackout {
+  top: 48px
+}
+
+@media only screen and (min-width: 48em) {
+  
+  .clearing-blackout {
+    top: 0
+  }
+  
+}
+
+.clearing-caption {
+  display: none !important;
+}
+
+.clearing-close {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+

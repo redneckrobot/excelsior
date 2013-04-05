@@ -1,0 +1,264 @@
+@import "excelsior/_variables";
+
+$nav-bar-height: 48px;
+
+@media only screen {
+
+  html,
+  body {
+    background: #282828;
+    height: 100%;
+  }
+
+  body.off-canvas {
+    padding-top: $nav-bar-height;
+  }
+
+  .off-canvas {
+
+    .gov-pull-down-container {
+      position: absolute;
+      top: 0;
+    }
+
+    .gov-pull-down {
+      height: 40px;
+      width: 44px;
+    }
+
+    .gov-bar {
+      position: absolute;
+      width: 100%;
+    }
+
+    .gov-bar form  {
+      margin: 0;
+    }
+
+    .site-bar {
+      position: absolute;
+      width: 100%;
+    }
+
+    .global-nav {
+      position: fixed;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 0;
+    }
+
+    .global-nav .sub-menu-title {
+      display: inline-block;
+      color: #AAA;
+      font-size: 1.45em;
+      position: relative;
+      left: 20%;
+      line-height: $nav-bar-height;
+      padding-top: 0.15em;
+    }
+
+    .global-nav .nav-container {
+      height: inherit;
+      overflow-y: scroll;
+    }
+
+    .global-nav .nav-container > ul {
+      min-height: 1000px;
+    }
+
+    .global-nav ul {
+      margin-left: 16%;
+    }
+
+    .global-nav ul li {
+      padding-left: 3%;
+    }
+
+    .global-nav ul ul {
+      background: #333 !important;
+      display: block;
+      height: 100%;
+      left: 100%;
+      position: fixed;
+      top: 53px;
+      width: 100%;
+      background: #333;
+      -webkit-transition: left 0.2s ease;
+              transition: left 0.2s ease;
+    }
+
+    .global-nav ul ul li {
+      padding-left: 2% !important;
+    }
+
+    .global-nav .menu-controls {
+      height: 53px;
+    }
+
+    .global-nav .menu-controls .menu-back {
+      background-image: -webkit-linear-gradient(#999, #505050);
+      background-image:         linear-gradient(#999, #505050);
+      border-radius: 5px;
+      color: #FFF;
+      float: right;
+      margin: 10px;
+      padding: 7px;
+      visibility: hidden;
+    }
+
+    &.active-sub-menu .global-nav .menu-controls .menu-back {
+      visibility: visible;
+    }
+
+    .global-nav .active-menu {
+      left: 0;;
+    }
+
+    .page {
+      position: relative;
+      height: auto;
+      min-height: 100%;
+      top: 0;
+      width: 100%;
+    }
+
+    .gov-pull-down,
+    .gov-pull-down-container,
+    .gov-bar,
+    .site-bar,
+    .page {
+      -webkit-transition: top 0.2s ease, left 0.2s ease, height 0.2s ease; /* Safari and Chrome */
+              transition: top 0.2s ease, left 0.2s ease, height 0.2s ease;
+    }
+
+    &.active-gov-bar .gov-pull-down-container,
+    &.active-gov-bar .site-bar {
+      top: 88px;
+    }
+
+    &.active-site-menu .gov-pull-down,
+    &.active-site-menu .gov-pull-down-container,
+    &.active-site-menu .gov-bar,
+    &.active-site-menu .site-bar,
+    &.active-site-menu .page {
+      position: fixed;
+      left: -82%;
+    }
+
+    &.active-site-menu .mobile-menu-button {
+      -webkit-box-shadow: inset 6px 0px 8px -2px #000;
+    }
+
+    &.active-site-menu .page {
+      -webkit-box-shadow: 5px 49px 8px #000;
+    }
+
+    &.active-site-menu .footer {
+      left: -82%;
+    }
+
+  }
+
+}
+
+// 960px and up
+@media only screen and (min-width: 60em) {
+	.global-nav .nav-container {
+    border-radius: 4px;
+  }
+}
+
+/* Medium Displays: 768px - 1279px */
+@media #{$medium-screen} {
+
+  body.off-canvas {
+    padding-top: 0;
+  }
+
+  .off-canvas {
+    .gov-bar,
+    .site-bar,
+    .global-nav,
+    .page {
+      position: relative;
+    }
+
+    &.active-site-menu .gov-bar,
+    &.active-site-menu .site-bar,
+    &.active-site-menu .global-nav,
+    &.active-site-menu .page {
+      left: auto;
+      position: relative;
+    }
+
+    &.active-gov-bar .site-bar {
+      top: 0;
+    }
+
+    .global-nav {
+      height: 46px;
+      overflow: visible;
+      z-index: 30;
+    }
+
+    .global-nav ul li {
+      padding-left: 0;
+    }
+
+    .global-nav .menu-controls {
+      display: none;
+    }
+
+    .global-nav .nav-container,
+    &.active-site-menu .global-nav .nav-container {
+      overflow: hidden;
+    }
+
+    .global-nav .nav-container > ul,
+    &.active-site-menu .global-nav .nav-container ul {
+      min-height: auto;
+    }
+
+    .global-nav ul,
+    &.active-site-menu .global-nav ul {
+      margin-left: 0;
+    }
+
+    .global-nav ul ul {
+      background: #454545 !important; /* M */
+      border-radius: 4px !important;
+      top: 50px !important;
+      position: absolute;
+      overflow: hidden;
+      visibility: hidden;
+      -webkit-transition: left 0;
+              transition: left 0s;
+    }
+
+    .global-nav ul ul.active-menu {
+      visibility: visible;
+    }
+
+    .global-nav ul ul.active-menu li {
+      padding: 0 !important;
+    }
+
+    .global-nav .active-menu li {
+      padding-left: 0;
+      border-bottom: 0;
+    }
+
+    .global-nav .active-menu li a {
+      border-radius: 4px;
+      background: #454545 !important;
+    }
+
+    .page {
+      min-height: auto;
+      top: -23px;
+      left: 0;
+    }
+
+  }
+}

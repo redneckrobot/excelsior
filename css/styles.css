@@ -1,0 +1,193 @@
+/**
+ * Excelsior Site-Wide Styles
+ *
+ * These will eventually move to /scss/_excelsior.scss or a component file
+*/
+#resize-bar-body #wrapper {height:99%;}
+#resize-bar-body section {
+  overflow-y:hidden;
+}
+
+.list li {
+  margin-bottom:.75em;
+  display: table;
+  border-collapse: collapse;
+  width: 100%;
+}
+.inner {
+  display: table-row;
+  overflow: hidden;
+}
+.li-img {
+  display: table-cell;
+  vertical-align: top;
+  width: 30%;
+  padding-right: 0.5em;
+}
+.li-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.li-text {
+  display: table-cell;
+  vertical-align: top;
+  width: 70%;
+  padding-right:7%;
+}
+.li-head {
+  margin: 0;
+}
+.li-sub {
+  margin: 0;
+}
+/* Orbit Carousel */ 
+  .touch .orbit-container .orbit-prev,
+  .touch .orbit-container .orbit-next {
+    display: inherit; }
+@media only screen and (max-width: 767px) {
+  .orbit-timer, .orbit-slide-number{ display:none;}
+}
+.orbit-container .orbit-slide-number {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  color: #fff;
+}
+.orbit-container .orbit-slides-container .orbit-caption .hide-for-small, 
+.orbit-container .orbit-slides-container .orbit-caption .hide-for-small a{
+  color: #aaa;
+}
+.orbit-bullets li{
+  background-color: #eee;
+  box-shadow: inset 0 1px 1px 1px #333;
+  cursor: pointer;
+  border: 0;
+}
+.orbit-bullets li.active {
+  background-color: #444;
+  box-shadow: inset 0 1px 1px 1px #111;
+}
+.orbit-container .orbit-timer .orbit-progress{
+  background: #eee;
+  height: 12px;
+}
+.orbit-container .orbit-timer > span{
+  top: 16px;
+  border: solid 4px #fff;
+  border-top: 0;
+  border-bottom: 0;
+}
+.orbit-container .orbit-timer.paused > span{
+  border-color: transparent transparent transparent #fff;
+  top: 16px;
+}
+.orbit-bullets{
+  display: none;
+}
+
+/* gov widget */
+.govwidget{
+  width: 100%;
+  min-width: 240px;
+  max-width: 450px;
+  background-image: linear-gradient(bottom, rgb(4,47,90) 20%, rgb(10,70,130) 60%, rgb(4,47,90) 82%);
+  background-image: -webkit-linear-gradient(bottom, rgb(4,47,90) 20%, rgb(10,70,130) 60%, rgb(4,47,90) 82%);
+  border-radius: 4px;
+  text-align: center;
+}
+.govheading{
+  background: url(../prototypes/dta/images/stateseal.png) 0.3em 0.3em no-repeat;
+}
+.govheading a{
+  color: #fff;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-family: times new roman;
+  font-size: 120%;
+  text-shadow: 0.2em 0.2em 0.2em #333;
+  padding: 0.8em 0 0.4em 0;
+}
+.button{
+  border: 1px solid #222;
+}
+.button:hover{
+  background-color: #162252;
+  border: 1px solid #444;
+}
+.govheading span{
+  display: block;
+}
+.govbutton{
+  margin: 0 0.5em;
+}
+.govbutton a{
+  background: #002d56;
+  line-height: 0;
+}
+.news{
+  margin: 0.3em 0.8em;
+  border-radius: 8px;
+  background: #5082b3;
+}
+.news strong{
+  font-weight: bold;
+  font-family: verdana;
+}
+.news img{
+  vertical-align: text-top;
+}
+.news dl{
+  background: #eee;
+  text-align: left;
+  padding: 0.5em 0.3em;
+  margin: 0;
+}
+.news dt{
+  font-family: verdana;
+  font-size: 0.688em;
+  font-weight: normal;
+  margin: 0;
+  line-height: 1.4em;
+  padding-bottom: 0.5em;
+}
+.news a{
+  color: #036;
+}
+.news a:hover{
+  color: #873939;
+  text-decoration: underline;
+}
+.whatsnew{
+  padding: 0.2em;
+  text-transform: uppercase;
+  font-family: cambria;
+  color: #fff;
+}
+.facebook{
+
+}
+.facebook a{
+  font-size: 0.7em;
+  color: #fff;
+  text-decoration: none;
+  font-family: times new roman;
+  padding: 0.3em 0;
+  display: block;
+}
+.facebook a:hover{
+  color: #ff0;
+  text-decoration: none;
+}
+.govurl{
+  padding: 0.2em 0 0.5em 0;
+}
+.govurl a{
+  font-family: times new roman;
+  color: #fff;
+  text-decoration: none;
+}
+.govurl a:hover{
+  color: #ff0;
+}

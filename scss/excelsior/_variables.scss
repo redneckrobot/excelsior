@@ -1,0 +1,16 @@
+// Fonts
+$font-sans-fallback: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$font-sans: "SourceSansPro", $font-sans-fallback;
+$font-sans-bold: "SourceSansProBold", $font-sans-fallback;
+$font-sans-italic: "SourceSansProItalic", $font-sans-fallback;
+$font-sans-bold-italic: "SourceSansProBoldItalic", $font-sans-fallback;
+$font-serif: "Merriweather", Georgia, serif;
+$font-icons: "Fontello";
+
+// Media queries
+
+/* Medium Displays: 768px - 1279px */
+$medium-screen: "only screen and (min-width:768px)";
+
+// Navigation
+$nav-bar-height: 48px;
