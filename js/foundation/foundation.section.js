@@ -225,7 +225,7 @@
           var $this = $(this);
           // Only position tabs, not accordions
           // This if() was added because of the chevrons in accordions; otherwise, just run the code inside it
-          if ($this.closest('.tabs').length || (!$this.closest('.accordion').length && $this.closest('.auto').length && exlsr.$window.width() >= 768)) {
+          if ($this.closest('.tabs').length || (!$this.closest('.accordion').length && $this.closest('.auto').length && EWF.$window.width() >= 768)) {
             $this.css('left', previous_width);
             previous_width += self.outerWidth($(this));
           }
