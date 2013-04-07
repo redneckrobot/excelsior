@@ -1,0 +1,22 @@
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
+*.sublime-*
+*.rb
+
+# OS or Editor folders
+.DS_Store
+Thumbs.db
+.cache
+.sass-cache
+
+# Static site output
+_site
