@@ -6,7 +6,7 @@
  * Based on https://github.com/filamentgroup/RWD-Table-Patterns
  */
 (function() {
-  $.widget('exlsr.responsiveTable', {
+  $.widget('EWF.responsiveTable', {
     options: {},
 
     // Set up the widget
@@ -60,7 +60,7 @@
 
         $.each(selectors, function(j, selector) {
 
-          if ($table.width() >= totalMinWidth && exlsr.$body.width() >= $table.width()) {
+          if ($table.width() >= totalMinWidth && EWF.$body.width() >= $table.width()) {
             // Don't need to hide any more
             return false;
           }
