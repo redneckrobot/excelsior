@@ -40,3 +40,12 @@
 .row {
   padding-bottom:1em;
 }
+
+// Prevents text from being selected (e.g., when the user is meant to swipe)
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
