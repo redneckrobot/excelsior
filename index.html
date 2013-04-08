@@ -28,24 +28,33 @@
       <div id="gov-bar" class="gov-bar">
         <div class="gov-wrap">
           <div class="state-links">
-            <a href="#" class="gov-link-1">
+            <a href="http://www.ny.gov/" class="gov-link-1">
               New York State
             </a>
             <a href="#" class="gov-link-2">
               State Agencies
             </a>
           </div>
-          <a href="#" id="gov-link-3" class="gov-link-3">
+          <a href="http://www.nysegov.com/citGuide.cfm?superCat=102&cat=449&content=main" id="gov-link-3" class="gov-link-3">
             Search all of NY.gov
           </a>
-          <form action="/">
+          <form action="http://www.search.cio.ny.gov/search" method="get" target="_blank">
             <fieldset>
               <legend>Legend</legend>
               <label for="site-search-box">Search</label>
               <div class="search-container">
-                <input type="search" />
+                <label for="state-search" class="hide-off-screen">Search All of NYS</label>
+                <input type="search" name="q" id="state-search" />
                 <input type="submit" value="Search NY"  />
               </div>
+              <input type="hidden" name="sort" value="date:D:L:d1">
+              <input type="hidden" name="output" value="xml_no_dtd">
+              <input type="hidden" name="ie" value="UTF-8">
+              <input type="hidden" name="oe" value="UTF-8">
+              <input type="hidden" name="client" value="default_frontend">
+              <input type="hidden" name="proxystylesheet" value="default_frontend">
+              <input type="hidden" name="site" value="default_collection">
+
             </fieldset>
           </form>
         </div>
