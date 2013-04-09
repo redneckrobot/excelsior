@@ -588,17 +588,18 @@
     border-right: 1px solid transparent;
     border-left: 1px solid transparent;
     border-bottom: none;
-    float: left
+    float: left;
   }
 
   .global-nav ul li:first-child a {
-    padding: 11px 12px 9px 14px;
+    padding: 13px 12px 9px 14px;
   }
 
   .global-nav ul li a {
     background: #666;
     font-size: 1em;
     text-shadow: none;
+    padding-top: 13px;
   }
 
   .global-nav .nav-container ul li a.active {
