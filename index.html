@@ -3,9 +3,12 @@
     <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <title><!-- Site Title --></title>
+
+    <!-- Please add a site Title -->
+    <title>Getting Started</title>
 
     <link rel="stylesheet" href="css/excelsior.css">
+    <link rel="stylesheet" href="css/off-canvas.css">
 
     <!-- Fav icon -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/apple-touch-icon-144x144-precomposed.png">
@@ -17,7 +20,7 @@
 
     <script src="js/vendor/custom.modernizr.js"></script>
     </head>
-    <body class="">
+    <body class="off-canvas">
       <a href="#global-nav" class="skip-to">Skip to Navigation</a>
       <a href="#page" class="skip-to">Skip to Content</a>
       <div class="gov-pull-down-container show-for-small">
@@ -62,7 +65,8 @@
       <div id="site-bar" class="site-bar">
         <div class="site-wrap">
           <a href="index.html" class="site-logo">
-            <!-- Site Title -->
+            <!-- Please change out the site title-->
+            Excelsior Web Framework
           </a>
           <div class="site-functions">
             <ul class="mobile-functions">
@@ -89,9 +93,12 @@
       </div>
       <nav id="global-nav" class="global-nav">
         <div class="nav-container">
-          <ul>
-            <li><a href="#">Global Nav Link</a></li>
-          </ul>
+            <!-- Change out the global navigation here -->
+            <ul>
+                <li><a href="#">Nav Link 1</a></li>
+                <li><a href="#">Nav Link 2</a></li>
+                <li><a href="#">Nav Link 3</a></li>
+            </ul>
         </div>
       </nav>
       <div id="page" class="page">
@@ -100,6 +107,40 @@
              <!--
              ======================== 
              Place Page Content Here
+             ======================== 
+             -->
+
+            <div class="row">
+                <div class="large-12 columns">
+                    <h1>Page Title</h1>
+                </div> 
+            </div>
+
+            <div class="row">
+                <div class="large-12 columns">
+                    <h2>Getting Started with the Excelsior Web Framework (EWF)</h2>
+                    <p>The Excelsior meta-framework is built using some of best web technologies currently avaliable. Using these different vendor libraries as a base, allows developers to create cutting edge websites and applications at a much faster pase.</p>
+
+                    <p>
+                        To get started using EWF please see out <a href="https://github.com/nys-its/excelsior-web-framework/wiki">documentation</a>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="large-12 columns">
+                    <h3>Build with:</h3>
+                    <ul>
+                        <li><a href="http://foundation.zurb.com">Zurb's Foundation</a></li>
+                        <li><a href="http://jquery.com">jQuery</a></li>
+                        <li><a href="http://http://modernizr.com/">Modernizr</a></li>
+                    </ul>
+                </div>
+            </div>
+
+             <!--
+             ======================== 
+             End Page Content Here
              ======================== 
              -->
 
@@ -113,12 +154,29 @@
              ======================== 
              -->
 
+            <div class="row">
+                <div class="large-12 columns">
+                    <ul>
+                        <li>
+                            <a href="http://nys-its.github.com/go-responsive/">See the framework in action</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+             <!--
+             ======================== 
+             End Footer Content Here
+             ======================== 
+             -->
+
           </div>
         </footer>
       </div>
 
       <script src="js/vendor/jquery.js"></script>
       <script src="js/excelsior/excelsior.js"></script>
+      <script src="js/excelsior/off-canvas.js"></script>
       <script src="js/foundation/foundation.js"></script>
 
       <!-- Uncomment items as needed -->
