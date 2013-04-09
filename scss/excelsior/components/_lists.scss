@@ -1,9 +1,5 @@
 /* Image to lists */
 
-.image-to-list li {
-  float: none;
-}
-
 .image-to-list a {
   color: #2ba6cb;
   text-decoration: underline;
@@ -26,6 +22,11 @@
 }
 
 @media only screen and (min-width: 24em) {
+
+  .image-to-list li {
+    float: none;
+  }
+
   .image-to-list a {
     color: #efefef;
     display: block;
