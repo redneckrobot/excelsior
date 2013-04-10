@@ -402,26 +402,6 @@
   height: 343px;
 }
 
-@media only screen and(min-width:47em) {
-  
-  .gov-bar {
-
-    input[type=search] {
-      height: 25px;
-    }
-
-    
-    input[type=submit] {
-      height: 23px;
-      line-height: 2em;
-      margin-top: 1px;
-    }
-
-  }
-
-}
-
-
 /* Medium Displays: 768px - 1279px */
 @media only screen and (min-width: 48em) {
 
@@ -443,6 +423,20 @@
     position: relative;
     -webkit-transition: height 0s ease;
             transition: height 0s ease;
+  }
+  .gov-bar {
+
+    input[type=search] {
+      height: 25px;
+    }
+
+    
+    input[type=submit] {
+      height: 23px;
+      line-height: 2em;
+      margin-top: 1px;
+    }
+
   }
 
   .gov-bar,
