@@ -51,14 +51,12 @@
     margin-top:  -39px;
   }
 
-/* I believe this was hacked in to force a demo to work properly, will need to test fully
-  
   .image-to-list li.large-3:nth-child(5n),
   .image-to-list li.small-3:nth-child(5n) {
     float: left;
     clear: both !important;
   }
-*/
+
   .image-to-list li[class*="large-"]:last-child,
   .image-to-list li[class*="small-"]:last-child {
     float: left; // Foundation override

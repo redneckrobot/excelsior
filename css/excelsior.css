@@ -9629,15 +9629,14 @@ body .joyride-close-tip:hover, .joyride-close-tip:focus {
     margin-top: -39px;
   }
 
-  /* I believe this was hacked in to force a demo to work properly, will need to test fully
-    
-    .image-to-list li.large-3:nth-child(5n),
-    .image-to-list li.small-3:nth-child(5n) {
-      float: left;
-      clear: both !important;
-    }
-  */
-  /* line 63, /Users/craig/Dropbox/ITS/excelsior-web-framework/scss/excelsior/components/_lists.scss */
+  /* line 55, /Users/craig/Dropbox/ITS/excelsior-web-framework/scss/excelsior/components/_lists.scss */
+  .image-to-list li.large-3:nth-child(5n),
+  .image-to-list li.small-3:nth-child(5n) {
+    float: left;
+    clear: both !important;
+  }
+
+  /* line 61, /Users/craig/Dropbox/ITS/excelsior-web-framework/scss/excelsior/components/_lists.scss */
   .image-to-list li[class*="large-"]:last-child,
   .image-to-list li[class*="small-"]:last-child {
     float: left;
