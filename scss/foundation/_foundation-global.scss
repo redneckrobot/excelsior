@@ -20,14 +20,14 @@ $body-font-style: normal !default;
 // We use these to control text direction settings
 $text-direction: ltr !default; // Controls default global text direction, 'rtl' or 'ltr'
 $default-float: left !default;
-$default-opposite: right !default;
+$opposite-direction: right !default;
 // No need to change this conditional statement, $text-direction variable controls it all.
 @if $text-direction == ltr {
   $default-float: left;
-  $default-opposite: right;
+  $opposite-direction: right;
 } @else {
   $default-float: right;
-  $default-opposite: left;
+  $opposite-direction: left;
 }
 
 // We use these as default colors throughout
@@ -186,18 +186,12 @@ $include-html-magellan-classes: $include-html-classes !default;
 }
 
 // Media Queries
-$tiny-screen: emCalc(480px) !default;
-$xsmall-screen: emCalc(600px) !default;
 $small-screen: emCalc(768px) !default;
-$medium-small-screen: emCalc(980px) !default;
 $medium-screen: emCalc(1280px) !default;
 $large-screen: emCalc(1440px) !default;
 
 $screen: "only screen" !default;
-$tiny: "only screen and (min-width:"#{$tiny-screen}")" !default;
-$xsmall: "only screen and (min-width:"#{$xsmall-screen}")" !default;
 $small: "only screen and (min-width:"#{$small-screen}")" !default;
-$medium-small: "only screen and (min-width:"#{$medium-small-screen}")" !default;
 $medium: "only screen and (min-width:"#{$medium-screen}")" !default;
 $large: "only screen and (min-width:"#{$large-screen}")" !default;
 $landscape: "only screen and (orientation: landscape)" !default;

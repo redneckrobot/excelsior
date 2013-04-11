@@ -32,7 +32,7 @@ $small-font-size:                      60% !default;
 $small-font-color:                     lighten($header-font-color, 30%) !default;
 
 // We use these to style paragraphs
-$paragraph-font-family:                "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
+$paragraph-font-family:                inherit !default;
 $paragraph-font-weight:                normal !default;
 $paragraph-font-size:                  1em !default;
 $paragraph-line-height:                1.6 !default;
@@ -111,7 +111,6 @@ $microformat-abbr-font-decoration:     none !default;
 %subheader {
   line-height: $subheader-line-height;
   color: $subheader-font-color;
-  font-family: $header-font-family;
   font-weight: $subheader-font-weight;
   margin-top: $subheader-top-margin;
   margin-bottom: $subheader-bottom-margin;
