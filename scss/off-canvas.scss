@@ -148,10 +148,13 @@ $nav-bar-height: 48px;
 
     &.active-site-menu .mobile-menu-button {
       -webkit-box-shadow: inset 6px 0px 8px -2px #000;
+      box-shadow: inset 6px 0px 8px -2px #000;
     }
 
     &.active-site-menu .page {
       -webkit-box-shadow: 5px 49px 8px #000;
+      box-shadow: 5px 49px 8px #000;
+
     }
 
     &.active-site-menu .footer {
