@@ -125,9 +125,10 @@ em strong {
   font-weight: normal;
 }
 
-legend {
+legend, fieldset legend {
   font-family: $font-sans-bold;
   font-weight: normal;
+  background:transparent;
 }
 
 input[type="search"]::-webkit-search-decoration,
