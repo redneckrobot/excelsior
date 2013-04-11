@@ -54,7 +54,6 @@
   .image-to-list li.large-3:nth-child(5n),
   .image-to-list li.small-3:nth-child(5n) {
     float: left;
-    clear: both !important;
   }
 
   .image-to-list li[class*="large-"]:last-child,
