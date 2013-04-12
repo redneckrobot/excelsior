@@ -17,10 +17,6 @@
   margin-top: 0;
 }
 
-.image-to-list .video-container .has-video a span {
-  display: none !important;
-}
-
 @media only screen and (min-width: 24em) {
 
   .image-to-list li {
@@ -49,6 +45,10 @@
     padding: 7px;
     position: relative;
     margin-top:  -39px;
+  }
+  
+  .image-to-list .video-container .has-video a{
+    display: none !important;
   }
 
   .image-to-list li.large-3:nth-child(5n),
