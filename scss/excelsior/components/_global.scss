@@ -24,6 +24,7 @@
 
 .scrollable-x {
   overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .radius {

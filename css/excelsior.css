@@ -6477,15 +6477,16 @@ section .title a:hover,
 /* line 25, ../scss/excelsior/components/_global.scss */
 .scrollable-x {
   overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
-/* line 29, ../scss/excelsior/components/_global.scss */
+/* line 30, ../scss/excelsior/components/_global.scss */
 .radius {
   border-radius: 4px;
   background-clip: padding-box;
 }
 
-/* line 33, ../scss/excelsior/components/_global.scss */
+/* line 34, ../scss/excelsior/components/_global.scss */
 .unsupported-browser-message {
   margin: 1em 0 0.5em 0;
   text-align: center;
@@ -6493,12 +6494,12 @@ section .title a:hover,
   line-height: 120%;
 }
 
-/* line 40, ../scss/excelsior/components/_global.scss */
+/* line 41, ../scss/excelsior/components/_global.scss */
 .row {
   padding-bottom: 1em;
 }
 
-/* line 45, ../scss/excelsior/components/_global.scss */
+/* line 46, ../scss/excelsior/components/_global.scss */
 .unselectable {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -8899,43 +8900,43 @@ body .joyride-close-tip:hover, .joyride-close-tip:focus {
   margin-top: 0;
 }
 
-/* line 20, ../scss/excelsior/components/_lists.scss */
-.image-to-list .video-container .has-video a span {
-  display: none !important;
-}
-
 @media only screen and (min-width: 24em) {
-  /* line 26, ../scss/excelsior/components/_lists.scss */
+  /* line 22, ../scss/excelsior/components/_lists.scss */
   .image-to-list li {
     float: none;
   }
 
-  /* line 30, ../scss/excelsior/components/_lists.scss */
+  /* line 26, ../scss/excelsior/components/_lists.scss */
   .image-to-list a {
     color: #efefef;
     display: block;
     text-decoration: none;
   }
 
-  /* line 37, ../scss/excelsior/components/_lists.scss */
+  /* line 33, ../scss/excelsior/components/_lists.scss */
   .image-to-list a img,
   .image-to-list .has-video iframe {
     display: block;
     speak: normal;
   }
 
-  /* line 42, ../scss/excelsior/components/_lists.scss */
+  /* line 38, ../scss/excelsior/components/_lists.scss */
   .image-to-list a iframe {
     height: 100%;
   }
 
-  /* line 46, ../scss/excelsior/components/_lists.scss */
+  /* line 42, ../scss/excelsior/components/_lists.scss */
   .image-to-list a span {
     background: rgba(0, 0, 0, 0.7);
     display: block;
     padding: 7px;
     position: relative;
     margin-top: -39px;
+  }
+
+  /* line 50, ../scss/excelsior/components/_lists.scss */
+  .image-to-list .video-container .has-video a {
+    display: none !important;
   }
 
   /* line 55, ../scss/excelsior/components/_lists.scss */
@@ -9736,15 +9737,15 @@ a:focus {
   .global-nav .nav-container ul li a.active {
     border: none;
     background-color: #888;
-    padding-right: 44px; /* this fixes nav breaking in Firefox when you click on a top level item */
+    padding-right: 44px;
   }
 
-  /* line 607, ../scss/excelsior/components/_navigation.scss */
+  /* line 608, ../scss/excelsior/components/_navigation.scss */
   .global-nav .nav-container ul li a:hover {
     background: #888;
   }
 
-  /* line 611, ../scss/excelsior/components/_navigation.scss */
+  /* line 612, ../scss/excelsior/components/_navigation.scss */
   .global-nav .nav-container ul li a.active:after {
     content: "\e760";
     width: 0;
@@ -9757,38 +9758,38 @@ a:focus {
     border-left: 10px solid transparent;
   }
 
-  /* line 623, ../scss/excelsior/components/_navigation.scss */
+  /* line 624, ../scss/excelsior/components/_navigation.scss */
   .global-nav ul ul li {
     border-right: 1px solid transparent;
     border-left: 1px solid transparent;
     border-bottom: none;
   }
 
-  /* line 629, ../scss/excelsior/components/_navigation.scss */
+  /* line 630, ../scss/excelsior/components/_navigation.scss */
   .global-nav .nav-container ul ul li a:hover {
     background-color: #393939 !important;
   }
 
-  /* line 633, ../scss/excelsior/components/_navigation.scss */
+  /* line 634, ../scss/excelsior/components/_navigation.scss */
   .page {
     background: #FFF;
     position: relative;
     top: -23px;
   }
 
-  /* line 639, ../scss/excelsior/components/_navigation.scss */
+  /* line 640, ../scss/excelsior/components/_navigation.scss */
   .page .content-section {
     padding: 2em 0;
   }
 }
 /* Page Lock at 960px */
 @media only screen and (min-width: 60em) {
-  /* line 648, ../scss/excelsior/components/_navigation.scss */
+  /* line 649, ../scss/excelsior/components/_navigation.scss */
   .gov-bar {
     background: #036;
   }
 
-  /* line 656, ../scss/excelsior/components/_navigation.scss */
+  /* line 657, ../scss/excelsior/components/_navigation.scss */
   .gov-bar .gov-wrap,
   .site-bar .site-wrap,
   .global-nav,
@@ -9800,17 +9801,17 @@ a:focus {
     width: 60em !important;
   }
 
-  /* line 663, ../scss/excelsior/components/_navigation.scss */
+  /* line 664, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-wrap {
     position: relative;
   }
 
-  /* line 667, ../scss/excelsior/components/_navigation.scss */
+  /* line 668, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-functions {
     position: relative;
   }
 
-  /* line 672, ../scss/excelsior/components/_navigation.scss */
+  /* line 673, ../scss/excelsior/components/_navigation.scss */
   .global-nav,
   .global-nav .nav-container {
     border-radius: 5px;
@@ -9818,14 +9819,14 @@ a:focus {
 }
 /* Large Displays: 1280px - 1440px */
 @media only screen and (min-width: 80em) {
-  /* line 681, ../scss/excelsior/components/_navigation.scss */
+  /* line 682, ../scss/excelsior/components/_navigation.scss */
   .gov-bar {
     background: #036;
   }
 }
 /* X-Large Displays: 1400px and up */
 @media only screen and (min-width: 90em) {
-  /* line 688, ../scss/excelsior/components/_navigation.scss */
+  /* line 689, ../scss/excelsior/components/_navigation.scss */
   .gov-bar {
     background: #036;
   }
