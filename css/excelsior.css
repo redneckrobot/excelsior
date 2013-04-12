@@ -9736,6 +9736,7 @@ a:focus {
   .global-nav .nav-container ul li a.active {
     border: none;
     background-color: #888;
+    padding-right: 44px; /* this fixes nav breaking in Firefox when you click on a top level item */
   }
 
   /* line 607, ../scss/excelsior/components/_navigation.scss */
