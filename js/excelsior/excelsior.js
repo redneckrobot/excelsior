@@ -38,11 +38,11 @@ EWF.init = function _init () {
   }
 
   // Preload assets
-  EWF.preloader.add('<img src="/excelsior-web-framework/images/close.svg">');
-  EWF.preloader.add('<img src="/excelsior-web-framework/images/close-x-gray.svg">');
-  EWF.preloader.add('<img src="/excelsior-web-framework/images/hamburger-no-dots.svg">');
-  EWF.preloader.add('<img src="/excelsior-web-framework/images/nys-small.png">');
-  EWF.preloader.add('<img src="/excelsior-web-framework/images/nys-banner-img.png">');
+  // EWF.preloader.add('<img src="/excelsior-web-framework/images/close.svg">');
+  // EWF.preloader.add('<img src="/excelsior-web-framework/images/close-x-gray.svg">');
+  // EWF.preloader.add('<img src="/excelsior-web-framework/images/hamburger-no-dots.svg">');
+  // EWF.preloader.add('<img src="/excelsior-web-framework/images/nys-small.png">');
+  // EWF.preloader.add('<img src="/excelsior-web-framework/images/nys-banner-img.png">');
   EWF.preloader.init();
 };
 
