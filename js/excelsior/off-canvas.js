@@ -1,3 +1,4 @@
+/*global EWF: false */
 /*
  Additional Login needed for off canvas Menus
 */
@@ -16,8 +17,13 @@ $(document).ready(function() {
     var link = $(this),
       subMenu = link.next('ul');
 
+    // Active subnav class
+    var activeMenu = $('#mobile-site-menu');
+
     // Check to see if there is a ul next to the anchor
     if (subMenu.length) {
+
+      link.addClass('icon-right-open');
 
       // We have a sub menu item so create the click event
       link.on(EWF.activateEventName, function(e){
@@ -25,6 +31,13 @@ $(document).ready(function() {
         // Prevent default link action
         e.preventDefault();
         e.stopPropagation();
+
+        // Check to see if the active-site-nav is there
+        if (!EWF.$body.hasClass(activeMenu.attr('data-active'))) {
+          // The menu is active so add the class
+          EWF.$body.addClass(activeMenu.attr('data-active'));
+          activeMenu.addClass("active");
+        }
 
         // Check to see if the direct submenu item already is active
         if (!subMenu.hasClass('active-menu')) {
@@ -57,10 +70,12 @@ $(document).ready(function() {
             $('#global-nav .active').removeClass('active');
             $('#global-nav .active-menu').removeClass('active-menu');
           });
-        }
-        else {
+
+        } else {
+
           // Menu is active
           subMenu.removeClass("active-menu");
+          EWF.$body.removeClass(activeMenu.attr('data-active'));
 
           // Remove active link class
           link.removeClass('active');
@@ -83,6 +98,9 @@ $(document).ready(function() {
 
       // Find the last occuance of the active menu and hide it
       $numberOfSubs.last().removeClass('active-menu');
+
+      // Remove active class from the active element
+      $numberOfSubs.prev('a').removeClass('active');
 
       // See if there are other menus
       if ($('.active-menu').length === 0) {
