@@ -26,11 +26,11 @@ EWF.init = function _init () {
   // Monitor-size classes
   screenMax = Math.max(screen.width, screen.height);
   if (screenMax <= 480) {
-    EWF.$html.addClass('screen-max-tiny');
+    EWF.$html.addClass('screen-max-mini');
   }
   else if (screenMax > 480 && screenMax < 768) {
     // Only Foundation's `small-` classes will ever take effect
-    EWF.$html.addClass('screen-max-small');
+    EWF.$html.addClass('screen-max-medium');
   }
   else if (screenMax >= 768) {
     // Foundation's `large-` classes may take effect

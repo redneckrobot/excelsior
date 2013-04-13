@@ -1,0 +1,121 @@
+// Craig's thumbnails, need to merge with Foundation's `.th` class
+.thumbnail {
+  background-color: #f9f9f9;
+  box-shadow: 0 0 0.25em #444;
+  .border-radius(3px);
+  margin: 0.375em; /* 6px; room for the shadow */
+  padding: 0.3125em !important; /* 5px; overriding Foundation styles for first element in a section */
+
+  &.left {
+    float: left;
+    margin: 0 0.75em 0.375em 0;
+  }
+
+  &.right {
+    float: right;
+    clear: right;
+    margin: 0 0.375em 0.75em;
+  }
+
+  figcaption {
+    font-size: 0.75em;
+    padding: 0.375em 0.25em;
+    text-align: center;
+  }
+}
+
+.section .thumbnail {
+  max-width: 33%; // Pretty arbitrary, just made up for the accordion demo
+}
+
+// Thumbnails prototype
+
+.img-list {
+  a {
+    text-decoration: none;
+
+    h4 {
+      text-decoration: underline;
+    }
+  }
+
+  li {
+
+    & > a {
+      display: block;
+      padding: 5px;
+      background-color: transparent;
+      -webkit-transition: background-color 0.2s ease;
+              transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: rgba(217, 237, 247, 0.4);
+      }
+    }
+
+    &:hover a h4 {
+      text-decoration: none;
+    }
+  }
+
+  h4 {
+    color: #2ba6cb;
+  }
+
+  p {
+    color:#333;
+    line-height:1.15em;
+  }
+}
+
+// Another set of thumbnail classes...
+
+.list li {
+  margin-bottom:.75em;
+  display: table;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.inner {
+  display: table-row;
+  overflow: hidden;
+}
+
+.li-img {
+  display: table-cell;
+  vertical-align: top;
+  width: 30%;
+  padding-right: 0.5em;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.li-text {
+  display: table-cell;
+  vertical-align: top;
+  width: 70%;
+  padding-right: 7%;
+}
+
+.li-head {
+  margin: 0;
+}
+
+.li-sub {
+  margin: 0;
+}
+
+// Map
+
+.map-canvas {
+  height: 300px;
+  width: 100%;
+  margin-bottom: 1em;
+  border: 1px solid #999;
+  box-shadow: 0 0 3px #999;
+}
