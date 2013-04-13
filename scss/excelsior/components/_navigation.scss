@@ -406,18 +406,6 @@
 /* Medium Displays: 768px - 1279px */
 @media only screen and (min-width: 48em) {
 
-  .icon-sub-menu:after {
-    content: "\e760";
-    float: right;
-    font-size: 1.5em;
-    line-height: inherit;
-    margin: -0.3em 0 0 8px;
-  }
-
-  .active.icon-sub-menu:after {
-    margin: -0.3em 0 0 -4px;
-  }
-
   .gov-bar {
     background: #036;
     border-bottom: 1px solid #555;
@@ -582,10 +570,14 @@
   }
 
   .global-nav ul li {
-    border-right: 1px solid transparent;
-    border-left: 1px solid transparent;
+    border-right: 1px solid #333;
+    border-left: 1px solid #888;
     border-bottom: none;
     float: left;
+  }
+
+  .global-nav ul li:first-child {
+    border-left: none;
   }
 
   .global-nav ul li:first-child a {
@@ -599,10 +591,19 @@
     padding-top: 13px;
   }
 
+  .global-nav .icon-right-open:before {
+    float: right;
+    padding-top: 3px;
+    padding-left: 5px;
+  }
+
+  .global-nav .icon-right-open.active:before {
+    content: '\e75c';
+  }
+
   .global-nav .nav-container ul li a.active {
     border: none;
     background-color: #888;
-    padding-right: 44px;
   }
 
   .global-nav .nav-container ul li a:hover {
@@ -610,15 +611,15 @@
   }
 
   .global-nav .nav-container ul li a.active:after {
-    content: "\e760";
-    width: 0;
-    height: auto;
-    position: absolute;
-    bottom: -5px;
-    margin-left: 4px;
     border-right: 10px solid transparent;
-    border-bottom: 9px solid #454545;
     border-left: 10px solid transparent;
+    border-bottom: 9px solid #454545;
+    content: " ";
+    display: inline-block;
+    height: 0;
+    position: absolute;
+    top: 41px;
+    width: 0;
   }
 
   .global-nav ul ul li {
