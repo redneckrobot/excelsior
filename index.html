@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 
     <!-- Please add a site Title -->
     <title>Getting Started</title>
 
-    <link rel="stylesheet" href="css/excelsior.css">
-    <link rel="stylesheet" href="css/off-canvas.css">
+    <link rel="stylesheet" href="css/excelsior.min.css">
+    <link rel="stylesheet" href="css/off-canvas.min.css">
 
     <!-- Fav icon -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/apple-touch-icon-144x144-precomposed.png">
@@ -22,252 +22,251 @@
 
 
      <!--
-     ======================== 
+     ========================
      Place Custom Styles Here
-     ======================== 
+     ========================
      -->
 
-     <link rel="stylesheet" href="css/site.css">
+     <link rel="stylesheet" href="css/site.min.css">
 
      <!--rbig1
-     
-     ======================== 
+
+     ========================
      End Custom Styles Here
-     ======================== 
+     ========================
      -->
 
-
-    </head>
-    <body class="off-canvas">
-      <a href="#global-nav" class="skip-to">Skip to Navigation</a>
-      <a href="#page" class="skip-to">Skip to Content</a>
-      <div class="gov-pull-down-container show-for-small">
-      <a href="#" id="gov-pull-down" class="gov-pull-down show-for-small" data-active="active-gov-bar">
-        Open New York State Search
-      </a>
+</head>
+<body class="off-canvas">
+  <a href="#global-nav" class="skip-to">Skip to Navigation</a>
+  <a href="#page" class="skip-to">Skip to Content</a>
+  <div class="gov-pull-down-container show-for-small">
+  <a href="#" id="gov-pull-down" class="gov-pull-down show-for-small" data-active="active-gov-bar">
+    Open New York State Search
+  </a>
+  </div>
+  <div id="gov-bar" class="gov-bar">
+    <div class="gov-wrap">
+      <div class="state-links">
+        <a href="http://www.ny.gov/" class="gov-link-1">
+          New York State
+        </a>
+        <a href="#" class="gov-link-2">
+          State Agencies
+        </a>
       </div>
-      <div id="gov-bar" class="gov-bar">
-        <div class="gov-wrap">
-          <div class="state-links">
-            <a href="http://www.ny.gov/" class="gov-link-1">
-              New York State
-            </a>
-            <a href="#" class="gov-link-2">
-              State Agencies
-            </a>
+      <a href="http://www.nysegov.com/citGuide.cfm?superCat=102&cat=449&content=main" id="gov-link-3" class="gov-link-3">
+        Search all of NY.gov
+      </a>
+      <form action="http://www.search.cio.ny.gov/search" method="get" target="_blank">
+        <fieldset>
+          <legend>Legend</legend>
+          <label for="site-search-box">Search</label>
+          <div class="search-container">
+            <label for="state-search" class="hide-off-screen">Search All of NYS</label>
+            <input type="search" name="q" id="state-search" />
+            <input type="submit" value="Search NY"  />
           </div>
-          <a href="http://www.nysegov.com/citGuide.cfm?superCat=102&cat=449&content=main" id="gov-link-3" class="gov-link-3">
-            Search all of NY.gov
-          </a>
-          <form action="http://www.search.cio.ny.gov/search" method="get" target="_blank">
+          <input type="hidden" name="sort" value="date:D:L:d1">
+          <input type="hidden" name="output" value="xml_no_dtd">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="oe" value="UTF-8">
+          <input type="hidden" name="client" value="default_frontend">
+          <input type="hidden" name="proxystylesheet" value="default_frontend">
+          <input type="hidden" name="site" value="default_collection">
+
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <div id="site-bar" class="site-bar">
+    <div class="site-wrap">
+      <a href="index.html" class="site-logo">
+         <!--
+         ========================
+         Place Site Title Here
+         ========================
+         -->
+        Excelsior Web Framework
+         <!--
+         ========================
+         End Site Title Here
+         ========================
+         -->
+      </a>
+      <div class="site-functions">
+        <ul class="mobile-functions">
+          <li><a href="#" id="mobile-site-search" class="mobile-icons mobile-search-button" data-active="active-site-search">Search Toggle</a></li>
+          <li><a href="#" id="mobile-site-menu" class="mobile-icons mobile-menu-button" data-active="active-site-menu">Menu Toggle</a></li>
+        </ul>
+        <!-- Link to show the menu -->
+        <div class="site-search">
+          <form action="/">
             <fieldset>
               <legend>Legend</legend>
               <label for="site-search-box">Search</label>
               <div class="search-container">
-                <label for="state-search" class="hide-off-screen">Search All of NYS</label>
-                <input type="search" name="q" id="state-search" />
-                <input type="submit" value="Search NY"  />
+                <input type="search" id="site-search-box" class="site-search-box" />
+                <div class="site-button">
+                  <input type="submit" class="site-search-button" value="Search Agency"  />
+                </div>
               </div>
-              <input type="hidden" name="sort" value="date:D:L:d1">
-              <input type="hidden" name="output" value="xml_no_dtd">
-              <input type="hidden" name="ie" value="UTF-8">
-              <input type="hidden" name="oe" value="UTF-8">
-              <input type="hidden" name="client" value="default_frontend">
-              <input type="hidden" name="proxystylesheet" value="default_frontend">
-              <input type="hidden" name="site" value="default_collection">
-
             </fieldset>
           </form>
         </div>
       </div>
-      <div id="site-bar" class="site-bar">
-        <div class="site-wrap">
-          <a href="index.html" class="site-logo">
-             <!--
-             ======================== 
-             Place Site Title Here
-             ======================== 
-             -->
-            Excelsior Web Framework
-             <!--
-             ======================== 
-             End Site Title Here
-             ======================== 
-             -->
-          </a>
-          <div class="site-functions">
-            <ul class="mobile-functions">
-              <li><a href="#" id="mobile-site-search" class="mobile-icons mobile-search-button" data-active="active-site-search">Search Toggle</a></li>
-              <li><a href="#" id="mobile-site-menu" class="mobile-icons mobile-menu-button" data-active="active-site-menu">Menu Toggle</a></li>
-            </ul>
-            <!-- Link to show the menu -->
-            <div class="site-search">
-              <form action="/">
-                <fieldset>
-                  <legend>Legend</legend>
-                  <label for="site-search-box">Search</label>
-                  <div class="search-container">
-                    <input type="search" id="site-search-box" class="site-search-box" />
-                    <div class="site-button">
-                      <input type="submit" class="site-search-button" value="Search Agency"  />
-                    </div>
-                  </div>
-                </fieldset>
-              </form>
-            </div>
+    </div>
+  </div>
+  <nav id="global-nav" class="global-nav">
+    <div class="nav-container">
+        <!--
+         ========================
+         Place Global Navigation Here
+         ========================
+         -->
+        <ul>
+            <li><a href="#">Nav Link 1</a></li>
+            <li><a href="#">Nav Link 2</a></li>
+            <li><a href="#">Nav Link 3</a></li>
+        </ul>
+         <!--
+         ========================
+         End Global Navigation  Here
+         ========================
+         -->
+    </div>
+  </nav>
+  <div id="page" class="page">
+    <div class="content-section">
+
+        <noscript>
+          <div class="alert-box">
+             <strong>JavaScript is currently disabled in your web browser. </strong><br /> For full functionality of this site, it is necessary to enable JavaScript. Here are <a href="http://www.enable-javascript.com/" target="_blank"> instructions how to enable JavaScript</a>
           </div>
+        </noscript>
+
+         <!--
+         ========================
+         Place Page Content Here
+         ========================
+         -->
+
+        <div class="row">
+            <div class="large-12 columns">
+                <h1>Page Title</h1>
+            </div>
         </div>
+
+        <div class="row">
+            <div class="large-12 columns">
+                <h2>Getting Started with the Excelsior Web Framework (EWF)</h2>
+                <p>The Excelsior meta-framework is built using some of best web technologies currently avaliable. Using these different vendor libraries as a base, allows developers to create cutting edge websites and applications at a much faster pase.</p>
+
+                <p>
+                    To get started using EWF please see out <a href="https://github.com/nys-its/excelsior-web-framework/wiki">documentation</a>.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="large-12 columns">
+                <h3>Built with:</h3>
+                <ul class="bulleted-list">
+                    <li><a href="http://foundation.zurb.com">Zurb's Foundation</a></li>
+                    <li><a href="http://jquery.com">jQuery</a></li>
+                    <li><a href="http://http://modernizr.com/">Modernizr</a></li>
+                </ul>
+            </div>
+        </div>
+
+         <!--
+         ========================
+         End Page Content Here
+         ========================
+         -->
+
+    </div>
+    <footer role="contentinfo" class="footer">
+      <div class="footer-contents">
+
+         <!--
+         ========================
+         Place Footer Content Here
+         ========================
+         -->
+
+        <div class="row">
+            <div class="large-12 columns">
+                <ul>
+                    <li>
+                        <a href="http://nys-its.github.com/go-responsive/">See the framework in action</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+         <!--
+         ========================
+         End Footer Content Here
+         ========================
+         -->
+
       </div>
-      <nav id="global-nav" class="global-nav">
-        <div class="nav-container">
-            <!--
-             ======================== 
-             Place Global Navigation Here
-             ======================== 
-             -->
-            <ul>
-                <li><a href="#">Nav Link 1</a></li>
-                <li><a href="#">Nav Link 2</a></li>
-                <li><a href="#">Nav Link 3</a></li>
-            </ul>
-             <!--
-             ======================== 
-             End Global Navigation  Here
-             ======================== 
-             -->
-        </div>
-      </nav>
-      <div id="page" class="page">
-        <div class="content-section">
+    </footer>
+  </div>
 
-            <noscript>
-              <div class="alert-box">
-                 <strong>JavaScript is currently disabled in your web browser. </strong><br /> For full functionality of this site, it is necessary to enable JavaScript. Here are <a href="http://www.enable-javascript.com/" target="_blank"> instructions how to enable JavaScript</a>
-              </div>
-            </noscript>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/excelsior/excelsior.min.js"></script>
+    <script src="js/excelsior/off-canvas.min.js"></script>
+    <script src="js/foundation/foundation.js"></script>
 
-             <!--
-             ======================== 
-             Place Page Content Here
-             ======================== 
-             -->
+    <!-- Uncomment items as needed -->
+    <!-- Foundation -->
+    <!-- <script src="javascripts/jquery.foundation.mediaQueryToggle.js"></script> -->
+    <!-- <script src="javascripts/jquery.foundation.forms.js"></script> -->
+    <!-- <script src="javascripts/jquery.foundation.reveal.js"></script> -->
+    <!-- <script src="javascripts/jquery.foundation.orbit.js"></script> -->
+    <!-- <script src="javascripts/jquery.foundation.navigation.js"></script> -->
+    <!-- <script src="javascripts/jquery.foundation.buttons.js"></script> -->
+    <!-- <script src="javascripts/jquery.foundation.tabs.js"></script> -->
+    <!-- <script src="javascripts/jquery.foundation.tooltips.js"></script> -->
+    <!-- <script src="javascripts/jquery.foundation.accordion.js"></script> -->
+    <!-- <script src="javascripts/jquery.placeholder.js"></script> -->
+    <!-- <script src="javascripts/jquery.foundation.alerts.js"></script> -->
+    <!-- <script src="javascripts/jquery.foundation.topbar.js"></script> -->
+    <!-- <script src="javascripts/jquery.foundation.joyride.js"></script> -->
+    <!-- <script src="javascripts/jquery.foundation.clearing.js"></script> -->
+    <!-- <script src="javascripts/jquery.foundation.magellan.js"></script> -->
 
-            <div class="row">
-                <div class="large-12 columns">
-                    <h1>Page Title</h1>
-                </div> 
-            </div>
+    <!-- Excelsior -->
+    <!-- <script src="js/excelsior/off-canvas.js"></script> -->
 
-            <div class="row">
-                <div class="large-12 columns">
-                    <h2>Getting Started with the Excelsior Web Framework (EWF)</h2>
-                    <p>The Excelsior meta-framework is built using some of best web technologies currently avaliable. Using these different vendor libraries as a base, allows developers to create cutting edge websites and applications at a much faster pase.</p>
+    <!-- jQuery UI -->
+    <!-- <script src="js/vendor/jquery-ui.widget.min.js"></script> -->
 
-                    <p>
-                        To get started using EWF please see out <a href="https://github.com/nys-its/excelsior-web-framework/wiki">documentation</a>.
-                    </p>
-                </div>
-            </div>
+    <!-- Charting -->
+    <!-- <script src="js/vendor/chart.min.js"></script> -->
+    <!-- <script src="js/excelsior/respCharts.js"></script> -->
 
-            <div class="row">
-                <div class="large-12 columns">
-                    <h3>Build with:</h3>
-                    <ul>
-                        <li><a href="http://foundation.zurb.com">Zurb's Foundation</a></li>
-                        <li><a href="http://jquery.com">jQuery</a></li>
-                        <li><a href="http://http://modernizr.com/">Modernizr</a></li>
-                    </ul>
-                </div>
-            </div>
+    <!-- Responsive Tables -->
+    <!-- <script src="js/excelsior/responsive-tables.js"></script> -->
 
-             <!--
-             ======================== 
-             End Page Content Here
-             ======================== 
-             -->
-
-        </div>
-        <footer role="contentinfo" class="footer">
-          <div class="footer-contents">
-
-             <!--
-             ======================== 
-             Place Footer Content Here
-             ======================== 
-             -->
-
-            <div class="row">
-                <div class="large-12 columns">
-                    <ul>
-                        <li>
-                            <a href="http://nys-its.github.com/go-responsive/">See the framework in action</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-             <!--
-             ======================== 
-             End Footer Content Here
-             ======================== 
-             -->
-
-          </div>
-        </footer>
-      </div>
-
-      <script src="js/vendor/jquery.js"></script>
-      <script src="js/excelsior/excelsior.js"></script>
-      <script src="js/excelsior/off-canvas.js"></script>
-      <script src="js/foundation/foundation.js"></script>
-
-      <!-- Uncomment items as needed -->
-      <!-- Foundation -->
-      <!-- <script src="javascripts/jquery.foundation.mediaQueryToggle.js"></script> -->
-      <!-- <script src="javascripts/jquery.foundation.forms.js"></script> -->
-      <!-- <script src="javascripts/jquery.foundation.reveal.js"></script> -->
-      <!-- <script src="javascripts/jquery.foundation.orbit.js"></script> -->
-      <!-- <script src="javascripts/jquery.foundation.navigation.js"></script> -->
-      <!-- <script src="javascripts/jquery.foundation.buttons.js"></script> -->
-      <!-- <script src="javascripts/jquery.foundation.tabs.js"></script> -->
-      <!-- <script src="javascripts/jquery.foundation.tooltips.js"></script> -->
-      <!-- <script src="javascripts/jquery.foundation.accordion.js"></script> -->
-      <!-- <script src="javascripts/jquery.placeholder.js"></script> -->
-      <!-- <script src="javascripts/jquery.foundation.alerts.js"></script> -->
-      <!-- <script src="javascripts/jquery.foundation.topbar.js"></script> -->
-      <!-- <script src="javascripts/jquery.foundation.joyride.js"></script> -->
-      <!-- <script src="javascripts/jquery.foundation.clearing.js"></script> -->
-      <!-- <script src="javascripts/jquery.foundation.magellan.js"></script> -->
-
-      <!-- Excelsior -->
-      <!-- <script src="js/excelsior/off-canvas.js"></script> -->
-
-      <!-- jQuery UI -->
-      <!-- <script src="js/vendor/jquery-ui.widget.min.js"></script> -->      
-
-      <!-- Charting -->
-      <!-- <script src="js/vendor/chart.min.js"></script> -->
-      <!-- <script src="js/excelsior/respCharts.js"></script> -->
-
-      <!-- Responsive Tables -->
-      <!-- <script src="js/excelsior/responsive-tables.js"></script> -->
-
-      <script>$(document).foundation();</script>
+    <script>$(document).foundation();</script>
 
 
      <!--
-     ======================== 
+     ========================
      Place Custom Scripts Here
-     ======================== 
+     ========================
      -->
 
-     <script src="js/site.js"></script>
+     <script src="js/site.min.js"></script>
 
      <!--
-     ======================== 
+     ========================
      End Custom Scripts Here
-     ======================== 
+     ========================
      -->
 
-    </body>
+</body>
 </html>

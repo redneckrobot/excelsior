@@ -36,7 +36,8 @@ module.exports = function(grunt) {
                 },
                 files: {
                     "css/excelsior.min.css": "src/less/excelsior.less",
-                    "css/off-canvas.min.css": "src/less/off-canvas.less"
+                    "css/off-canvas.min.css": "src/less/off-canvas.less",
+                    "css/site.min.css": "src/css/site.css"
                 }
             }
         },
