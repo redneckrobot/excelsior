@@ -4,38 +4,46 @@
   html,
   body {
     background: #282828;
-    height: 100%; }
+    height: 100%;
+  }
 
   /* line 13, ../scss/off-canvas.scss */
   body.off-canvas {
-    padding-top: 48px; }
+    padding-top: 48px;
+  }
 
   /* line 19, ../scss/off-canvas.scss */
   .off-canvas .gov-pull-down-container {
     position: absolute;
-    top: 0; }
+    top: 0;
+  }
   /* line 24, ../scss/off-canvas.scss */
   .off-canvas .gov-pull-down {
     height: 40px;
-    width: 44px; }
+    width: 44px;
+  }
   /* line 29, ../scss/off-canvas.scss */
   .off-canvas .gov-bar {
     position: absolute;
-    width: 100%; }
+    width: 100%;
+  }
   /* line 34, ../scss/off-canvas.scss */
   .off-canvas .gov-bar form {
-    margin: 0; }
+    margin: 0;
+  }
   /* line 38, ../scss/off-canvas.scss */
   .off-canvas .site-bar {
     position: absolute;
-    width: 100%; }
+    width: 100%;
+  }
   /* line 43, ../scss/off-canvas.scss */
   .off-canvas .global-nav {
     position: fixed;
     top: 0;
     height: 100%;
     width: 100%;
-    z-index: 0; }
+    z-index: 0;
+  }
   /* line 51, ../scss/off-canvas.scss */
   .off-canvas .global-nav .sub-menu-title {
     display: inline-block;
@@ -44,23 +52,28 @@
     position: relative;
     left: 20%;
     line-height: 48px;
-    padding-top: 0.15em; }
+    padding-top: 0.15em;
+  }
   /* line 61, ../scss/off-canvas.scss */
   .off-canvas .global-nav .nav-container {
     height: inherit;
-    overflow-y: scroll; }
+    overflow-y: scroll;
+  }
   /* line 66, ../scss/off-canvas.scss */
   .off-canvas .global-nav .nav-container > ul {
-    min-height: 1000px; }
+    min-height: 1000px;
+  }
   /* line 70, ../scss/off-canvas.scss */
   .off-canvas .global-nav ul {
-    margin-left: 16%; }
+    margin-left: 16%;
+  }
   /* line 74, ../scss/off-canvas.scss */
   .off-canvas .global-nav ul li {
-    padding-left: 3%; }
+    padding-left: 3%;
+  }
   /* line 78, ../scss/off-canvas.scss */
   .off-canvas .global-nav ul ul {
-    background: #333333 !important;
+    background: #333 !important;
     display: block;
     height: 100%;
     left: 100%;
@@ -69,13 +82,16 @@
     width: 100%;
     background: #333;
     -webkit-transition: left 0.2s ease;
-    transition: left 0.2s ease; }
+    transition: left 0.2s ease;
+  }
   /* line 91, ../scss/off-canvas.scss */
   .off-canvas .global-nav ul ul li {
-    padding-left: 2% !important; }
+    padding-left: 2% !important;
+  }
   /* line 95, ../scss/off-canvas.scss */
   .off-canvas .global-nav .menu-controls {
-    height: 53px; }
+    height: 53px;
+  }
   /* line 99, ../scss/off-canvas.scss */
   .off-canvas .global-nav .menu-controls .menu-back {
     background-image: -webkit-linear-gradient(#999999, #505050);
@@ -85,21 +101,26 @@
     float: right;
     margin: 10px;
     padding: 7px 7px 7px 1px;
-    visibility: hidden; }
+    visibility: hidden;
+  }
   /* line 110, ../scss/off-canvas.scss */
   .off-canvas.active-sub-menu .global-nav .menu-controls .menu-back {
-    visibility: visible; }
+    visibility: visible;
+  }
   /* line 114, ../scss/off-canvas.scss */
   .off-canvas .global-nav .active-menu {
-    left: 0; }
-  /* line 118, ../scss/off-canvas.scss */
+    left: 0;
+    z-index: 1;
+  }
+  /* line 119, ../scss/off-canvas.scss */
   .off-canvas .page {
     position: relative;
     height: auto;
     min-height: 100%;
     top: 0;
-    width: 100%; }
-  /* line 130, ../scss/off-canvas.scss */
+    width: 100%;
+  }
+  /* line 131, ../scss/off-canvas.scss */
   .off-canvas .gov-pull-down,
   .off-canvas .gov-pull-down-container,
   .off-canvas .gov-bar,
@@ -107,69 +128,110 @@
   .off-canvas .page {
     -webkit-transition: top 0.2s ease, left 0.2s ease, height 0.2s ease;
     /* Safari and Chrome */
-    transition: top 0.2s ease, left 0.2s ease, height 0.2s ease; }
-  /* line 136, ../scss/off-canvas.scss */
+    transition: top 0.2s ease, left 0.2s ease, height 0.2s ease;
+  }
+  /* line 137, ../scss/off-canvas.scss */
   .off-canvas.active-gov-bar .gov-pull-down-container, .off-canvas.active-gov-bar .site-bar {
-    top: 88px; }
-  /* line 144, ../scss/off-canvas.scss */
+    top: 88px;
+  }
+  /* line 145, ../scss/off-canvas.scss */
   .off-canvas.active-site-menu .gov-pull-down, .off-canvas.active-site-menu .gov-pull-down-container, .off-canvas.active-site-menu .gov-bar, .off-canvas.active-site-menu .site-bar, .off-canvas.active-site-menu .page {
     position: fixed;
-    left: -82%; }
-  /* line 149, ../scss/off-canvas.scss */
+    left: -82%;
+  }
+  /* line 150, ../scss/off-canvas.scss */
+  .off-canvas.active-site-menu .global-nav .icon-right-open:before {
+    padding-top: 3px;
+    position: absolute;
+    right: 5%;
+  }
+  /* line 156, ../scss/off-canvas.scss */
   .off-canvas.active-site-menu .mobile-menu-button {
-    -webkit-box-shadow: inset 6px 0px 8px -2px black;
-    box-shadow: inset 6px 0px 8px -2px black; }
-  /* line 154, ../scss/off-canvas.scss */
+    -webkit-box-shadow: inset 6px 0px 8px -2px #000;
+    box-shadow: inset 6px 0px 8px -2px #000;
+  }
+  /* line 161, ../scss/off-canvas.scss */
   .off-canvas.active-site-menu .page {
-    -webkit-box-shadow: 5px 49px 8px black;
-    box-shadow: 5px 49px 8px black; }
-  /* line 160, ../scss/off-canvas.scss */
+    -webkit-box-shadow: 5px 49px 8px #000;
+    box-shadow: 5px 49px 8px #000;
+  }
+  /* line 167, ../scss/off-canvas.scss */
   .off-canvas.active-site-menu .footer {
-    left: -82%; } }
+    left: -82%;
+  }
+}
+@media only screen and (min-width: 48em) {
+  /* line 178, ../scss/off-canvas.scss */
+  .off-canvas.active-site-menu .global-nav .icon-right-open:before {
+    position: relative;
+    right: auto;
+  }
+  /* line 183, ../scss/off-canvas.scss */
+  .off-canvas.active-site-menu .page {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  /* line 190, ../scss/off-canvas.scss */
+  .off-canvas.active-site-menu .footer {
+    left: auto;
+  }
+}
 @media only screen and (min-width: 60em) {
-  /* line 170, ../scss/off-canvas.scss */
+  /* line 199, ../scss/off-canvas.scss */
   .global-nav .nav-container {
-    border-radius: 4px; } }
+    border-radius: 4px;
+  }
+}
 /* Medium Displays: 768px - 1279px */
 @media only screen and (min-width: 768px) {
-  /* line 178, ../scss/off-canvas.scss */
+  /* line 209, ../scss/off-canvas.scss */
   body.off-canvas {
-    padding-top: 0; }
+    padding-top: 0;
+  }
 
-  /* line 186, ../scss/off-canvas.scss */
+  /* line 217, ../scss/off-canvas.scss */
   .off-canvas .gov-bar,
   .off-canvas .site-bar,
   .off-canvas .global-nav,
   .off-canvas .page {
-    position: relative; }
-  /* line 193, ../scss/off-canvas.scss */
+    position: relative;
+  }
+  /* line 224, ../scss/off-canvas.scss */
   .off-canvas.active-site-menu .gov-bar, .off-canvas.active-site-menu .site-bar, .off-canvas.active-site-menu .global-nav, .off-canvas.active-site-menu .page {
     left: auto;
-    position: relative; }
-  /* line 198, ../scss/off-canvas.scss */
+    position: relative;
+  }
+  /* line 229, ../scss/off-canvas.scss */
   .off-canvas.active-gov-bar .site-bar {
-    top: 0; }
-  /* line 202, ../scss/off-canvas.scss */
+    top: 0;
+  }
+  /* line 233, ../scss/off-canvas.scss */
   .off-canvas .global-nav {
     height: 46px;
     overflow: visible;
-    z-index: 30; }
-  /* line 208, ../scss/off-canvas.scss */
+    z-index: 30;
+  }
+  /* line 239, ../scss/off-canvas.scss */
   .off-canvas .global-nav ul li {
-    padding-left: 0; }
-  /* line 212, ../scss/off-canvas.scss */
+    padding-left: 0;
+  }
+  /* line 243, ../scss/off-canvas.scss */
   .off-canvas .global-nav .menu-controls {
-    display: none; }
-  /* line 217, ../scss/off-canvas.scss */
+    display: none;
+  }
+  /* line 248, ../scss/off-canvas.scss */
   .off-canvas .global-nav .nav-container, .off-canvas.active-site-menu .global-nav .nav-container {
-    overflow: hidden; }
-  /* line 222, ../scss/off-canvas.scss */
+    overflow: hidden;
+  }
+  /* line 253, ../scss/off-canvas.scss */
   .off-canvas .global-nav .nav-container > ul, .off-canvas.active-site-menu .global-nav .nav-container ul {
-    min-height: auto; }
-  /* line 227, ../scss/off-canvas.scss */
+    min-height: auto;
+  }
+  /* line 258, ../scss/off-canvas.scss */
   .off-canvas .global-nav ul, .off-canvas.active-site-menu .global-nav ul {
-    margin-left: 0; }
-  /* line 231, ../scss/off-canvas.scss */
+    margin-left: 0;
+  }
+  /* line 262, ../scss/off-canvas.scss */
   .off-canvas .global-nav ul ul {
     background: #454545 !important;
     /* M */
@@ -180,23 +242,39 @@
     overflow: hidden;
     visibility: hidden;
     -webkit-transition: left 0;
-    transition: left 0s; }
-  /* line 243, ../scss/off-canvas.scss */
+    transition: left 0s;
+  }
+  /* line 274, ../scss/off-canvas.scss */
+  .off-canvas .global-nav ul ul li {
+    border-right: 1px solid #000;
+    border-left: 1px solid #666;
+  }
+  /* line 279, ../scss/off-canvas.scss */
+  .off-canvas .global-nav ul ul li:first {
+    border-left: none;
+  }
+  /* line 283, ../scss/off-canvas.scss */
   .off-canvas .global-nav ul ul.active-menu {
-    visibility: visible; }
-  /* line 247, ../scss/off-canvas.scss */
+    visibility: visible;
+  }
+  /* line 287, ../scss/off-canvas.scss */
   .off-canvas .global-nav ul ul.active-menu li {
-    padding: 0 !important; }
-  /* line 251, ../scss/off-canvas.scss */
+    padding: 0 !important;
+  }
+  /* line 291, ../scss/off-canvas.scss */
   .off-canvas .global-nav .active-menu li {
     padding-left: 0;
-    border-bottom: 0; }
-  /* line 256, ../scss/off-canvas.scss */
+    border-bottom: 0;
+  }
+  /* line 296, ../scss/off-canvas.scss */
   .off-canvas .global-nav .active-menu li a {
     border-radius: 4px;
-    background: #454545 !important; }
-  /* line 261, ../scss/off-canvas.scss */
+    background: #454545 !important;
+  }
+  /* line 301, ../scss/off-canvas.scss */
   .off-canvas .page {
     min-height: auto;
     top: -23px;
-    left: 0; } }
+    left: 0;
+  }
+}

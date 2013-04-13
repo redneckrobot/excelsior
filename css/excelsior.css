@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "IBM437";
 /* normalize.css v2.1.0 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -249,7 +249,7 @@ figure {
  */
 /* line 253, ../scss/normalize.scss */
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
@@ -2163,7 +2163,7 @@ blockquote p {
   /* line 374, ../scss/foundation/components/_type.scss */
   * {
     background: transparent !important;
-    color: black !important;
+    color: #000 !important;
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important;
@@ -2195,7 +2195,7 @@ blockquote p {
   /* line 393, ../scss/foundation/components/_type.scss */
   pre,
   blockquote {
-    border: 1px solid #999999;
+    border: 1px solid #999;
     page-break-inside: avoid;
   }
 
@@ -2930,7 +2930,7 @@ form.custom .custom.dropdown {
   background: white;
   background: -moz-linear-gradient(top, white 0%, #f3f3f3 100%);
   background: -webkit-linear-gradient(top, white 0%, #f3f3f3 100%);
-  background: linear-gradient(to bottom, white 0%, #f3f3f3 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #f3f3f3 100%);
   -webkit-box-shadow: none;
   box-shadow: none;
   font-size: 0.875em;
@@ -4290,7 +4290,7 @@ form.custom .custom.disabled {
   right: 0px;
   width: 11px;
   height: 14px;
-  border: solid 4px black;
+  border: solid 4px #000;
   border-top: none;
   border-bottom: none;
 }
@@ -4301,7 +4301,7 @@ form.custom .custom.disabled {
   width: 11px;
   height: 14px;
   border: solid 8px;
-  border-color: transparent transparent transparent black;
+  border-color: transparent transparent transparent #000;
 }
 /* line 111, ../scss/foundation/components/_orbit.scss */
 .orbit-container:hover .orbit-timer > span {
@@ -4376,7 +4376,7 @@ form.custom .custom.disabled {
   background: #fff;
   float: left;
   margin-right: 6px;
-  border: solid 2px black;
+  border: solid 2px #000;
   -webkit-border-radius: 1000px;
   border-radius: 1000px;
 }
@@ -4627,11 +4627,11 @@ form.custom .custom.disabled {
   text-decoration: none;
   font-size: 30px;
   font-weight: normal;
-  line-height: 0.5 !important;
+  line-height: .5 !important;
 }
 /* line 144, ../scss/foundation/components/_joyride.scss */
 .joyride-close-tip:hover, .joyride-close-tip:focus {
-  color: #eeeeee !important;
+  color: #eee !important;
 }
 
 /* line 147, ../scss/foundation/components/_joyride.scss */
@@ -4654,9 +4654,9 @@ form.custom .custom.disabled {
   position: absolute;
   border-radius: 3px;
   z-index: 102;
-  -moz-box-shadow: 0px 0px 30px white;
-  -webkit-box-shadow: 0px 0px 15px white;
-  box-shadow: 0px 0px 15px white;
+  -moz-box-shadow: 0px 0px 30px #ffffff;
+  -webkit-box-shadow: 0px 0px 15px #ffffff;
+  box-shadow: 0px 0px 15px #ffffff;
 }
 
 /* line 170, ../scss/foundation/components/_joyride.scss */
@@ -5559,7 +5559,7 @@ kbd {
     background: white;
     background: -moz-linear-gradient(top, white 0%, #f2f2f2 100%);
     background: -webkit-linear-gradient(top, white 0%, #f2f2f2 100%);
-    background: linear-gradient(to bottom, white 0%, #f2f2f2 100%);
+    background: linear-gradient(to bottom, #ffffff 0%, #f2f2f2 100%);
     -webkit-box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.07), 1000px 0 0 1000px #e1f5d1, -2px 0 10px 0 rgba(0, 0, 0, 0.07), -1000px 0 0 1000px whitesmoke;
     box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.07), 1000px 0 0 980px #e1f5d1, -2px 0 10px 0 rgba(0, 0, 0, 0.07), -1000px 0 0 1000px whitesmoke;
   }
@@ -5568,7 +5568,7 @@ kbd {
     background: white;
     background: -moz-linear-gradient(top, white 0%, #e6e6e6 100%);
     background: -webkit-linear-gradient(top, white 0%, #e6e6e6 100%);
-    background: linear-gradient(to bottom, white 0%, #e6e6e6 100%);
+    background: linear-gradient(to bottom, #ffffff 0%, #e6e6e6 100%);
   }
   /* line 193, ../scss/foundation/components/_switch.scss */
   div.switch:active {
@@ -6387,20 +6387,20 @@ section .title a:hover,
 /* line 396, ../scss/excelsior/_foundation-override.scss */
 .orbit-container .orbit-timer > span {
   top: 16px;
-  border: solid 4px white;
+  border: solid 4px #fff;
   border-top: 0;
   border-bottom: 0;
 }
 /* line 403, ../scss/excelsior/_foundation-override.scss */
 .orbit-container .orbit-timer.paused > span {
-  border-color: transparent transparent transparent white;
+  border-color: transparent transparent transparent #fff;
   top: 16px;
 }
 
 /* line 410, ../scss/excelsior/_foundation-override.scss */
 .orbit-bullets li {
   background-color: #eee;
-  box-shadow: inset 0 1px 1px 1px #333333;
+  box-shadow: inset 0 1px 1px 1px #333;
   cursor: pointer;
   border: 0;
 }
@@ -6408,7 +6408,7 @@ section .title a:hover,
 /* line 416, ../scss/excelsior/_foundation-override.scss */
 .orbit-bullets li.active {
   background-color: #444;
-  box-shadow: inset 0 1px 1px 1px #111111;
+  box-shadow: inset 0 1px 1px 1px #111;
 }
 
 /* line 420, ../scss/excelsior/_foundation-override.scss */
@@ -7346,7 +7346,7 @@ tbody tr.info > td {
   text-decoration: none;
   background-color: #f5f5f5;
   background-image: -webkit-linear-gradient(top, white, #e6e6e6);
-  background-image: linear-gradient(to bottom, white, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
   background-repeat: repeat-x;
   border-color: #e6e6e6 #e6e6e6 #bfbfbf;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
@@ -7396,7 +7396,7 @@ button.button {
 
 /* line 45, ../scss/excelsior/components/_buttons.scss */
 .button:focus {
-  outline: thin dotted #333333;
+  outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -7642,7 +7642,7 @@ input[type="button"].button-block {
   background-image: -webkit-linear-gradient(top, #444444, #222222);
   background-image: linear-gradient(to bottom, #444444, #222222);
   background-repeat: repeat-x;
-  border-color: #222222 #222222 black;
+  border-color: #222222 #222222 #000000;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
 
@@ -7710,7 +7710,7 @@ input[type="submit"].button::-moz-focus-inner {
   font-weight: bold;
   line-height: 20px;
   color: #000000;
-  text-shadow: 0 1px 0 white;
+  text-shadow: 0 1px 0 #ffffff;
   opacity: 0.2;
   border: none;
   text-decoration: none;
@@ -7752,7 +7752,7 @@ button.close {
   text-decoration: none;
   background-color: #f5f5f5;
   background-image: -webkit-linear-gradient(top, white, #e6e6e6);
-  background-image: linear-gradient(to bottom, white, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
   background-repeat: repeat-x;
   border-color: #e6e6e6 #e6e6e6 #bfbfbf;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
@@ -7875,8 +7875,8 @@ input[type="color"] {
   background-color: #ffffff;
   border: 1px solid #cccccc;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-  transition: border linear 0.2s, box-shadow linear 0.2s;
+  -webkit-transition: border linear .2s, box-shadow linear .2s;
+  transition: border linear .2s, box-shadow linear .2s;
 }
 
 /* line 119, ../scss/excelsior/components/_forms.scss */
@@ -7948,7 +7948,7 @@ select:focus,
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted #333333;
+  outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -8211,9 +8211,9 @@ select:focus:invalid:focus {
   font-weight: normal;
   line-height: 20px;
   text-align: center;
-  text-shadow: 0 1px 0 white;
+  text-shadow: 0 1px 0 #ffffff;
   background-color: #eeeeee;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
 }
 
 /* line 404, ../scss/excelsior/components/_forms.scss */
@@ -8339,7 +8339,7 @@ select:focus:invalid:focus {
 
 /* line 1, ../scss/excelsior/components/_demo-bar.scss */
 #resize-bar-body {
-  background: #333!important;
+  background: #333333 !important;
 }
 
 /* line 5, ../scss/excelsior/components/_demo-bar.scss */
@@ -8349,9 +8349,9 @@ select:focus:invalid:focus {
 
 /* line 8, ../scss/excelsior/components/_demo-bar.scss */
 #wrapper {
-  -webkit-transition: height 1250ms ease, width 1250ms ease, margin 1250ms ease;
-  transition: height 1250ms ease, width 1250ms ease, margin 1250ms ease;
-  box-shadow: 0 0 12px 1px black;
+  -webkit-transition: height 1250ms ease,width 1250ms ease,margin 1250ms ease;
+  transition: height 1250ms ease,width 1250ms ease,margin 1250ms ease;
+  box-shadow: 0 0 12px 1px #000;
   -webkit-transform: translate3d(0, 0, 0);
   position: relative;
   background-color: #FFF;
@@ -8652,26 +8652,26 @@ header .keyboard a, header .cssrefresh a {
 /*  Try to separate out Joyride CSS*/
 /* line 283, ../scss/excelsior/components/_demo-bar.scss */
 .joyride-tip-guide {
-  background: #DEDEDE!important;
-  color: #333!important;
-  top: 60px!important;
-  text-shadow: none!important;
-  box-shadow: 0 0 4px #666666;
+  background: #dedede !important;
+  color: #333333 !important;
+  top: 60px !important;
+  text-shadow: none !important;
+  box-shadow: 0 0 4px #666;
   /* Typography */
 }
 /* line 290, ../scss/excelsior/components/_demo-bar.scss */
 .joyride-tip-guide .joyride-nub.top {
-  border-color: transparent transparent #dedede !important;
+  border-color: transparent transparent #DEDEDE !important;
 }
 /* line 295, ../scss/excelsior/components/_demo-bar.scss */
 .joyride-tip-guide h1, .joyride-tip-guide h2, .joyride-tip-guide h3, .joyride-tip-guide h4, .joyride-tip-guide h5, .joyride-tip-guide h6 {
-  color: #333!important;
+  color: #333333 !important;
   margin-bottom: 0.5em;
 }
 
 /* line 301, ../scss/excelsior/components/_demo-bar.scss */
 body .joyride-close-tip:hover, .joyride-close-tip:focus {
-  color: black !important;
+  color: #000 !important;
 }
 
 /* line 305, ../scss/excelsior/components/_demo-bar.scss */
@@ -8782,7 +8782,7 @@ body .joyride-close-tip:hover, .joyride-close-tip:focus {
 
 /* line 62, ../scss/excelsior/components/_footer.scss */
 .footer-line {
-  border-top: 1px solid #333333;
+  border-top: 1px solid #333;
   height: 1px;
   margin: 0 0 1em 0;
 }
@@ -8842,14 +8842,14 @@ body .joyride-close-tip:hover, .joyride-close-tip:focus {
 /* line 37, ../scss/excelsior/components/_lightbox.scss */
 .orbit-bullets li {
   background-color: #eee;
-  box-shadow: inset 0 1px 1px 1px #333333;
+  box-shadow: inset 0 1px 1px 1px #333;
   cursor: pointer;
   border: 0;
 }
 /* line 43, ../scss/excelsior/components/_lightbox.scss */
 .orbit-bullets li.active {
   background-color: #444;
-  box-shadow: inset 0 1px 1px 1px #111111;
+  box-shadow: inset 0 1px 1px 1px #111;
 }
 
 /* line 52, ../scss/excelsior/components/_lightbox.scss */
@@ -9070,8 +9070,8 @@ body .joyride-close-tip:hover, .joyride-close-tip:focus {
   height: 300px;
   width: 100%;
   margin-bottom: 1em;
-  border: 1px solid #999999;
-  box-shadow: 0 0 3px #999999;
+  border: 1px solid #999;
+  box-shadow: 0 0 3px #999;
 }
 
 /* POC Styles */
@@ -9083,7 +9083,7 @@ body {
 
 /* line 8, ../scss/excelsior/components/_navigation.scss */
 a:focus {
-  outline: 1px dotted #ffcc66;
+  outline: 1px dotted #fc6;
 }
 
 /* Highjacked icon font to create after arrows */
@@ -9102,7 +9102,7 @@ a:focus {
   clip: rect(0, 0, 0, 0);
   background: rgba(0, 0, 0, 0.5);
   border-radius: 3px;
-  border: 1px solid white;
+  border: 1px solid #FFF;
   display: inline-block;
   padding: 5px;
   top: 10px;
@@ -9112,7 +9112,7 @@ a:focus {
 /* line 33, ../scss/excelsior/components/_navigation.scss */
 .skip-to:focus {
   clip: auto;
-  outline: 1px solid white;
+  outline: 1px solid #FFF;
   z-index: 100;
 }
 
@@ -9120,7 +9120,7 @@ a:focus {
 .gov-pull-down-container {
   background: #036;
   border-radius: 0 0 5px 5px;
-  box-shadow: 1px 0px 2px black;
+  box-shadow: 1px 0px 2px #000;
   height: 40px;
   width: 44px;
   margin: 0 5px 8px;
@@ -9219,7 +9219,7 @@ a:focus {
 .gov-bar input {
   border-radius: 4px;
   -webkit-appearance: none;
-  border: 1px solid #666666;
+  border: 1px solid #666;
   padding: 0;
   display: block;
   float: left;
@@ -9242,7 +9242,7 @@ a:focus {
   background-image: linear-gradient(#999999, #505050);
   background: #505050;
   border-radius: 0 5px 5px 0;
-  border: 1px solid #666666;
+  border: 1px solid #666;
   border-left: 0;
   color: #FFF;
   height: 37px;
@@ -9275,7 +9275,7 @@ a:focus {
 .site-bar a.site-logo {
   color: #fff;
   float: left;
-  font-size: 1em;
+  font-size: 0.9em;
   font-weight: normal;
   margin: -2px 0 0 52px;
   padding: 0.1em 0 0 0.3em;
@@ -9290,7 +9290,7 @@ a:focus {
 /* line 205, ../scss/excelsior/components/_navigation.scss */
 .site-bar .site-functions .site-search {
   background: #fff;
-  border-bottom: 1px solid #666666;
+  border-bottom: 1px solid #666;
   box-shadow: none;
   display: block;
   height: 0;
@@ -9385,7 +9385,7 @@ a:focus {
 /* line 289, ../scss/excelsior/components/_navigation.scss */
 .site-bar .mobile-functions li {
   float: left;
-  border-left: 1px solid #666666;
+  border-left: 1px solid #666;
 }
 
 /* line 294, ../scss/excelsior/components/_navigation.scss */
@@ -9436,8 +9436,8 @@ a:focus {
 
 /* line 336, ../scss/excelsior/components/_navigation.scss */
 .global-nav ul li {
-  border-right: 1px solid #444444;
-  border-bottom: 1px solid #444444;
+  border-right: 1px solid #444;
+  border-bottom: 1px solid #444;
 }
 
 /* line 341, ../scss/excelsior/components/_navigation.scss */
@@ -9447,7 +9447,7 @@ a:focus {
   display: block;
   font-size: 1.15em;
   padding: 11px 12px 9px 12px;
-  text-shadow: 1px 1px 1px #111111;
+  text-shadow: 1px 1px 1px #111;
 }
 
 /* Page Contents */
@@ -9517,53 +9517,39 @@ a:focus {
 /* Medium Displays: 768px - 1279px */
 @media only screen and (min-width: 48em) {
   /* line 409, ../scss/excelsior/components/_navigation.scss */
-  .icon-sub-menu:after {
-    content: "\e760";
-    float: right;
-    font-size: 1.5em;
-    line-height: inherit;
-    margin: -0.3em 0 0 8px;
-  }
-
-  /* line 417, ../scss/excelsior/components/_navigation.scss */
-  .active.icon-sub-menu:after {
-    margin: -0.3em 0 0 -4px;
-  }
-
-  /* line 421, ../scss/excelsior/components/_navigation.scss */
   .gov-bar {
     background: #036;
-    border-bottom: 1px solid #555555;
+    border-bottom: 1px solid #555;
     position: relative;
     -webkit-transition: height 0s ease;
     transition: height 0s ease;
   }
 
-  /* line 430, ../scss/excelsior/components/_navigation.scss */
+  /* line 418, ../scss/excelsior/components/_navigation.scss */
   .gov-bar input[type=search] {
     height: 25px;
   }
-  /* line 435, ../scss/excelsior/components/_navigation.scss */
+  /* line 423, ../scss/excelsior/components/_navigation.scss */
   .gov-bar input[type=submit] {
     height: 23px;
     line-height: 2em;
     margin-top: 1px;
   }
 
-  /* line 445, ../scss/excelsior/components/_navigation.scss */
+  /* line 433, ../scss/excelsior/components/_navigation.scss */
   .gov-bar,
   .active-gov-bar .gov-bar,
   .gov-bar a {
     height: 28px;
   }
 
-  /* line 449, ../scss/excelsior/components/_navigation.scss */
+  /* line 437, ../scss/excelsior/components/_navigation.scss */
   .gov-bar .state-links {
     display: inline-block;
     float: left;
   }
 
-  /* line 454, ../scss/excelsior/components/_navigation.scss */
+  /* line 442, ../scss/excelsior/components/_navigation.scss */
   .gov-bar a.gov-link-1 {
     background: url(../images/nys-banner-img.png) no-repeat 0 0 transparent;
     display: inline-block;
@@ -9573,7 +9559,7 @@ a:focus {
     width: 185px;
   }
 
-  /* line 464, ../scss/excelsior/components/_navigation.scss */
+  /* line 452, ../scss/excelsior/components/_navigation.scss */
   .gov-bar a.gov-link-2,
   .gov-bar a.gov-link-2:hover {
     background: url(../images/nys-banner-img.png) no-repeat 0 -28px transparent;
@@ -9585,12 +9571,12 @@ a:focus {
     width: 130px;
   }
 
-  /* line 474, ../scss/excelsior/components/_navigation.scss */
+  /* line 462, ../scss/excelsior/components/_navigation.scss */
   .gov-bar a.gov-link-2:hover {
     background-color: transparent;
   }
 
-  /* line 478, ../scss/excelsior/components/_navigation.scss */
+  /* line 466, ../scss/excelsior/components/_navigation.scss */
   .gov-bar a.gov-link-3 {
     background: url(../images/nys-banner-img.png) no-repeat 0 -56px transparent;
     display: inline-block;
@@ -9599,12 +9585,12 @@ a:focus {
     width: 150px;
   }
 
-  /* line 486, ../scss/excelsior/components/_navigation.scss */
+  /* line 474, ../scss/excelsior/components/_navigation.scss */
   .gov-bar .search-container {
     margin: -1px 9px 0 0;
   }
 
-  /* line 490, ../scss/excelsior/components/_navigation.scss */
+  /* line 478, ../scss/excelsior/components/_navigation.scss */
   .gov-bar form {
     display: none;
     float: right;
@@ -9615,18 +9601,18 @@ a:focus {
   }
 
   /* Active Gov Bar Search Box */
-  /* line 500, ../scss/excelsior/components/_navigation.scss */
+  /* line 488, ../scss/excelsior/components/_navigation.scss */
   .active-gov-bar-search a.gov-link-3 {
     display: none;
   }
 
-  /* line 504, ../scss/excelsior/components/_navigation.scss */
+  /* line 492, ../scss/excelsior/components/_navigation.scss */
   .active-gov-bar-search .gov-bar form {
     display: block;
   }
 
   /* Site Header */
-  /* line 510, ../scss/excelsior/components/_navigation.scss */
+  /* line 498, ../scss/excelsior/components/_navigation.scss */
   .site-bar {
     background-image: -webkit-linear-gradient(#363636, #282828);
     background-image: linear-gradient(#363636, #282828);
@@ -9635,7 +9621,7 @@ a:focus {
     width: 100%;
   }
 
-  /* line 519, ../scss/excelsior/components/_navigation.scss */
+  /* line 507, ../scss/excelsior/components/_navigation.scss */
   .site-bar,
   .active-gov-bar .site-bar {
     top: 0;
@@ -9644,25 +9630,25 @@ a:focus {
     z-index: 0;
   }
 
-  /* line 526, ../scss/excelsior/components/_navigation.scss */
+  /* line 514, ../scss/excelsior/components/_navigation.scss */
   .site-bar a.site-logo {
     font-size: 2em;
-    margin: 0 0 0 0.3em;
+    margin: 0 0 0 .3em;
     padding: 0.4em 0 0 4px;
   }
 
-  /* line 532, ../scss/excelsior/components/_navigation.scss */
+  /* line 520, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-functions {
     height: 100%;
   }
 
-  /* line 536, ../scss/excelsior/components/_navigation.scss */
+  /* line 524, ../scss/excelsior/components/_navigation.scss */
   .site-bar .mobile-functions {
     display: none !important;
     speak: none;
   }
 
-  /* line 541, ../scss/excelsior/components/_navigation.scss */
+  /* line 529, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-functions .site-search {
     border-bottom: none;
     background: transparent;
@@ -9676,27 +9662,27 @@ a:focus {
     width: 15em;
   }
 
-  /* line 554, ../scss/excelsior/components/_navigation.scss */
+  /* line 542, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-functions .site-search .search-container {
     margin: 0 2px 0 0;
   }
 
-  /* line 558, ../scss/excelsior/components/_navigation.scss */
+  /* line 546, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-functions .site-search form {
     margin: 0;
   }
 
-  /* line 562, ../scss/excelsior/components/_navigation.scss */
+  /* line 550, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-functions .site-search input[type=search] {
     width: 82%;
   }
 
-  /* line 566, ../scss/excelsior/components/_navigation.scss */
+  /* line 554, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-functions .site-button {
     width: 18%;
   }
 
-  /* line 570, ../scss/excelsior/components/_navigation.scss */
+  /* line 558, ../scss/excelsior/components/_navigation.scss */
   .global-nav {
     display: block;
     height: 46px;
@@ -9706,26 +9692,31 @@ a:focus {
     margin-top: -24px;
   }
 
-  /* line 579, ../scss/excelsior/components/_navigation.scss */
+  /* line 567, ../scss/excelsior/components/_navigation.scss */
   .global-nav .nav-container {
     height: auto;
     background: #666;
   }
 
-  /* line 584, ../scss/excelsior/components/_navigation.scss */
+  /* line 572, ../scss/excelsior/components/_navigation.scss */
   .global-nav ul li {
-    border-right: 1px solid transparent;
-    border-left: 1px solid transparent;
+    border-right: 1px solid #333;
+    border-left: 1px solid #888;
     border-bottom: none;
     float: left;
   }
 
-  /* line 591, ../scss/excelsior/components/_navigation.scss */
+  /* line 579, ../scss/excelsior/components/_navigation.scss */
+  .global-nav ul li:first-child {
+    border-left: none;
+  }
+
+  /* line 583, ../scss/excelsior/components/_navigation.scss */
   .global-nav ul li:first-child a {
     padding: 13px 12px 9px 14px;
   }
 
-  /* line 595, ../scss/excelsior/components/_navigation.scss */
+  /* line 587, ../scss/excelsior/components/_navigation.scss */
   .global-nav ul li a {
     background: #666;
     font-size: 1em;
@@ -9733,63 +9724,74 @@ a:focus {
     padding-top: 13px;
   }
 
-  /* line 602, ../scss/excelsior/components/_navigation.scss */
+  /* line 594, ../scss/excelsior/components/_navigation.scss */
+  .global-nav .icon-right-open:before {
+    float: right;
+    padding-top: 3px;
+    padding-left: 5px;
+  }
+
+  /* line 600, ../scss/excelsior/components/_navigation.scss */
+  .global-nav .icon-right-open.active:before {
+    content: '\e75c';
+  }
+
+  /* line 604, ../scss/excelsior/components/_navigation.scss */
   .global-nav .nav-container ul li a.active {
     border: none;
     background-color: #888;
-    padding-right: 44px;
   }
 
-  /* line 608, ../scss/excelsior/components/_navigation.scss */
+  /* line 609, ../scss/excelsior/components/_navigation.scss */
   .global-nav .nav-container ul li a:hover {
     background: #888;
   }
 
-  /* line 612, ../scss/excelsior/components/_navigation.scss */
+  /* line 613, ../scss/excelsior/components/_navigation.scss */
   .global-nav .nav-container ul li a.active:after {
-    content: "\e760";
-    width: 0;
-    height: auto;
-    position: absolute;
-    bottom: -5px;
-    margin-left: 4px;
     border-right: 10px solid transparent;
-    border-bottom: 9px solid #454545;
     border-left: 10px solid transparent;
+    border-bottom: 9px solid #454545;
+    content: " ";
+    display: inline-block;
+    height: 0;
+    position: absolute;
+    top: 41px;
+    width: 0;
   }
 
-  /* line 624, ../scss/excelsior/components/_navigation.scss */
+  /* line 625, ../scss/excelsior/components/_navigation.scss */
   .global-nav ul ul li {
     border-right: 1px solid transparent;
     border-left: 1px solid transparent;
     border-bottom: none;
   }
 
-  /* line 630, ../scss/excelsior/components/_navigation.scss */
+  /* line 631, ../scss/excelsior/components/_navigation.scss */
   .global-nav .nav-container ul ul li a:hover {
     background-color: #393939 !important;
   }
 
-  /* line 634, ../scss/excelsior/components/_navigation.scss */
+  /* line 635, ../scss/excelsior/components/_navigation.scss */
   .page {
     background: #FFF;
     position: relative;
     top: -23px;
   }
 
-  /* line 640, ../scss/excelsior/components/_navigation.scss */
+  /* line 641, ../scss/excelsior/components/_navigation.scss */
   .page .content-section {
     padding: 2em 0;
   }
 }
 /* Page Lock at 960px */
 @media only screen and (min-width: 60em) {
-  /* line 649, ../scss/excelsior/components/_navigation.scss */
+  /* line 650, ../scss/excelsior/components/_navigation.scss */
   .gov-bar {
     background: #036;
   }
 
-  /* line 657, ../scss/excelsior/components/_navigation.scss */
+  /* line 658, ../scss/excelsior/components/_navigation.scss */
   .gov-bar .gov-wrap,
   .site-bar .site-wrap,
   .global-nav,
@@ -9801,17 +9803,17 @@ a:focus {
     width: 60em !important;
   }
 
-  /* line 664, ../scss/excelsior/components/_navigation.scss */
+  /* line 665, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-wrap {
     position: relative;
   }
 
-  /* line 668, ../scss/excelsior/components/_navigation.scss */
+  /* line 669, ../scss/excelsior/components/_navigation.scss */
   .site-bar .site-functions {
     position: relative;
   }
 
-  /* line 673, ../scss/excelsior/components/_navigation.scss */
+  /* line 674, ../scss/excelsior/components/_navigation.scss */
   .global-nav,
   .global-nav .nav-container {
     border-radius: 5px;
@@ -9819,14 +9821,14 @@ a:focus {
 }
 /* Large Displays: 1280px - 1440px */
 @media only screen and (min-width: 80em) {
-  /* line 682, ../scss/excelsior/components/_navigation.scss */
+  /* line 683, ../scss/excelsior/components/_navigation.scss */
   .gov-bar {
     background: #036;
   }
 }
 /* X-Large Displays: 1400px and up */
 @media only screen and (min-width: 90em) {
-  /* line 689, ../scss/excelsior/components/_navigation.scss */
+  /* line 690, ../scss/excelsior/components/_navigation.scss */
   .gov-bar {
     background: #036;
   }
@@ -9885,7 +9887,7 @@ a:focus {
   text-decoration: none;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 120%;
-  text-shadow: 0.2em 0.2em 0.2em #333333;
+  text-shadow: 0.2em 0.2em 0.2em #333;
   padding: 0.8em 0 0.4em 0;
 }
 /* line 29, ../scss/excelsior/components/_components.scss */
@@ -9910,12 +9912,12 @@ a:focus {
 }
 /* line 48, ../scss/excelsior/components/_components.scss */
 .govbutton .button {
-  border: 1px solid #222222;
+  border: 1px solid #222;
 }
 /* line 51, ../scss/excelsior/components/_components.scss */
 .govbutton .button:hover {
   background-color: #162252;
-  border: 1px solid #444444;
+  border: 1px solid #444;
 }
 
 @media screen and (max-width: 768px) {
