@@ -1,4 +1,3 @@
-/*global EWF: false */
 /*
  Additional Login needed for off canvas Menus
 */

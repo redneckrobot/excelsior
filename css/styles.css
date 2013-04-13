@@ -1,7 +1,7 @@
 /**
  * Excelsior Site-Wide Styles
  *
- * These will eventually move to /scss/_excelsior.scss or a component file
+ * These will eventually move to /src/less/excelsior.less or a component file
 */
 #resize-bar-body #wrapper {height:99%;}
 #resize-bar-body section {
@@ -41,7 +41,7 @@
 .li-sub {
   margin: 0;
 }
-/* Orbit Carousel */ 
+/* Orbit Carousel */
   .touch .orbit-container .orbit-prev,
   .touch .orbit-container .orbit-next {
     display: inherit; }
@@ -53,7 +53,7 @@
   padding: 10px;
   color: #fff;
 }
-.orbit-container .orbit-slides-container .orbit-caption .hide-for-small, 
+.orbit-container .orbit-slides-container .orbit-caption .hide-for-small,
 .orbit-container .orbit-slides-container .orbit-caption .hide-for-small a{
   color: #aaa;
 }
