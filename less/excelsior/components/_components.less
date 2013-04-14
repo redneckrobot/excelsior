@@ -1,71 +1,71 @@
 // gov widget
 
 .govwidget {
-  width: 100%;
-  min-width: 240px;
-  max-width: 450px;
-  background-image: -webkit-linear-gradient(bottom, rgb(4,47,90) 20%, rgb(10,70,130) 60%, rgb(4,47,90) 82%);
-  background-image:         linear-gradient(bottom, rgb(4,47,90) 20%, rgb(10,70,130) 60%, rgb(4,47,90) 82%);
-  text-align: center;
-  margin: 0 auto;
+    width: 100%;
+    min-width: 240px;
+    max-width: 450px;
+    background-image: -webkit-linear-gradient(bottom, rgb(4,47,90) 20%, rgb(10,70,130) 60%, rgb(4,47,90) 82%);
+    background-image:         linear-gradient(bottom, rgb(4,47,90) 20%, rgb(10,70,130) 60%, rgb(4,47,90) 82%);
+    text-align: center;
+    margin: 0 auto;
 }
 
 .govheading {
-  background: url(../prototypes/dta/images/stateseal.png) 0.3em 0.3em no-repeat;
-  background-size: 58px 58px;
+    background: url(../prototypes/dta/images/stateseal.png) 0.3em 0.3em no-repeat;
+    background-size: 58px 58px;
 
-  a {
-    color: #fff;
-    text-transform: uppercase;
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 120%;
-    text-shadow: 0.2em 0.2em 0.2em #333;
-    padding: 0.8em 0 0.4em 0;
-  }
+    a {
+        color: #fff;
+        text-transform: uppercase;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 120%;
+        text-shadow: 0.2em 0.2em 0.2em #333;
+        padding: 0.8em 0 0.4em 0;
+    }
 
-  span {
-    display: block;
-  }
+    span {
+        display: block;
+    }
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .govheading {
-    background-image: url(../prototypes/dta/images/stateseal@2x.png)
-  }
+    .govheading {
+        background-image: url(../prototypes/dta/images/stateseal@2x.png)
+    }
 }
 
 .govbutton {
-  margin: 0 0.5em;
+    margin: 0 0.5em;
 
-  a {
-    background: #002d56;
-    line-height: 0;
-  }
-
-  .button {
-    border: 1px solid #222;
-
-    &:hover {
-      background-color: #162252;
-      border: 1px solid #444;
+    a {
+        background: #002d56;
+        line-height: 0;
     }
-  }
+
+    .button {
+        border: 1px solid #222;
+
+        &:hover {
+            background-color: #162252;
+            border: 1px solid #444;
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {
-  .margin-top-small {
-    margin-top: 1em;
-  }
+    .margin-top-small {
+        margin-top: 1em;
+    }
 }
 
 // DTA Prototype
 
 .news {
   margin: 0.3em 0.8em;
-  border-radius: 8px;
+  .border-radius(8px);
   background: #5082b3;
 
   strong {

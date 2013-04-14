@@ -22,7 +22,7 @@
   position: absolute;
   clip: rect(0, 0, 0, 0);
   background: rgba(0,0,0,0.5);
-  border-radius: 3px;
+  .border-radius(3px);
   border: 1px solid #FFF;
   display: inline-block;
   padding: 5px;
@@ -38,7 +38,7 @@
 
 .gov-pull-down-container {
   background: #036;
-  border-radius: 0 0 5px 5px;
+  .border-radius(0 0 5px 5px);
   box-shadow: 1px 0px 2px #000;
   height: 40px;
   width: 44px;
@@ -64,12 +64,11 @@
 }
 
 .gov-bar {
-  background: #036;
-  background-image: -webkit-linear-gradient(#002851, #036);
-  background-image:         linear-gradient(#002851, #036);
   position: absolute;
   top: 0;
   height: 0;
+  background: #036;
+  #gradient > .vertical(#002851, #036);
   overflow: hidden;
   .transition(height 0.2s ease);
   width: 100%;
@@ -130,7 +129,7 @@
   }
 
   input {
-    border-radius: 4px;
+    .border-radius(4px);
     -webkit-appearance: none;
     border: 1px solid #666;
     padding: 0;
@@ -139,7 +138,7 @@
     margin: 0;
 
     &[type=search] {
-      border-radius: 5px 0 0 5px;
+      .border-radius(5px 0 0 5px);
       padding-left: 10px;
       width: 70%;
       color: #333;
@@ -149,10 +148,9 @@
 
     &[type=submit] {
       background-color: #505050;
-      background-image: -webkit-linear-gradient(#999, #505050);
-      background-image:         linear-gradient(#999, #505050);
+      #gradient > .vertical(#999, #505050);
       background: #505050;
-      border-radius: 0 5px 5px 0;
+      .border-radius(0 5px 5px 0);
       border: 1px solid #666;
       border-left: 0;
       color: #FFF;
@@ -172,25 +170,24 @@
 
 /* Site Header */
 .site-bar {
-  background: #454545;
-  background-image: -webkit-linear-gradient(#5f5f5f, #282828);
-  background-image:         linear-gradient(#5f5f5f, #282828);
-  height: 48px;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 30;
-  .transition(top 0.2s ease);
+    background: #454545;
+    #gradient > .vertical(#5f5f5f, #282828);
+    height: 48px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 30;
+    .transition(top 0.2s ease);
 }
 
 .site-bar a.site-logo {
-  color: #fff;
-  float: left;
-  font-size: 0.9em;
-  font-weight: normal;
-  margin: -2px 0 0 52px;
-  padding: 0.1em 0 0 0.3em;
-  line-height: 48px;
+    color: #fff;
+    float: left;
+    font-size: 0.9em;
+    font-weight: normal;
+    margin: -2px 0 0 52px;
+    padding: 0.1em 0 0 0.3em;
+    line-height: 48px;
 }
 
 .site-bar .site-functions {
@@ -225,52 +222,52 @@
 
 .site-bar .site-functions .site-search form legend,
 .site-bar .site-functions .site-search form label {
-  display: none;
+    display: none;
 }
 
 .site-bar .site-functions .site-search form fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .site-bar .site-functions .site-search input {
-  -webkit-appearance: none;
-  padding: 0;
-  display: block;
-  float: left;
-  margin: 0;
+    -webkit-appearance: none;
+    padding: 0;
+    display: block;
+    float: left;
+    margin: 0;
 }
+
 .site-bar .site-functions .site-search input[type=search] {
-  float: left;
-  border-radius: 5px 0 0 5px;
-  padding: 1px 0 0 6px;
-  width: 86%;
-  border-color: #999;
-  color: #333;
-  .box-sizing(border-box);
+    float: left;
+    .border-radius(5px 0 0 5px);
+    padding: 1px 0 0 6px;
+    width: 86%;
+    border-color: #999;
+    color: #333;
+    .box-sizing(border-box);
 }
 
 .site-bar .site-functions .site-button {
-  float: left;
-  background-color: #505050;
-  background-image: -webkit-linear-gradient(#999, #505050);
-  background-image:         linear-gradient(#999, #505050);
-  border-radius: 0 5px 5px 0;
-  border-color: #999;
-  width: 14%;
-  height: 100%;
+    float: left;
+    background-color: #505050;
+    #gradient > .vertical(#999, #505050);
+    .border-radius(0 5px 5px 0);
+    border-color: #999;
+    width: 14%;
+    height: 100%;
 }
 
 .site-bar .site-functions .site-search input[type=submit] {
-  background: url(../images/search.svg) no-repeat center center transparent;
-  background-size: 24px;
-  border: 0;
-  height: 100%;
-  width: 100%;
-  color: #fff;
-  text-indent: -9999px;
-  padding-bottom: 0.69em;
+    background: url(../images/search.svg) no-repeat center center transparent;
+    background-size: 24px 24px;
+    border: 0;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    text-indent: -9999px;
+    padding-bottom: 0.69em;
 }
 
 .site-bar .mobile-functions {
@@ -305,94 +302,94 @@
 /* Global Navigation Bar */
 
 .global-nav {
-  background: #333;
-  position: absolute;
-  top: 48px;
-  width: 100%;
-  z-index: 20;
+    background: #333;
+    position: absolute;
+    top: 48px;
+    width: 100%;
+    z-index: 20;
 }
 
 .global-nav .nav-container {
-  border-bottom: 1px solid #505050;
-  height: 0;
-  overflow: hidden;
-  .transition(height 0.2s ease);
+    border-bottom: 1px solid #505050;
+    height: 0;
+    overflow: hidden;
+    .transition(height 0.2s ease);
 }
 
 .global-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .global-nav ul li {
-  border-right: 1px solid #444;
-  border-bottom: 1px solid #444;
+    border-right: 1px solid #444;
+    border-bottom: 1px solid #444;
 }
 
 .global-nav ul li a {
-  background: #333;
-  color: #FFF;
-  display: block;
-  font-size: 1.15em;
-  padding: 11px 12px 9px 12px;
-  text-shadow: 1px 1px 1px #111;
+    background: #333;
+    color: #FFF;
+    display: block;
+    font-size: 1.15em;
+    padding: 11px 12px 9px 12px;
+    text-shadow: 1px 1px 1px #111;
 }
 
 /* Page Contents */
 
 .page {
-  background: #282828;
-  height: 100%;
-  position: relative;
-  overflow: visible;
-  top: 0;
-  z-index: 10;
+    background: #282828;
+    height: 100%;
+    position: relative;
+    overflow: visible;
+    top: 0;
+    z-index: 10;
 }
 
 .page .content-section {
-  background: #FFF;
-  padding: 1em 0;
+    background: #FFF;
+    padding: 1em 0;
 }
 
 
 /* Active Govenor Banner */
 .active-gov-bar .gov-bar {
-  height: 88px;
+    height: 88px;
 }
 
 .active-gov-bar .site-bar {
-  top: 88px;
+    top: 88px;
 }
 
 .active-gov-bar .gov-pull-down-container {
-  top: 88px;
+    top: 88px;
 }
 
 .active-gov-bar .gov-pull-down {
-  background: url(../images/close.svg) no-repeat 5px 7px transparent;
-  background-size: 28px;
+    background: url(../images/close.svg) no-repeat 5px 7px transparent;
+    background-size: 28px 28px;
 }
 
 /* Active Site Search */
 .active-site-search .site-bar .mobile-functions .mobile-icons.active {
-  background: url(../images/close-x-gray.svg) no-repeat 10px 12px #fff;
-  background-size: 28px;
+    background: url(../images/close-x-gray.svg) no-repeat 10px 12px #fff;
+    background-size: 28px 28px;
 }
 
 /* Active Menu */
 .active-site-menu .site-bar .mobile-functions .mobile-icons.active {
-  background: url(../images/close.svg) no-repeat 10px 12px #333;
-  background-size: 28px;
+    background: url(../images/close.svg) no-repeat 10px 12px #333;
+    background-size: 28px 28px;
 }
 
 .active-site-search .site-functions .site-search {
-  height: 53px;
+    height: 53px;
 }
 
 /* Active Site Menu */
 .active-site-menu .global-nav .nav-container {
-  height: 343px;
+    height: 343px;
 }
 
 /* Medium Displays: 768px - 1279px */
@@ -464,31 +461,30 @@
   }
 
   .gov-bar form {
-    display: none;
-    float: right;
-    font-size: .75em;
-    width: 280px;
-    padding: 0;
-    margin: 2px 5px 0 0;
+      display: none;
+      float: right;
+      font-size: .75em;
+      width: 280px;
+      padding: 0;
+      margin: 2px 5px 0 0;
   }
 
   /* Active Gov Bar Search Box */
   .active-gov-bar-search a.gov-link-3 {
-    display: none;
+      display: none;
   }
 
   .active-gov-bar-search .gov-bar form {
-    display: block;
+      display: block;
   }
 
   /* Site Header */
 
   .site-bar {
-    background-image: -webkit-linear-gradient(#363636, #282828);
-    background-image:         linear-gradient(#363636, #282828);
-    height: 90px;
-    position: relative;
-    width: 100%
+      #gradient > .vertical(#363636, #282828);
+      height: 90px;
+      position: relative;
+      width: 100%
   }
 
   .site-bar,
@@ -659,7 +655,7 @@
 
   .global-nav,
   .global-nav .nav-container {
-    border-radius: 5px;
+    .border-radius(5px);
   }
 }
 

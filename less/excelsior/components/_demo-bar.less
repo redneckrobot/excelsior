@@ -12,8 +12,7 @@
   height: 100%;
   margin: 0 auto;
   background-color: #FFF;
-  -webkit-transition: height 1250ms ease,width 1250ms ease,margin 1250ms ease;
-          transition: height 1250ms ease,width 1250ms ease,margin 1250ms ease;
+  .transition-three(height 1250ms ease, width 1250ms ease, margin 1250ms ease);
   box-shadow: 0 0 12px 1px #000;
   .translate3d(0, 0, 0);
 }
@@ -69,109 +68,112 @@
 #wrapper[data-device="smartphoneLandscape"].keyboard{padding-bottom:194px}
 #wrapper[data-device="tabletLandscape"].keyboard{padding-bottom:307px}
 body>header {
-  background: -webkit-linear-gradient(rgba(52,52,52,0.75),rgba(36,36,36,0.75));
-  background:         linear-gradient(rgba(52,52,52,0.75),rgba(36,36,36,0.75));
-  box-shadow: inset 0 1px 0 #5f6164,inset 0 -1px 0 #2e2f2f,0 1px 3px rgba(0,0,0,0.3);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 51px;
-  z-index: 100;
+    #gradient > .vertical(rgba(52,52,52,0.75),rgba(36,36,36,0.75));
+    box-shadow: inset 0 1px 0 #5f6164,inset 0 -1px 0 #2e2f2f,0 1px 3px rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 51px;
+    z-index: 100;
 }
 
-body>section {
-  position: fixed;
-  top: 51px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 3;
-  overflow-y: scroll;
+body > section {
+    position: fixed;
+    top: 51px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow-y: scroll;
 }
 
 #size {
-  .transition(padding 240ms ease);
-  background-image: -webkit-linear-gradient(#202021,#222223);
-  background-image:         linear-gradient(#202021,#222223);
-  box-shadow: 0 1px 0 #363738;
-  border-radius: 4px;
-  .translate3d(0, 0, 0);
-  color: #EEE;
-  border: 1px solid #040404;
-  text-align: center;
-  padding: 9px 12px 7px;
-  margin: 9px 0 0 8px;
-  min-width: 80px;
-  display: block;
-  float: left;
-  font-size: 14px;
-  height: 32px;
+    display: block;
+    float: left;
+    .transition(padding 240ms ease);
+    #gradient > .vertical(#202021,#222223);
+    box-shadow: 0 1px 0 #363738;
+    .border-radius(4px);
+    .translate3d(0, 0, 0);
+    color: #EEE;
+    border: 1px solid #040404;
+    text-align: center;
+    padding: 9px 12px 7px;
+    margin: 9px 0 0 8px;
+    min-width: 80px;
+    font-size: 14px;
+    height: 32px;
 }
 
 @media screen and (max-width: 480px) {
-  #size {
-    padding-left: 6px;
-    padding-right: 6px;
-  };
+    #size {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
 }
 
 header .keyboard,.cssrefresh {
-  border-radius: 4px;
-  color: #EEE;
-  position: absolute;
-  z-index: 1;
-  top: 8px;
-  right: 8px;
-  border: 1px solid #363738;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: #EEE;
+    border: 1px solid #363738;
+    .border-radius(4px);
+    z-index: 1;
 }
 
 header .keyboard a,.cssrefresh a {
-  background: -webkit-linear-gradient(#343434,#242424);
-  background:         linear-gradient(#343434,#242424);
-  box-shadow: inset 0 1px 0 #3c3c3c;
-  border-radius: 4px;
-  text-decoration: none;
-  border: 1px solid #040404;
-  float: left;
-  display: block;
-  width: 30px;
-  height: 30px;
-  outline: none;
-  line-height: 30px;
-  font-size: 16px;
-  text-align: center;
+    float: left;
+    display: block;
+    #gradient > .vertical(#343434,#242424);
+    box-shadow: inset 0 1px 0 #3c3c3c;
+    .border-radius(4px);
+    text-decoration: none;
+    border: 1px solid #040404;
+    width: 30px;
+    height: 30px;
+    outline: none;
+    line-height: 30px;
+    font-size: 16px;
+    text-align: center;
 }
 
-header .keyboard a:hover,.cssrefresh a:hover {
-  background: -webkit-linear-gradient(#313131,#242424);
-  background:         linear-gradient(#313131,#242424);
+header .keyboard a:hover,
+.cssrefresh a:hover {
+    #gradient > .vertical(#313131,#242424);
 }
 
-header .keyboard a.active,header .keyboard a:active,.cssrefresh a.active,.cssrefresh a:active {
-  background: -webkit-linear-gradient(#1c1c1c,#242424);
-  background:         linear-gradient(#1c1c1c,#242424);
-  box-shadow: inset 0 1px 0 #242424;
-  outline: none;
+header .keyboard a.active,
+header .keyboard a:active,
+.cssrefresh a.active,
+.cssrefresh a:active {
+    #gradient > .vertical(#1c1c1c,#242424);
+    box-shadow: inset 0 1px 0 #242424;
+    outline: none;
 }
 
-header .keyboard a.active span,header .keyboard a:active span,.cssrefresh a.active span,.cssrefresh a:active span {
-  opacity: 1;
+header .keyboard a.active span,
+header .keyboard a:active span,
+.cssrefresh a.active span,
+.cssrefresh a:active span {
+    opacity: 1;
 }
 
-header .keyboard,header .cssrefresh {
-  right: auto;
-  position: relative;
-  top: auto;
-  float: left;
-  margin: 8px 0 0 8px;
+header .keyboard,
+header .cssrefresh {
+    right: auto;
+    position: relative;
+    top: auto;
+    float: left;
+    margin: 8px 0 0 8px;
 }
 
 header .keyboard a,header .cssrefresh a {
   text-indent: -9999px;
 }
 #devices {
-  border-radius: 4px;
+  .border-radius(4px);
   .transition(all 200ms ease);
   position: absolute;
   z-index: 1;
@@ -181,8 +183,7 @@ header .keyboard a,header .cssrefresh a {
   border: 1px solid #363738;
 
   a {
-    background: -webkit-linear-gradient(#313131,#242424);
-    background:         linear-gradient(#313131,#242424);
+    #gradient > .vertical(#313131,#242424);
     box-shadow: inset 0 1px 0 #3c3c3c;
     text-decoration: none;
     border: 1px solid #040404;
@@ -194,24 +195,22 @@ header .keyboard a,header .cssrefresh a {
     outline: none;
 
     &:first-of-type {
-      border-radius: 4px 0 0 4px;
+      .border-radius(4px 0 0 4px);
     }
 
     &:last-of-type {
-      border-radius: 0 4px 4px 0;
+      .border-radius(0 4px 4px 0);
       border-right-width: 1px;
       width: 80px;
     }
 
     &:hover {
-      background: -webkit-linear-gradient(#2c2c2c,#242424);
-      background:         linear-gradient(#2c2c2c,#242424);
+      #gradient > .vertical(#2c2c2c,#242424);
     }
 
     &.active,
     &:active {
-      background: -webkit-linear-gradient(#1c1c1c,#242424);
-      background:         linear-gradient(#1c1c1c,#242424);
+      #gradient > .vertical(#1c1c1c,#242424);
       box-shadow: inset 0 1px 0 #242424;
       outline: none;
     }
@@ -268,11 +267,11 @@ header .keyboard a,header .cssrefresh a {
 
 /*  Try to separate out Joyride CSS*/
 .joyride-tip-guide {
-  background: #DEDEDE!important;
-  color: #333!important;
-  top: 60px!important;
-  text-shadow:none!important;
-  box-shadow:0 0 4px #666;
+  background: #DEDEDE !important;
+  color: #333 !important;
+  top: 60px !important;
+  text-shadow: none !important;
+  box-shadow: 0 0 4px #666;
 
   .joyride-nub.top {
     border-color: transparent transparent #DEDEDE !important;
@@ -298,11 +297,11 @@ body .joyride-close-tip:hover, .joyride-close-tip:focus {
 }
 
 #resize-bar-body #wrapper {
-  height:99%;
+  height: 99%;
 }
 
 #resize-bar-body section {
-  overflow-y:hidden;
+  overflow-y: hidden;
 }
 
 // IE classes -- demo only, since the `.ie10` class will be added by JS by this component only

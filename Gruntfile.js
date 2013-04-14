@@ -58,13 +58,14 @@ module.exports = function(grunt) {
         },
 
         watch: {
-            // scripts: {
-            //     files: ['<%= jshint.files %>'],
-            //     tasks: ['jshint'],
-            //     options: {
-            //         interrupt: true
-            //     }
-            // },
+            scripts: {
+                // files: ['<%= jshint.files %>'], //TODO: Why doesn't this work?
+                files: ['js/excelsior/excelsior.js', 'js/excelsior/off-canvas.js', 'js/excelsior/respCharts.js', 'js/excelsior/responsive-tables.js', 'js/site.js'],
+                tasks: ['jshint'],
+                options: {
+                    interrupt: true
+                }
+            },
             src: {
                 files: ["less/excelsior.less", "less/off-canvas.less", "less/excelsior/*.less", "less/excelsior/components/*.less"],
                 tasks: ['less']

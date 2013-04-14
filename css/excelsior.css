@@ -5762,6 +5762,7 @@ table tfoot tr td {
 .f-dropdown.large {
   max-width: 800px;
 }
+/* Ugh, is there a better way to handle these next two? */
 body {
   font-family: "SourceSansPro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 }
@@ -5916,6 +5917,7 @@ ul.f-dropdown li {
 .sub-nav dt:not(.active) a:hover,
 .sub-nav dd:not(.active) a:hover {
   border-radius: 1000px;
+  background-clip: padding-box;
   background: #999;
   color: #fff;
 }
@@ -6524,6 +6526,7 @@ table {
   border-collapse: separate;
   border-left: 0;
   border-radius: 4px;
+  background-clip: padding-box;
 }
 thead:first-child tr:first-child th,
 thead:first-child tr:first-child td {
@@ -6815,6 +6818,7 @@ button.button {
   padding: 11px 19px;
   font-size: 17.5px;
   border-radius: 6px;
+  background-clip: padding-box;
 }
 .button.large [class^="icon-"],
 .button.large [class*=" icon-"] {
@@ -6824,6 +6828,7 @@ button.button {
   padding: 2px 10px;
   font-size: 11.9px;
   border-radius: 3px;
+  background-clip: padding-box;
 }
 .button.small [class^="icon-"],
 .button.small [class*=" icon-"] {
@@ -6837,6 +6842,7 @@ button.button {
   padding: 0 6px;
   font-size: 10.5px;
   border-radius: 3px;
+  background-clip: padding-box;
 }
 .button-block {
   display: block;
@@ -7100,6 +7106,7 @@ button.close {
   border: 1px solid #cccccc;
   border-bottom-color: #b3b3b3;
   border-radius: 4px;
+  background-clip: padding-box;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
   font-family: "SourceSansPro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal !important;
@@ -7177,6 +7184,7 @@ input[type="tel"],
 input[type="color"] {
   color: #555555;
   border-radius: 4px;
+  background-clip: padding-box;
   vertical-align: middle;
 }
 textarea {
@@ -7221,18 +7229,52 @@ input[type="color"]:focus,
 .uneditable-input:focus {
   border-color: rgba(82, 168, 236, 0.8);
   outline: 0;
-  outline: thin dotted \9;
-  /* IE6-9 */
-
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+.ie9 textarea:focus,
+.lt-ie9 textarea:focus,
+.ie9 input[type="text"]:focus,
+.lt-ie9 input[type="text"]:focus,
+.ie9 input[type="password"]:focus,
+.lt-ie9 input[type="password"]:focus,
+.ie9 input[type="datetime"]:focus,
+.lt-ie9 input[type="datetime"]:focus,
+.ie9 input[type="datetime-local"]:focus,
+.lt-ie9 input[type="datetime-local"]:focus,
+.ie9 input[type="date"]:focus,
+.lt-ie9 input[type="date"]:focus,
+.ie9 input[type="month"]:focus,
+.lt-ie9 input[type="month"]:focus,
+.ie9 input[type="time"]:focus,
+.lt-ie9 input[type="time"]:focus,
+.ie9 input[type="week"]:focus,
+.lt-ie9 input[type="week"]:focus,
+.ie9 input[type="number"]:focus,
+.lt-ie9 input[type="number"]:focus,
+.ie9 input[type="email"]:focus,
+.lt-ie9 input[type="email"]:focus,
+.ie9 input[type="url"]:focus,
+.lt-ie9 input[type="url"]:focus,
+.ie9 input[type="search"]:focus,
+.lt-ie9 input[type="search"]:focus,
+.ie9 input[type="tel"]:focus,
+.lt-ie9 input[type="tel"]:focus,
+.ie9 input[type="color"]:focus,
+.lt-ie9 input[type="color"]:focus,
+.ie9 .uneditable-input:focus,
+.lt-ie9 .uneditable-input:focus {
+  outline: thin dotted;
 }
 input[type="radio"],
 input[type="checkbox"] {
   margin: 4px 0 0;
-  margin-top: 1px \9;
-  /* IE8-9 */
-
   line-height: normal;
+}
+.ie9 input[type="radio"],
+.lt-ie9 input[type="radio"],
+.ie9 input[type="checkbox"],
+.lt-ie9 input[type="checkbox"] {
+  margin-top: 1px;
 }
 input[type="file"],
 input[type="image"],
@@ -7436,6 +7478,7 @@ select:focus:invalid:focus {
   margin-bottom: 0;
   vertical-align: top;
   border-radius: 0 4px 4px 0;
+  background-clip: padding-box;
 }
 .input-append input:focus,
 .input-prepend input:focus,
@@ -7468,6 +7511,7 @@ select:focus:invalid:focus {
 .input-prepend .btn-group > .dropdown-toggle {
   vertical-align: top;
   border-radius: 0;
+  background-clip: padding-box;
 }
 .input-append .active,
 .input-prepend .active {
@@ -7481,16 +7525,19 @@ select:focus:invalid:focus {
 .input-prepend .add-on:first-child,
 .input-prepend .btn:first-child {
   border-radius: 4px 0 0 4px;
+  background-clip: padding-box;
 }
 .input-append input,
 .input-append select,
 .input-append .uneditable-input {
   border-radius: 4px 0 0 4px;
+  background-clip: padding-box;
 }
 .input-append input + .btn-group .btn:last-child,
 .input-append select + .btn-group .btn:last-child,
 .input-append .uneditable-input + .btn-group .btn:last-child {
   border-radius: 0 4px 4px 0;
+  background-clip: padding-box;
 }
 .input-append .add-on,
 .input-append .btn,
@@ -7501,6 +7548,7 @@ select:focus:invalid:focus {
 .input-append .btn:last-child,
 .input-append .btn-group:last-child > .dropdown-toggle {
   border-radius: 0 4px 4px 0;
+  background-clip: padding-box;
 }
 .input-prepend.input-append input,
 .input-prepend.input-append select,
@@ -7511,16 +7559,19 @@ select:focus:invalid:focus {
 .input-prepend.input-append select + .btn-group .btn,
 .input-prepend.input-append .uneditable-input + .btn-group .btn {
   border-radius: 0 4px 4px 0;
+  background-clip: padding-box;
 }
 .input-prepend.input-append .add-on:first-child,
 .input-prepend.input-append .btn:first-child {
   margin-right: -1px;
   border-radius: 4px 0 0 4px;
+  background-clip: padding-box;
 }
 .input-prepend.input-append .add-on:last-child,
 .input-prepend.input-append .btn:last-child {
   margin-left: -1px;
   border-radius: 0 4px 4px 0;
+  background-clip: padding-box;
 }
 .input-prepend.input-append .btn-group:first-child {
   margin-left: 0;
@@ -7559,8 +7610,8 @@ select:focus:invalid:focus {
   height: 100%;
   margin: 0 auto;
   background-color: #FFF;
-  -webkit-transition: height 1250ms ease,width 1250ms ease,margin 1250ms ease;
-  transition: height 1250ms ease,width 1250ms ease,margin 1250ms ease;
+  -webkit-transition: height 1250ms ease, width 1250ms ease, margin 1250ms ease;
+  transition: height 1250ms ease, width 1250ms ease, margin 1250ms ease;
   box-shadow: 0 0 12px 1px #000;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -7619,8 +7670,10 @@ select:focus:invalid:focus {
   padding-bottom: 307px;
 }
 body > header {
-  background: -webkit-linear-gradient(rgba(52, 52, 52, 0.75), rgba(36, 36, 36, 0.75));
-  background: linear-gradient(rgba(52, 52, 52, 0.75), rgba(36, 36, 36, 0.75));
+  background-color: rgba(46, 46, 46, 0.75);
+  background-image: -webkit-linear-gradient(top, rgba(52, 52, 52, 0.75), rgba(36, 36, 36, 0.75));
+  background-image: linear-gradient(to bottom, rgba(52, 52, 52, 0.75), rgba(36, 36, 36, 0.75));
+  background-repeat: repeat-x;
   box-shadow: inset 0 1px 0 #5f6164, inset 0 -1px 0 #2e2f2f, 0 1px 3px rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
@@ -7639,12 +7692,17 @@ body > section {
   overflow-y: scroll;
 }
 #size {
+  display: block;
+  float: left;
   -webkit-transition: padding 240ms ease;
   transition: padding 240ms ease;
-  background-image: -webkit-linear-gradient(#202021, #222223);
-  background-image: linear-gradient(#202021, #222223);
+  background-color: #212122;
+  background-image: -webkit-linear-gradient(top, #202021, #222223);
+  background-image: linear-gradient(to bottom, #202021, #222223);
+  background-repeat: repeat-x;
   box-shadow: 0 1px 0 #363738;
   border-radius: 4px;
+  background-clip: padding-box;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   color: #EEE;
@@ -7653,8 +7711,6 @@ body > section {
   padding: 9px 12px 7px;
   margin: 9px 0 0 8px;
   min-width: 80px;
-  display: block;
-  float: left;
   font-size: 14px;
   height: 32px;
 }
@@ -7666,24 +7722,28 @@ body > section {
 }
 header .keyboard,
 .cssrefresh {
-  border-radius: 4px;
-  color: #EEE;
   position: absolute;
-  z-index: 1;
   top: 8px;
   right: 8px;
+  color: #EEE;
   border: 1px solid #363738;
+  border-radius: 4px;
+  background-clip: padding-box;
+  z-index: 1;
 }
 header .keyboard a,
 .cssrefresh a {
-  background: -webkit-linear-gradient(#343434, #242424);
-  background: linear-gradient(#343434, #242424);
-  box-shadow: inset 0 1px 0 #3c3c3c;
-  border-radius: 4px;
-  text-decoration: none;
-  border: 1px solid #040404;
   float: left;
   display: block;
+  background-color: #2e2e2e;
+  background-image: -webkit-linear-gradient(top, #343434, #242424);
+  background-image: linear-gradient(to bottom, #343434, #242424);
+  background-repeat: repeat-x;
+  box-shadow: inset 0 1px 0 #3c3c3c;
+  border-radius: 4px;
+  background-clip: padding-box;
+  text-decoration: none;
+  border: 1px solid #040404;
   width: 30px;
   height: 30px;
   outline: none;
@@ -7693,15 +7753,19 @@ header .keyboard a,
 }
 header .keyboard a:hover,
 .cssrefresh a:hover {
-  background: -webkit-linear-gradient(#313131, #242424);
-  background: linear-gradient(#313131, #242424);
+  background-color: #2c2c2c;
+  background-image: -webkit-linear-gradient(top, #313131, #242424);
+  background-image: linear-gradient(to bottom, #313131, #242424);
+  background-repeat: repeat-x;
 }
 header .keyboard a.active,
 header .keyboard a:active,
 .cssrefresh a.active,
 .cssrefresh a:active {
-  background: -webkit-linear-gradient(#1c1c1c, #242424);
-  background: linear-gradient(#1c1c1c, #242424);
+  background-color: #1f1f1f;
+  background-image: -webkit-linear-gradient(top, #1c1c1c, #242424);
+  background-image: linear-gradient(to bottom, #1c1c1c, #242424);
+  background-repeat: repeat-x;
   box-shadow: inset 0 1px 0 #242424;
   outline: none;
 }
@@ -7725,6 +7789,7 @@ header .cssrefresh a {
 }
 #devices {
   border-radius: 4px;
+  background-clip: padding-box;
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
   position: absolute;
@@ -7735,8 +7800,10 @@ header .cssrefresh a {
   border: 1px solid #363738;
 }
 #devices a {
-  background: -webkit-linear-gradient(#313131, #242424);
-  background: linear-gradient(#313131, #242424);
+  background-color: #2c2c2c;
+  background-image: -webkit-linear-gradient(top, #313131, #242424);
+  background-image: linear-gradient(to bottom, #313131, #242424);
+  background-repeat: repeat-x;
   box-shadow: inset 0 1px 0 #3c3c3c;
   text-decoration: none;
   border: 1px solid #040404;
@@ -7749,20 +7816,26 @@ header .cssrefresh a {
 }
 #devices a:first-of-type {
   border-radius: 4px 0 0 4px;
+  background-clip: padding-box;
 }
 #devices a:last-of-type {
   border-radius: 0 4px 4px 0;
+  background-clip: padding-box;
   border-right-width: 1px;
   width: 80px;
 }
 #devices a:hover {
-  background: -webkit-linear-gradient(#2c2c2c, #242424);
-  background: linear-gradient(#2c2c2c, #242424);
+  background-color: #292929;
+  background-image: -webkit-linear-gradient(top, #2c2c2c, #242424);
+  background-image: linear-gradient(to bottom, #2c2c2c, #242424);
+  background-repeat: repeat-x;
 }
 #devices a.active,
 #devices a:active {
-  background: -webkit-linear-gradient(#1c1c1c, #242424);
-  background: linear-gradient(#1c1c1c, #242424);
+  background-color: #1f1f1f;
+  background-image: -webkit-linear-gradient(top, #1c1c1c, #242424);
+  background-image: linear-gradient(to bottom, #1c1c1c, #242424);
+  background-repeat: repeat-x;
   box-shadow: inset 0 1px 0 #242424;
   outline: none;
 }
@@ -7812,10 +7885,10 @@ header .cssrefresh a {
 }
 /*  Try to separate out Joyride CSS*/
 .joyride-tip-guide {
-  background: #DEDEDE!important;
-  color: #333!important;
-  top: 60px!important;
-  text-shadow: none!important;
+  background: #DEDEDE !important;
+  color: #333 !important;
+  top: 60px !important;
+  text-shadow: none !important;
   box-shadow: 0 0 4px #666;
   /* Typography */
 
@@ -8150,6 +8223,7 @@ a:focus {
   clip: rect(0, 0, 0, 0);
   background: rgba(0, 0, 0, 0.5);
   border-radius: 3px;
+  background-clip: padding-box;
   border: 1px solid #FFF;
   display: inline-block;
   padding: 5px;
@@ -8164,6 +8238,7 @@ a:focus {
 .gov-pull-down-container {
   background: #036;
   border-radius: 0 0 5px 5px;
+  background-clip: padding-box;
   box-shadow: 1px 0px 2px #000;
   height: 40px;
   width: 44px;
@@ -8189,12 +8264,14 @@ a:focus {
   transition: top 0.2s ease;
 }
 .gov-bar {
-  background: #036;
-  background-image: -webkit-linear-gradient(#002851, #003366);
-  background-image: linear-gradient(#002851, #003366);
   position: absolute;
   top: 0;
   height: 0;
+  background: #036;
+  background-color: #002c59;
+  background-image: -webkit-linear-gradient(top, #002851, #003366);
+  background-image: linear-gradient(to bottom, #002851, #003366);
+  background-repeat: repeat-x;
   overflow: hidden;
   -webkit-transition: height 0.2s ease;
   transition: height 0.2s ease;
@@ -8248,6 +8325,7 @@ a:focus {
 }
 .gov-bar input {
   border-radius: 4px;
+  background-clip: padding-box;
   -webkit-appearance: none;
   border: 1px solid #666;
   padding: 0;
@@ -8257,6 +8335,7 @@ a:focus {
 }
 .gov-bar input[type=search] {
   border-radius: 5px 0 0 5px;
+  background-clip: padding-box;
   padding-left: 10px;
   width: 70%;
   color: #333;
@@ -8266,10 +8345,13 @@ a:focus {
 }
 .gov-bar input[type=submit] {
   background-color: #505050;
-  background-image: -webkit-linear-gradient(#999999, #505050);
-  background-image: linear-gradient(#999999, #505050);
+  background-color: #7c7c7c;
+  background-image: -webkit-linear-gradient(top, #999999, #505050);
+  background-image: linear-gradient(to bottom, #999999, #505050);
+  background-repeat: repeat-x;
   background: #505050;
   border-radius: 0 5px 5px 0;
+  background-clip: padding-box;
   border: 1px solid #666;
   border-left: 0;
   color: #FFF;
@@ -8285,8 +8367,10 @@ a:focus {
 /* Site Header */
 .site-bar {
   background: #454545;
-  background-image: -webkit-linear-gradient(#5f5f5f, #282828);
-  background-image: linear-gradient(#5f5f5f, #282828);
+  background-color: #494949;
+  background-image: -webkit-linear-gradient(top, #5f5f5f, #282828);
+  background-image: linear-gradient(to bottom, #5f5f5f, #282828);
+  background-repeat: repeat-x;
   height: 48px;
   position: absolute;
   top: 0;
@@ -8350,6 +8434,7 @@ a:focus {
 .site-bar .site-functions .site-search input[type=search] {
   float: left;
   border-radius: 5px 0 0 5px;
+  background-clip: padding-box;
   padding: 1px 0 0 6px;
   width: 86%;
   border-color: #999;
@@ -8360,16 +8445,19 @@ a:focus {
 .site-bar .site-functions .site-button {
   float: left;
   background-color: #505050;
-  background-image: -webkit-linear-gradient(#999999, #505050);
-  background-image: linear-gradient(#999999, #505050);
+  background-color: #7c7c7c;
+  background-image: -webkit-linear-gradient(top, #999999, #505050);
+  background-image: linear-gradient(to bottom, #999999, #505050);
+  background-repeat: repeat-x;
   border-radius: 0 5px 5px 0;
+  background-clip: padding-box;
   border-color: #999;
   width: 14%;
   height: 100%;
 }
 .site-bar .site-functions .site-search input[type=submit] {
   background: url(../images/search.svg) no-repeat center center transparent;
-  background-size: 24px;
+  background-size: 24px 24px;
   border: 0;
   height: 100%;
   width: 100%;
@@ -8457,17 +8545,17 @@ a:focus {
 }
 .active-gov-bar .gov-pull-down {
   background: url(../images/close.svg) no-repeat 5px 7px transparent;
-  background-size: 28px;
+  background-size: 28px 28px;
 }
 /* Active Site Search */
 .active-site-search .site-bar .mobile-functions .mobile-icons.active {
   background: url(../images/close-x-gray.svg) no-repeat 10px 12px #ffffff;
-  background-size: 28px;
+  background-size: 28px 28px;
 }
 /* Active Menu */
 .active-site-menu .site-bar .mobile-functions .mobile-icons.active {
   background: url(../images/close.svg) no-repeat 10px 12px #333333;
-  background-size: 28px;
+  background-size: 28px 28px;
 }
 .active-site-search .site-functions .site-search {
   height: 53px;
@@ -8550,8 +8638,10 @@ a:focus {
   }
   /* Site Header */
   .site-bar {
-    background-image: -webkit-linear-gradient(#363636, #282828);
-    background-image: linear-gradient(#363636, #282828);
+    background-color: #303030;
+    background-image: -webkit-linear-gradient(top, #363636, #282828);
+    background-image: linear-gradient(to bottom, #363636, #282828);
+    background-repeat: repeat-x;
     height: 90px;
     position: relative;
     width: 100%;
@@ -8696,6 +8786,7 @@ a:focus {
   .global-nav,
   .global-nav .nav-container {
     border-radius: 5px;
+    background-clip: padding-box;
   }
 }
 /* Large Displays: 1280px - 1440px */
@@ -8783,6 +8874,7 @@ a:focus {
 .news {
   margin: 0.3em 0.8em;
   border-radius: 8px;
+  background-clip: padding-box;
   background: #5082b3;
 }
 .news strong {
