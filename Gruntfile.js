@@ -24,7 +24,6 @@ module.exports = function(grunt) {
         less: {
             development: {
                 options: {
-                    yuicompress: true
                 },
                 files: {
                     "css/excelsior.css": "less/excelsior.less",
@@ -44,6 +43,7 @@ module.exports = function(grunt) {
         },
 
         jshint: {
+            files: ['js/excelsior/excelsior.js', 'js/excelsior/off-canvas.js', 'js/excelsior/respCharts.js', 'js/excelsior/responsive-tables.js', 'js/site.js'],
             options: {
                 curly: true,
                 eqeqeq: true,
@@ -55,6 +55,11 @@ module.exports = function(grunt) {
                     EWF: true
                 }
             }
+        },
+
+        watch: {
+            files: ['<%= jshint.files %>'],
+            tasks: ['jshint']
         }
     });
 
@@ -62,10 +67,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default tasks
-    grunt.registerTask('default', ['less']);
-    grunt.registerTask('default', ['jshint']);
-    grunt.registerTask('default', ['uglify']);
-
+    grunt.registerTask('default', ['less', 'jshint','uglify']);
 };
