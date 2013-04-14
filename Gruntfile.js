@@ -66,7 +66,7 @@ module.exports = function(grunt) {
             //     }
             // },
             src: {
-                files: ["less/excelsior.less", "less/off-canvas.less"],
+                files: ["less/excelsior.less", "less/off-canvas.less", "less/excelsior/*.less", "less/excelsior/components/*.less"],
                 tasks: ['less']
             }
         }
