@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 
         uglify: {
             options: {
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+                banner: '/*! <%= pkg.name %> */\n',
                 mangle: false, // Don't change variable and function names
                 report: 'gzip'  // Print size savings to the command line
             },
