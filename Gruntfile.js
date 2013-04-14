@@ -23,8 +23,6 @@ module.exports = function(grunt) {
 
         less: {
             development: {
-                options: {
-                },
                 files: {
                     "css/excelsior.css": "less/excelsior.less",
                     "css/off-canvas.css": "less/off-canvas.less"
