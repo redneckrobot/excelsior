@@ -58,7 +58,7 @@ $(document).ready(function(){EWF.init();});
     // (c) 2010-2012 Thomas Fuchs
     // Zepto.js may be freely distributed under the MIT license.
     // Modified to work with jQuery 1.9.1 by NYS-ITS
-    ;(function(){
+    (function(){
       var touch = {},
           touchTimeout, tapTimeout, swipeTimeout,
           longTapDelay = 750, longTapTimeout;
