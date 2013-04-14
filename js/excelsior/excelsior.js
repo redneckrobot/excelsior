@@ -1,49 +1,47 @@
-/*global Modernizr:false */
-
 /**
  * Namespace
  */
 var EWF = {
-  activateEventName: 'click',
-  ua: navigator.userAgent,
-  iOS: false,
-  $body: null,
-  $html: null,
-  $window: null
+    activateEventName: 'click',
+    ua: navigator.userAgent,
+    iOS: false,
+    $body: null,
+    $html: null,
+    $window: null
 };
 
 /**
  * Init methods
  */
 EWF.init = function _init () {
-  var screenMax;
+    var screenMax;
 
-  // Init code here...
-  EWF.$body = $('body');
-  EWF.$html = $('html');
-  EWF.$window = $(window);
+    // Init code here...
+    EWF.$body = $('body');
+    EWF.$html = $('html');
+    EWF.$window = $(window);
 
-  // Monitor-size classes
-  screenMax = Math.max(screen.width, screen.height);
-  if (screenMax <= 480) {
-    EWF.$html.addClass('screen-max-mini');
-  }
-  else if (screenMax > 480 && screenMax < 768) {
-    // Only Foundation's `small-` classes will ever take effect
-    EWF.$html.addClass('screen-max-medium');
-  }
-  else if (screenMax >= 768) {
-    // Foundation's `large-` classes may take effect
-    EWF.$html.addClass('screen-max-large');
-  }
+    // Monitor-size classes
+    screenMax = Math.max(screen.width, screen.height);
+    if (screenMax <= 480) {
+        EWF.$html.addClass('screen-max-mini');
+    }
+    else if (screenMax > 480 && screenMax < 768) {
+        // Only Foundation's `small-` classes will ever take effect
+        EWF.$html.addClass('screen-max-medium');
+    }
+    else if (screenMax >= 768) {
+        // Foundation's `large-` classes may take effect
+        EWF.$html.addClass('screen-max-large');
+    }
 
-  // Preload assets
-  // EWF.preloader.add('<img src="/excelsior-web-framework/images/close.svg">');
-  // EWF.preloader.add('<img src="/excelsior-web-framework/images/close-x-gray.svg">');
-  // EWF.preloader.add('<img src="/excelsior-web-framework/images/hamburger-no-dots.svg">');
-  // EWF.preloader.add('<img src="/excelsior-web-framework/images/nys-small.png">');
-  // EWF.preloader.add('<img src="/excelsior-web-framework/images/nys-banner-img.png">');
-  EWF.preloader.init();
+    // Preload assets
+    EWF.preloader.add('<img src="/excelsior-web-framework/images/close.svg">');
+    EWF.preloader.add('<img src="/excelsior-web-framework/images/close-x-gray.svg">');
+    EWF.preloader.add('<img src="/excelsior-web-framework/images/hamburger-no-dots.svg">');
+    EWF.preloader.add('<img src="/excelsior-web-framework/images/nys-small.png">');
+    EWF.preloader.add('<img src="/excelsior-web-framework/images/nys-banner-img.png">');
+    EWF.preloader.init();
 };
 
 $(document).ready(function(){EWF.init();});
@@ -358,41 +356,41 @@ $(document).ready(function(){
  * Asset Preloader
  */
 EWF.preloader = {
-  container: null, // The container <div>
-  assets: []       // Assets to be preloaded (HTML strings); this can be prepopulated
+    container: null, // The container <div>
+    assets: []       // Assets to be preloaded (HTML strings); this can be prepopulated
 };
 
 // Creates an off-screen container for preloaded assets and adds any assets present in the queue
 // Should be called at document.ready
 EWF.preloader.init = function _EWF_preloader_init () {
-  // Create container
-  EWF.preloader.container = document.createElement('div');
-  EWF.preloader.container.className = 'hide-off-screen';
-  document.body.appendChild(EWF.preloader.container);
+    // Create container
+    EWF.preloader.container = document.createElement('div');
+    EWF.preloader.container.className = 'hide-off-screen';
+    document.body.appendChild(EWF.preloader.container);
 
-  // Load anything that's already in the queue
-  EWF.preloader.assets.forEach(function(i) {
-    EWF.preloader.add(i);
-  });
+    // Load anything that's already in the queue
+    EWF.preloader.assets.forEach(function(i) {
+        EWF.preloader.add(i);
+    });
 
-  // Empty the queue
-  EWF.preloader.assets = [];
+    // Empty the queue
+    EWF.preloader.assets = [];
 };
 
 // Add an asset to the preload container
 // Argument is an HTML string to be added to the page
 // May be called before or after preload.setup() has run
 EWF.preloader.add = function _EWF_preloader_add (html) {
-  if (!html || typeof html !== 'string') { return false; }
+    if (!html || typeof html !== 'string') { return false; }
 
-  // If the container has already been set up, add this asset immediately
-  if (EWF.preloader.container) {
-    EWF.preloader.container.innerHTML += html;
-  }
-  // Otherwise, queue it to load when setup() is run
-  else {
-    EWF.preloader.assets.push(html);
-  }
+    // If the container has already been set up, add this asset immediately
+    if (EWF.preloader.container) {
+        EWF.preloader.container.innerHTML += html;
+    }
+    // Otherwise, queue it to load when setup() is run
+    else {
+        EWF.preloader.assets.push(html);
+    }
 };
 
 /**
