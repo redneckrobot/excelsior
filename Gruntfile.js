@@ -58,12 +58,16 @@ module.exports = function(grunt) {
         },
 
         watch: {
-            scripts: {
-                files: ['<%= jshint.files %>'],
-                tasks: ['jshint'],
-                options: {
-                    interrupt: true
-                }
+            // scripts: {
+            //     files: ['<%= jshint.files %>'],
+            //     tasks: ['jshint'],
+            //     options: {
+            //         interrupt: true
+            //     }
+            // },
+            src: {
+                files: ["less/excelsior.less", "less/off-canvas.less"],
+                tasks: ['less']
             }
         }
     });

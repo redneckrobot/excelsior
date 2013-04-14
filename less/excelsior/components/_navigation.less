@@ -46,8 +46,7 @@
   padding: 0 4px 4px 4px;
   position: relative;
   z-index: 35;
-  -webkit-transition: top 0.2s ease;
-          transition: top 0.2s ease;
+  .transition(top 0.2s ease);
 }
 
 .gov-pull-down {
@@ -61,8 +60,7 @@
   text-indent: -9999px;
   top: 0px;
   z-index: 50;
-  -webkit-transition: top 0.2s ease;
-          transition: top 0.2s ease;
+  .transition(top 0.2s ease);
 }
 
 .gov-bar {
@@ -73,8 +71,7 @@
   top: 0;
   height: 0;
   overflow: hidden;
-  -webkit-transition: height 0.2s ease;
-  transition: height 0.2s ease;
+  .transition(height 0.2s ease);
   width: 100%;
   z-index: 40;
 
@@ -146,8 +143,7 @@
       padding-left: 10px;
       width: 70%;
       color: #333;
-      -moz-box-sizing: border-box;
-           box-sizing: border-box;
+      .box-sizing(border-box);
       height: 37px;
     }
 
@@ -184,8 +180,7 @@
   top: 0;
   width: 100%;
   z-index: 30;
-  -webkit-transition: top 0.2s ease;
-          transition: top 0.2s ease;
+  .transition(top 0.2s ease);
 }
 
 .site-bar a.site-logo {
@@ -214,8 +209,7 @@
   position: absolute;
   width: 100%;
   z-index: 15;
-  -webkit-transition: height 0.2s ease;
-          transition: height 0.2s ease;
+  .transition(height 0.2s ease);
 }
 
 .site-bar .site-functions .site-search .search-container {
@@ -254,8 +248,7 @@
   width: 86%;
   border-color: #999;
   color: #333;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  .box-sizing(border-box);
 }
 
 .site-bar .site-functions .site-button {
@@ -323,8 +316,7 @@
   border-bottom: 1px solid #505050;
   height: 0;
   overflow: hidden;
-  -webkit-transition: height 0.2s ease;
-          transition: height 0.2s ease;
+  .transition(height 0.2s ease);
 }
 
 .global-nav ul {
@@ -410,8 +402,7 @@
     background: #036;
     border-bottom: 1px solid #555;
     position: relative;
-    -webkit-transition: height 0s ease;
-            transition: height 0s ease;
+    .transition(height 0s ease);
 
     input[type=search] {
       height: 25px;
@@ -503,8 +494,7 @@
   .site-bar,
   .active-gov-bar .site-bar {
     top: 0;
-    -webkit-transition: top 0s ease;
-            transition: top 0s ease;
+    .transition(top 0s ease);
     z-index: 0;
   }
 

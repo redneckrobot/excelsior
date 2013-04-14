@@ -321,18 +321,14 @@ section .title a,
   font-family: @font-icons;
   font-style: normal;
   font-weight: normal;
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
+  .rotate(90deg);
 }
 
 .accordion section.auto.active .title:after,
 .accordion section.section.active .title:after {
   top: 8px;
   right: 18px;
-  -webkit-transform: rotate(270deg);
-      -ms-transform: rotate(270deg);
-          transform: rotate(270deg);
+  .rotate(270deg);
 }
 
 @media screen and (max-width: @lt-medium-screen) {
@@ -351,18 +347,14 @@ section .title a,
     font-family: @font-icons;
     font-style: normal;
     font-weight: normal;
-    -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-            transform: rotate(90deg);
+    .rotate(90deg);
   }
 
   .auto section.auto.active .title:after,
   .auto section.section.active .title:after {
     top: 6px;
     right: 18px;
-    -webkit-transform: rotate(270deg);
-        -ms-transform: rotate(270deg);
-            transform: rotate(270deg);
+    .rotate(270deg);
   }
 }
 

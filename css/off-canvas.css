@@ -147,6 +147,19 @@
     left: auto;
   }
 }
+@media only screen and (min-width: 48em) {
+  .off-canvas.active-site-menu .global-nav .icon-right-open:before {
+    position: relative;
+    right: auto;
+  }
+  .off-canvas.active-site-menu .page {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  .off-canvas.active-site-menu .footer {
+    left: auto;
+  }
+}
 @media only screen and (min-width: 60em) {
   .global-nav .nav-container {
     border-radius: 4px;
