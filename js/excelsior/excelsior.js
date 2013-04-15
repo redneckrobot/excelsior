@@ -13,7 +13,8 @@ var EWF = {
     iOS: false,
     $body: null,
     $html: null,
-    $window: null
+    $window: null,
+    imagePath: 'images/' // Relative to project root
 };
 
 /**
@@ -42,11 +43,14 @@ EWF.init = function _init () {
     }
 
     // Preload assets
-    EWF.preloader.add('<img src="/excelsior-web-framework/images/close.svg">');
-    EWF.preloader.add('<img src="/excelsior-web-framework/images/close-x-gray.svg">');
-    EWF.preloader.add('<img src="/excelsior-web-framework/images/hamburger-no-dots.svg">');
-    EWF.preloader.add('<img src="/excelsior-web-framework/images/nys-small.png">');
-    EWF.preloader.add('<img src="/excelsior-web-framework/images/nys-banner-img.png">');
+
+    // Images referenced by CSS that aren't visible at page load but will likely appear in normal usage
+    EWF.preloader.add('<img src="' + EWF.imagePath + 'close.svg" alt="">');
+    EWF.preloader.add('<img src="' + EWF.imagePath + 'close-x-gray.svg" alt="">');
+    EWF.preloader.add('<img src="' + EWF.imagePath + 'hamburger-no-dots.svg" alt="">');
+    EWF.preloader.add('<img src="' + EWF.imagePath + 'nys-small.png" alt="">');
+    EWF.preloader.add('<img src="' + EWF.imagePath + 'nys-banner-img.png" alt="">');
+
     EWF.preloader.init();
 };
 
