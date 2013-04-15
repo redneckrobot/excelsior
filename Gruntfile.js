@@ -25,7 +25,8 @@ module.exports = function(grunt) {
             development: {
                 files: {
                     "css/excelsior.css": "less/excelsior.less",
-                    "css/off-canvas.css": "less/off-canvas.less"
+                    "css/off-canvas.css": "less/off-canvas.less",
+                    "css/site.css": "less/site.less"
                 }
             },
             production: {
@@ -35,7 +36,7 @@ module.exports = function(grunt) {
                 files: {
                     "css/excelsior.min.css": "less/excelsior.less",
                     "css/off-canvas.min.css": "less/off-canvas.less",
-                    "css/site.min.css": "css/site.css"
+                    "css/site.min.css": "less/site.less"
                 }
             }
         },
@@ -65,7 +66,7 @@ module.exports = function(grunt) {
                 }
             },
             src: {
-                files: ["less/excelsior.less", "less/off-canvas.less", "less/excelsior/*.less", "less/excelsior/components/*.less"],
+                files: ["less/excelsior.less", "less/off-canvas.less", "less/site.less", "less/excelsior/*.less", "less/excelsior/components/*.less"],
                 tasks: ['less']
             }
         }
