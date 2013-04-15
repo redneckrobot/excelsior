@@ -1,5 +1,11 @@
 /**
- * Namespace
+ * @fileOverview Excelsior Framework common functions
+ * @author <a href="https://github.com/nys-its/excelsior-web-framework">NYS-ITS</a>
+ * @version 0.1.0
+ */
+
+/**
+ * @namespace
  */
 var EWF = {
     activateEventName: 'click',
@@ -11,12 +17,12 @@ var EWF = {
 };
 
 /**
- * Init methods
+ * Main initialization method
  */
 EWF.init = function _init () {
     var screenMax;
 
-    // Init code here...
+    // Cache often-used queries
     EWF.$body = $('body');
     EWF.$html = $('html');
     EWF.$window = $(window);
@@ -238,7 +244,7 @@ $(document).ready(function(){EWF.init();});
 }());
 
 /**
- * Navigation
+ * Navigation Menu Setup
  */
 $(document).ready(function(){
 
@@ -263,11 +269,14 @@ $(document).ready(function(){
 
     // Active attribute class
     var $clickedElm = $(this),
-      activeClass = $clickedElm.attr('data-active'),
-      $activeElm = $('.active'),
-      selectedClass = 'active';
+        activeClass = $clickedElm.attr('data-active'),
+        $activeElm = $('.active'),
+        selectedClass = 'active';
 
-    // Function is used to close a pre-existing active items.
+    /**
+     * Closes pre-existing active items
+     * @param {object} active The active element
+     */
     function removeOtherActive(active) {
 
       // Get the old active class to remove from the body tag
@@ -281,7 +290,10 @@ $(document).ready(function(){
 
     }
 
-    // Function for special functionality determined by the data-active value
+    /**
+     * Special functionality determined by the data-active value
+     * @param {object} activeElm The active element
+     */
     function specialEvents(activeElm) {
       if (activeElm === 'active-site-search') {
         $('#site-search-box').focus();
@@ -353,15 +365,17 @@ $(document).ready(function(){
 });
 
 /**
- * Asset Preloader
+ * @namespace Asset Preloader
  */
 EWF.preloader = {
     container: null, // The container <div>
     assets: []       // Assets to be preloaded (HTML strings); this can be prepopulated
 };
 
-// Creates an off-screen container for preloaded assets and adds any assets present in the queue
-// Should be called at document.ready
+/**
+ * Creates an off-screen container for preloaded assets and adds any assets present in the queue.
+ * Should be called at document.ready
+ */
 EWF.preloader.init = function _EWF_preloader_init () {
     // Create container
     EWF.preloader.container = document.createElement('div');
@@ -377,9 +391,11 @@ EWF.preloader.init = function _EWF_preloader_init () {
     EWF.preloader.assets = [];
 };
 
-// Add an asset to the preload container
-// Argument is an HTML string to be added to the page
-// May be called before or after preload.setup() has run
+/**
+ * Adds an asset to the preload container
+ * May be called before or after preload.setup() has run
+ * @param {string} html HTML string to be added to the page
+ */
 EWF.preloader.add = function _EWF_preloader_add (html) {
     if (!html || typeof html !== 'string') { return false; }
 
@@ -397,5 +413,9 @@ EWF.preloader.add = function _EWF_preloader_add (html) {
  * Plugins
  */
 
-// Simple array-reversal plugin
-try { $.fn.reverse = [].reverse; } catch (e) { }
+try {
+    /**
+     * Simple array-reversal plugin
+     */
+    $.fn.reverse = [].reverse;
+} catch (e) { }
