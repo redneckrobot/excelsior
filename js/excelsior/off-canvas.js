@@ -73,7 +73,7 @@ $(document).ready(function() {
                 else {
                     // Menu is active
                     $subMenu.removeClass("active-menu");
-                    EWF.$body.removeClass($activeMenu.attr('data-active');
+                    EWF.$body.removeClass($activeMenu.attr('data-active'));
 
                     // Remove off-canvas menu text
                     $('#sub-menu-title').text("");
