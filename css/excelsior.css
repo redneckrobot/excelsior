@@ -6114,6 +6114,50 @@ section .title a:hover,
   .touch .orbit-bullets {
     display: none;
   }
+  .orbit-timer,
+  .orbit-slide-number {
+    display: none;
+  }
+}
+.touch .orbit-container .orbit-prev,
+.touch .orbit-container .orbit-next {
+  display: inherit;
+}
+.orbit-container .orbit-slide-number {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  color: #fff;
+}
+.orbit-container .orbit-slides-container .orbit-caption .hide-for-small,
+.orbit-container .orbit-slides-container .orbit-caption .hide-for-small a {
+  color: #aaa;
+}
+.orbit-bullets li {
+  background-color: #eee;
+  box-shadow: inset 0 1px 1px 1px #333;
+  cursor: pointer;
+  border: 0;
+}
+.orbit-bullets li.active {
+  background-color: #444;
+  box-shadow: inset 0 1px 1px 1px #111;
+}
+.orbit-container .orbit-timer .orbit-progress {
+  background: #eee;
+  height: 12px;
+}
+.orbit-container .orbit-timer > span {
+  top: 16px;
+  border: solid 4px #fff;
+  border-top: 0;
+  border-bottom: 0;
+}
+.orbit-container .orbit-timer.paused > span {
+  border-color: transparent transparent transparent #fff;
+  top: 16px;
+}
+.orbit-bullets {
+  display: none;
 }
 .clearing-blackout {
   top: 48px;
@@ -7877,9 +7921,7 @@ select:focus:invalid:focus {
   width: 70%;
   padding-right: 7%;
 }
-.li-head {
-  margin: 0;
-}
+.li-head,
 .li-sub {
   margin: 0;
 }
@@ -8488,6 +8530,40 @@ a:focus {
   .gov-bar {
     background: #036;
   }
+}
+/* gov widget */
+.govwidget {
+  width: 100%;
+  min-width: 240px;
+  max-width: 450px;
+  background-image: linear-gradient(bottom, #042f5a 20%, #0a4682 60%, #042f5a 82%);
+  background-image: -webkit-linear-gradient(bottom, #042f5a 20%, #0a4682 60%, #042f5a 82%);
+  border-radius: 4px;
+  text-align: center;
+}
+.govheading {
+  background: url(../prototypes/dta/images/stateseal.png) 0.3em 0.3em no-repeat;
+}
+.govheading a {
+  color: #fff;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-family: times new roman;
+  font-size: 120%;
+  text-shadow: 0.2em 0.2em 0.2em #333;
+  padding: 0.8em 0 0.4em 0;
+}
+.govheading span {
+  display: block;
+}
+.govbutton {
+  margin: 0 0.5em;
+}
+.govbutton a {
+  background: #002d56;
+  line-height: 0;
 }
 .sticky-header .gov-pull-down-container {
   position: fixed;
