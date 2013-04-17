@@ -24,3 +24,6 @@ _site
 sass
 stylesheets
 css
+
+# Grunt Build
+node_modules/*
