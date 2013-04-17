@@ -1,4 +1,4 @@
-![Excelsior Web Framework](images/excelsior-long-500.png "Excelsior Web Framework")
+![Excelsior Web Framework](https://raw.github.com/wiki/nys-its/excelsior/images/excelsior-long-500.png "Excelsior Web Framework")
 
 ## Excelsior Web Framework (EWF)
 
