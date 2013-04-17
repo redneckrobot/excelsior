@@ -22,3 +22,6 @@ Thumbs.db
 _site
 sass
 stylesheets
+
+# Grunt Build
+node_modules/*
