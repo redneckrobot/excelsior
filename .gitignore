@@ -25,4 +25,4 @@ sass
 stylesheets
 
 # Grunt Build
-node_modules/*
+node_modules
