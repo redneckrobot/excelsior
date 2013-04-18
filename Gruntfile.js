@@ -24,9 +24,9 @@ module.exports = function(grunt) {
         less: {
             development: {
                 files: {
-                    "css/excelsior.css": "less/excelsior.less",
-                    "css/off-canvas.css": "less/off-canvas.less",
-                    "css/site.css": "less/site.less"
+                    'css/excelsior.css': 'less/excelsior.less',
+                    'css/off-canvas.css': 'less/off-canvas.less',
+                    'css/site.css': 'less/site.less'
                 }
             },
             production: {
@@ -34,9 +34,9 @@ module.exports = function(grunt) {
                     yuicompress: true
                 },
                 files: {
-                    "css/excelsior.min.css": "less/excelsior.less",
-                    "css/off-canvas.min.css": "less/off-canvas.less",
-                    "css/site.min.css": "less/site.less"
+                    'css/excelsior.min.css': 'less/excelsior.less',
+                    'css/off-canvas.min.css': 'less/off-canvas.less',
+                    'css/site.min.css': 'less/site.less'
                 }
             }
         },
@@ -66,7 +66,7 @@ module.exports = function(grunt) {
                 }
             },
             src: {
-                files: ["less/excelsior.less", "less/off-canvas.less", "less/site.less", "less/excelsior/*.less", "less/excelsior/components/*.less"],
+                files: ['less/excelsior.less', 'less/off-canvas.less', 'less/site.less', 'less/excelsior/*.less', 'less/excelsior/components/*.less'],
                 tasks: ['less']
             }
         }
@@ -79,5 +79,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default tasks
-    grunt.registerTask('default', ['less', 'jshint','uglify']);
+    grunt.registerTask('default', ['less', 'jshint', 'uglify']);
 };
