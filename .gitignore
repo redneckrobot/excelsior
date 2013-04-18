@@ -12,6 +12,7 @@
 *.sublime-*
 *.rb
 
+
 # OS or Editor folders
 .DS_Store
 Thumbs.db

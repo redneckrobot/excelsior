@@ -402,10 +402,12 @@ section .title a,
   cursor: pointer;
   border: 0;
 }
+
 .orbit-bullets li.active {
   background-color: #444;
   box-shadow: inset 0 1px 1px 1px #111;
 }
+
 .orbit-bullets{
   display: none;
 }
@@ -413,10 +415,65 @@ section .title a,
 
 // Do not show bullets on touch
 @media only screen and (max-width: @lt-medium-screen) {
-  .touch {
-    .orbit-bullets { display: none; }
-  }
+    .touch {
+        .orbit-bullets { display: none; }
+    }
+    .orbit-timer,
+    .orbit-slide-number {
+        display:none;
+    }
 }
+
+.touch .orbit-container .orbit-prev,
+.touch .orbit-container .orbit-next {
+    display: inherit;
+}
+
+.orbit-container .orbit-slide-number {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  color: #fff;
+}
+
+.orbit-container .orbit-slides-container .orbit-caption .hide-for-small,
+.orbit-container .orbit-slides-container .orbit-caption .hide-for-small a{
+  color: #aaa;
+}
+
+.orbit-bullets li{
+  background-color: #eee;
+  box-shadow: inset 0 1px 1px 1px #333;
+  cursor: pointer;
+  border: 0;
+}
+
+.orbit-bullets li.active {
+  background-color: #444;
+  box-shadow: inset 0 1px 1px 1px #111;
+}
+
+.orbit-container .orbit-timer .orbit-progress{
+  background: #eee;
+  height: 12px;
+}
+
+.orbit-container .orbit-timer > span{
+  top: 16px;
+  border: solid 4px #fff;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.orbit-container .orbit-timer.paused > span{
+    border-color: transparent transparent transparent #fff;
+    top: 16px;
+}
+
+.orbit-bullets{
+    display: none;
+}
+
+
 
 // Clearing (Lightbox)
 
