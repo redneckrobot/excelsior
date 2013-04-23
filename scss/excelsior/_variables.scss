@@ -1,0 +1,18 @@
+// Fonts
+$font-sans-fallback: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$font-sans: "SourceSansPro", $font-sans-fallback;
+$font-sans-bold: "SourceSansProBold", $font-sans-fallback;
+$font-sans-italic: "SourceSansProItalic", $font-sans-fallback;
+$font-sans-bold-italic: "SourceSansProBoldItalic", $font-sans-fallback;
+$font-serif: "Merriweather", Georgia, serif;
+$font-icons: "Fontello";
+
+// Color
+
+$primary-color: #2ba6cb;
+$secondary-color: #e9e9e9;
+$alert-color: #c60f13;
+$success-color: #5da423;
+
+// Navigation
+$nav-bar-height: 48px;

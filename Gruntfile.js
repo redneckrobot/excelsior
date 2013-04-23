@@ -69,15 +69,52 @@ module.exports = function(grunt) {
                 files: ['less/excelsior.less', 'less/off-canvas.less', 'less/site.less', 'less/excelsior/*.less', 'less/excelsior/components/*.less'],
                 tasks: ['less']
             }
+        },
+
+        compass: {
+            clean: {
+              options: {
+                clean: true
+              }
+            },
+            prod: {
+              options: {
+                config: 'prod.rb',
+                force: true
+              }
+            },
+            dev: {
+              options: {
+                config: 'dev.rb',
+                force: true
+              }
+            }
         }
     });
 
     // Load the plugins
+    grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default tasks
-    grunt.registerTask('default', ['less', 'jshint', 'uglify']);
+    // grunt.registerTask('default', ['less', 'jshint', 'uglify']);
+
+    // Development setup
+    grunt.registerTask('dev', 'Development build', function() {
+        // run tasks
+        grunt.task.run('compass:dev');
+    });
+
+    // Production setup
+    grunt.registerTask('prod', 'Production build', function() {
+        // run tasks
+        grunt.task.run(['compass:clean','compass:prod']);
+    });
+
+
+    // Default task (Force to development build)
+    grunt.registerTask('default', 'dev');
 };
