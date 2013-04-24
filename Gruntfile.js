@@ -75,7 +75,7 @@ module.exports = function(grunt) {
             options: {
                 colorize: true,
                 verbose: true
-                // require: 'config-scss-dev.rb'
+                //, require: 'config-scss-dev.rb'
             },
             dist: {
                 src: ['css/excelsior.css']
