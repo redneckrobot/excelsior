@@ -51,7 +51,7 @@ module.exports = function(grunt) {
             }
         },
 
-        compass: {
+        compass: { // TODO: Make this pull in foundation.css and normalize.css or rename them to scss, compass has no concatenate.
             clean: {
               options: {
                 clean: true
