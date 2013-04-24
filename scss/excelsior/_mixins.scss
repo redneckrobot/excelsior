@@ -116,10 +116,18 @@
 }
 
 // Gradients
+
+@mixin gradient-vertical($startColor, $endColor) {
+    background-color: $endColor;
+    background-image: -webkit-linear-gradient(top, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+    background-image:         linear-gradient(to bottom, $startColor, $endColor); // Standard
+    background-repeat: repeat-x;
+}
+
 @mixin gradient-horizontal($startColor, $endColor) {
     background-color: $endColor;
     background-image: -webkit-linear-gradient(left, $startColor, $endColor); // Safari 5.1+, Chrome 10+
-    background-image:         linear-gradient(to right, $startColor, $endColor); // Standard, IE10
+    background-image:         linear-gradient(to right, $startColor, $endColor); // Standard
     background-repeat: repeat-x;
 }
 
@@ -134,7 +142,7 @@
   color: #333333;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   text-decoration: none;
-  @include gradient-horizontal(#ffffff, #e6e6e6);
+  @include gradient-vertical(#ffffff, #e6e6e6);
   background-color: #f5f5f5;
   background-repeat: repeat-x;
   border-color: #e6e6e6 #e6e6e6 #bfbfbf;

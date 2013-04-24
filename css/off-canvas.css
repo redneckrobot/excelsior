@@ -80,8 +80,8 @@
   .off-canvas .global-nav .menu-controls .menu-back {
     float: right;
     background-color: #505050;
-    background-image: -webkit-linear-gradient(left, #999999, #505050);
-    background-image: linear-gradient(to right, #999999, #505050);
+    background-image: -webkit-linear-gradient(top, #999999, #505050);
+    background-image: linear-gradient(to bottom, #999999, #505050);
     background-repeat: repeat-x;
     border-radius: 5px;
     background-clip: padding-box;

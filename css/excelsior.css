@@ -7605,8 +7605,8 @@ input[type="button"].button-block {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: #0044cc;
-  background-image: -webkit-linear-gradient(left, #0088cc, #0044cc);
-  background-image: linear-gradient(to right, #0088cc, #0044cc);
+  background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
+  background-image: linear-gradient(to bottom, #0088cc, #0044cc);
   background-repeat: repeat-x;
   border-color: #0044cc #0044cc #002a80;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
@@ -7632,8 +7632,8 @@ input[type="button"].button-block {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: #faa732;
   background-color: #f89406;
-  background-image: -webkit-linear-gradient(left, #fbb450, #f89406);
-  background-image: linear-gradient(to right, #fbb450, #f89406);
+  background-image: -webkit-linear-gradient(top, #fbb450, #f89406);
+  background-image: linear-gradient(to bottom, #fbb450, #f89406);
   background-repeat: repeat-x;
   border-color: #f89406 #f89406 #ad6704;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
@@ -7661,8 +7661,8 @@ input[type="button"].button-block {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: #da4f49;
   background-color: #bd362f;
-  background-image: -webkit-linear-gradient(left, #ee5f5b, #bd362f);
-  background-image: linear-gradient(to right, #ee5f5b, #bd362f);
+  background-image: -webkit-linear-gradient(top, #ee5f5b, #bd362f);
+  background-image: linear-gradient(to bottom, #ee5f5b, #bd362f);
   background-repeat: repeat-x;
   border-color: #bd362f #bd362f #802420;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
@@ -7690,8 +7690,8 @@ input[type="button"].button-block {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: #5bb75b;
   background-color: #51a351;
-  background-image: -webkit-linear-gradient(left, #62c462, #51a351);
-  background-image: linear-gradient(to right, #62c462, #51a351);
+  background-image: -webkit-linear-gradient(top, #62c462, #51a351);
+  background-image: linear-gradient(to bottom, #62c462, #51a351);
   background-repeat: repeat-x;
   border-color: #51a351 #51a351 #387038;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
@@ -7716,8 +7716,8 @@ input[type="button"].button-block {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: #2f96b4;
-  background-image: -webkit-linear-gradient(left, #5bc0de, #2f96b4);
-  background-image: linear-gradient(to right, #5bc0de, #2f96b4);
+  background-image: -webkit-linear-gradient(top, #5bc0de, #2f96b4);
+  background-image: linear-gradient(to bottom, #5bc0de, #2f96b4);
   background-repeat: repeat-x;
   background-color: #49afcd;
   border-color: #2f96b4 #2f96b4 #1f6377;
@@ -7745,8 +7745,8 @@ input[type="button"].button-block {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: #222222;
-  background-image: -webkit-linear-gradient(left, #444444, #222222);
-  background-image: linear-gradient(to right, #444444, #222222);
+  background-image: -webkit-linear-gradient(top, #444444, #222222);
+  background-image: linear-gradient(to bottom, #444444, #222222);
   background-repeat: repeat-x;
   background-color: #363636;
   border-color: #222222 #222222 #000000;
@@ -7848,8 +7848,8 @@ button.close {
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   text-decoration: none;
   background-color: #e6e6e6;
-  background-image: -webkit-linear-gradient(left, white, #e6e6e6);
-  background-image: linear-gradient(to right, #ffffff, #e6e6e6);
+  background-image: -webkit-linear-gradient(top, white, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
   background-repeat: repeat-x;
   background-color: #f5f5f5;
   background-repeat: repeat-x;
@@ -7861,7 +7861,7 @@ button.close {
   background-clip: padding-box;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
   padding: 6px 12px; }
-  /* line 147, ../scss/excelsior/_mixins.scss */
+  /* line 155, ../scss/excelsior/_mixins.scss */
   .touch .button-for-touch:hover {
     text-decoration: none; }
 
@@ -8783,8 +8783,8 @@ a:focus {
   height: 0;
   background: #036;
   background-color: #003366;
-  background-image: -webkit-linear-gradient(left, #002851, #003366);
-  background-image: linear-gradient(to right, #002851, #003366);
+  background-image: -webkit-linear-gradient(top, #002851, #003366);
+  background-image: linear-gradient(to bottom, #002851, #003366);
   background-repeat: repeat-x;
   overflow: hidden;
   -webkit-transition: height 0.2s ease;
@@ -8860,8 +8860,8 @@ a:focus {
     .gov-bar input[type=submit] {
       background-color: #505050;
       background-color: #505050;
-      background-image: -webkit-linear-gradient(left, #999999, #505050);
-      background-image: linear-gradient(to right, #999999, #505050);
+      background-image: -webkit-linear-gradient(top, #999999, #505050);
+      background-image: linear-gradient(to bottom, #999999, #505050);
       background-repeat: repeat-x;
       background: #505050;
       border-radius: 0 5px 5px 0;
@@ -8883,8 +8883,8 @@ a:focus {
 .site-bar {
   background: #454545;
   background-color: #282828;
-  background-image: -webkit-linear-gradient(left, #5f5f5f, #282828);
-  background-image: linear-gradient(to right, #5f5f5f, #282828);
+  background-image: -webkit-linear-gradient(top, #5f5f5f, #282828);
+  background-image: linear-gradient(to bottom, #5f5f5f, #282828);
   background-repeat: repeat-x;
   height: 48px;
   position: absolute;
@@ -8971,8 +8971,8 @@ a:focus {
   float: left;
   background-color: #505050;
   background-color: #505050;
-  background-image: -webkit-linear-gradient(left, #999999, #505050);
-  background-image: linear-gradient(to right, #999999, #505050);
+  background-image: -webkit-linear-gradient(top, #999999, #505050);
+  background-image: linear-gradient(to bottom, #999999, #505050);
   background-repeat: repeat-x;
   border-radius: 0 5px 5px 0;
   background-clip: padding-box;
@@ -9197,8 +9197,8 @@ a:focus {
   /* line 483, ../scss/excelsior/components/_navigation.scss */
   .site-bar {
     background-color: #282828;
-    background-image: -webkit-linear-gradient(left, #363636, #282828);
-    background-image: linear-gradient(to right, #363636, #282828);
+    background-image: -webkit-linear-gradient(top, #363636, #282828);
+    background-image: linear-gradient(to bottom, #363636, #282828);
     background-repeat: repeat-x;
     height: 90px;
     position: relative;

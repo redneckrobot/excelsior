@@ -97,7 +97,7 @@
 
     .global-nav .menu-controls .menu-back {
       float: right;
-      @include gradient-horizontal(#999, #505050);
+      @include gradient-vertical(#999, #505050);
       @include border-radius(5px);
       color: #fff;
       margin: 10px;
