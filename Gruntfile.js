@@ -78,7 +78,7 @@ module.exports = function(grunt) {
                 //, require: 'config-scss-dev.rb'
             },
             dist: {
-                src: ['css/excelsior.css']
+                src: ['css/excelsior.css', 'css/off-canvas.css']
             }
         }
     });
