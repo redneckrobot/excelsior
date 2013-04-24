@@ -53,21 +53,32 @@ module.exports = function(grunt) {
 
         compass: {
             clean: {
-              options: {
-                clean: true
-              }
+                options: {
+                    clean: true
+                }
             },
             prod: {
-              options: {
-                config: 'config-scss-prod.rb',
-                force: true
-              }
+                options: {
+                    config: 'config-scss-prod.rb',
+                    force: true
+                }
             },
             dev: {
-              options: {
-                config: 'config-scss-dev.rb',
-                force: true
-              }
+                options: {
+                    config: 'config-scss-dev.rb',
+                    force: true
+                }
+            }
+        },
+
+        csscss: {
+            options: {
+                colorize: true,
+                verbose: true
+                // require: 'config-scss-dev.rb'
+            },
+            dist: {
+                src: ['css/excelsior.css']
             }
         }
     });
@@ -77,9 +88,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-csscss');
 
     // Development setup
-    grunt.registerTask('dev', 'Development build', ['compass:dev', 'jshint']);
+    grunt.registerTask('dev', 'Development build', ['compass:dev', 'jshint', 'csscss']);
 
     // Production setup
     grunt.registerTask('prod', 'Production build', ['compass:clean', 'compass:prod', 'compass:dev', 'jshint', 'uglify']);
