@@ -8955,7 +8955,7 @@ a:focus {
   margin: 0; }
 
 /* line 242, ../scss/excelsior/components/_navigation.scss */
-.site-bar .site-functions .site-search input[type=search] {
+.site-bar .site-functions .site-search input[type="search"] {
   float: left;
   border-radius: 5px 0 0 5px;
   background-clip: padding-box;
@@ -8981,7 +8981,7 @@ a:focus {
   height: 100%; }
 
 /* line 262, ../scss/excelsior/components/_navigation.scss */
-.site-bar .site-functions .site-search input[type=submit] {
+.site-bar .site-functions .site-search input[type="submit"] {
   background: url(../images/search.svg) no-repeat center center transparent;
   background-size: 24px 24px;
   border: 0;
@@ -9120,10 +9120,10 @@ a:focus {
     -webkit-transition: height 0s ease;
     transition: height 0s ease; }
     /* line 404, ../scss/excelsior/components/_navigation.scss */
-    .gov-bar input[type=search] {
+    .gov-bar input[type="search"] {
       height: 25px; }
     /* line 408, ../scss/excelsior/components/_navigation.scss */
-    .gov-bar input[type=submit] {
+    .gov-bar input[type="submit"] {
       height: 23px;
       line-height: 2em;
       margin-top: 1px; }
@@ -9249,7 +9249,7 @@ a:focus {
     margin: 0; }
 
   /* line 533, ../scss/excelsior/components/_navigation.scss */
-  .site-bar .site-functions .site-search input[type=search] {
+  .site-bar .site-functions .site-search input[type="search"] {
     width: 82%; }
 
   /* line 537, ../scss/excelsior/components/_navigation.scss */
