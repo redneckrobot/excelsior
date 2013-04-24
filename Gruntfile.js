@@ -108,7 +108,7 @@ module.exports = function(grunt) {
     grunt.registerTask('zip', 'Zip up the project', ['zip']);
 
     // RUN ALL THE TASKS!!
-    grunt.registerTask('sink', 'Kitchen Sink', ['compass:clean', 'compass:prod', 'compass:dev', 'csscss', 'jshint', 'uglify']);
+    grunt.registerTask('sink', 'Kitchen Sink', ['compass:clean', 'compass:prod', 'compass:dev', 'csscss', 'jshint', 'uglify', 'zip']);
 
     // Default task (Force to development build)
     grunt.registerTask('default', 'dev');
