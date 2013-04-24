@@ -51,7 +51,7 @@ module.exports = function(grunt) {
             }
         },
 
-        compass: { // TODO: Make this pull in foundation.css and normalize.css or rename them to scss, compass has no concatenate.
+        compass: {
             clean: {
               options: {
                 clean: true
@@ -59,13 +59,13 @@ module.exports = function(grunt) {
             },
             prod: {
               options: {
-                config: 'config-prod.rb',
+                config: 'config-scss-prod.rb',
                 force: true
               }
             },
             dev: {
               options: {
-                config: 'config-dev.rb',
+                config: 'config-scss-dev.rb',
                 force: true
               }
             }
@@ -78,14 +78,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    // Default tasks
-    // grunt.registerTask('default', ['less', 'jshint', 'uglify']);
-
     // Development setup
     grunt.registerTask('dev', 'Development build', ['compass:dev', 'jshint']);
 
     // Production setup
-    grunt.registerTask('prod', 'Production build', ['compass:clean', 'compass:prod', ,'compass:dev', 'jshint', 'uglify']);
+    grunt.registerTask('prod', 'Production build', ['compass:clean', 'compass:prod', 'compass:dev', 'jshint', 'uglify']);
 
     // Default task (Force to development build)
     grunt.registerTask('default', 'dev');
