@@ -6264,7 +6264,6 @@ table tfoot tr td {
 .f-dropdown.large {
   max-width: 800px; }
 
-/* Ugh, is there a better way to handle these next two? */
 /* line 3, ../scss/excelsior/_foundation-override.scss */
 body {
   font-family: "SourceSansPro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
@@ -7024,157 +7023,157 @@ body .joyride-close-tip:hover,
 .icon-up-dir:before {
   content: '\25b4'; }
 
-/* 'Γû┤' */
+/* '▴' */
 /* line 108, ../scss/excelsior/components/_fonts.scss */
 .icon-right-dir:before {
   content: '\25b8'; }
 
-/* 'Γû╕' */
+/* '▸' */
 /* line 109, ../scss/excelsior/components/_fonts.scss */
 .icon-down-dir:before {
   content: '\25be'; }
 
-/* 'Γû╛' */
+/* '▾' */
 /* line 110, ../scss/excelsior/components/_fonts.scss */
 .icon-left-dir:before {
   content: '\25c2'; }
 
-/* 'Γùé' */
+/* '◂' */
 /* line 111, ../scss/excelsior/components/_fonts.scss */
 .icon-cancel:before {
   content: '\2715'; }
 
-/* 'Γ£ò' */
+/* '✕' */
 /* line 112, ../scss/excelsior/components/_fonts.scss */
 .icon-list:before {
   content: '\e005'; }
 
-/* 'εÇà' */
+/* '' */
 /* line 113, ../scss/excelsior/components/_fonts.scss */
 .icon-comment-1:before {
   content: '\e718'; }
 
-/* 'ε£ÿ' */
+/* '' */
 /* line 114, ../scss/excelsior/components/_fonts.scss */
 .icon-comment-alt:before {
   content: '\e71a'; }
 
-/* 'ε£Ü' */
+/* '' */
 /* line 115, ../scss/excelsior/components/_fonts.scss */
 .icon-chat:before {
   content: '\e720'; }
 
-/* 'ε£á' */
+/* '' */
 /* line 116, ../scss/excelsior/components/_fonts.scss */
 .icon-down-open:before {
   content: '\e75c'; }
 
-/* 'ε¥£' */
+/* '' */
 /* line 117, ../scss/excelsior/components/_fonts.scss */
 .icon-left-open:before {
   content: '\e75d'; }
 
-/* 'ε¥¥' */
+/* '' */
 /* line 118, ../scss/excelsior/components/_fonts.scss */
 .icon-right-open:before {
   content: '\e75e'; }
 
-/* 'ε¥₧' */
+/* '' */
 /* line 119, ../scss/excelsior/components/_fonts.scss */
 .icon-up-open:before {
   content: '\e75f'; }
 
-/* 'ε¥ƒ' */
+/* '' */
 /* line 120, ../scss/excelsior/components/_fonts.scss */
 .icon-down-open-mini:before {
   content: '\e760'; }
 
-/* 'ε¥á' */
+/* '' */
 /* line 121, ../scss/excelsior/components/_fonts.scss */
 .icon-left-open-mini:before {
   content: '\e761'; }
 
-/* 'ε¥í' */
+/* '' */
 /* line 122, ../scss/excelsior/components/_fonts.scss */
 .icon-right-open-mini:before {
   content: '\e762'; }
 
-/* 'ε¥ó' */
+/* '' */
 /* line 123, ../scss/excelsior/components/_fonts.scss */
 .icon-up-open-mini:before {
   content: '\e763'; }
 
-/* 'ε¥ú' */
+/* '' */
 /* line 124, ../scss/excelsior/components/_fonts.scss */
 .icon-down-open-big:before {
   content: '\e764'; }
 
-/* 'ε¥ñ' */
+/* '' */
 /* line 125, ../scss/excelsior/components/_fonts.scss */
 .icon-left-open-big:before {
   content: '\e765'; }
 
-/* 'ε¥Ñ' */
+/* '' */
 /* line 126, ../scss/excelsior/components/_fonts.scss */
 .icon-right-open-big:before {
   content: '\e766'; }
 
-/* 'ε¥ª' */
+/* '' */
 /* line 127, ../scss/excelsior/components/_fonts.scss */
 .icon-up-open-big:before {
   content: '\e767'; }
 
-/* 'ε¥º' */
+/* '' */
 /* line 128, ../scss/excelsior/components/_fonts.scss */
 .icon-phone-squared:before {
   content: '\f098'; }
 
-/* '∩éÿ' */
+/* '' */
 /* line 129, ../scss/excelsior/components/_fonts.scss */
 .icon-comment-empty:before {
   content: '\f0e5'; }
 
-/* '∩âÑ' */
+/* '' */
 /* line 130, ../scss/excelsior/components/_fonts.scss */
 .icon-chat-empty:before {
   content: '\f0e6'; }
 
-/* '∩âª' */
+/* '' */
 /* line 131, ../scss/excelsior/components/_fonts.scss */
 .icon-comment:before {
   content: '\f4ac'; }
 
-/* '∩Æ¼' */
+/* '' */
 /* line 132, ../scss/excelsior/components/_fonts.scss */
 .icon-search-3:before {
   content: '\f50d'; }
 
-/* '∩öì' */
+/* '' */
 /* line 133, ../scss/excelsior/components/_fonts.scss */
 .icon-phone:before {
-  content: '≡ƒô₧'; }
+  content: '📞'; }
 
 /* '\1f4de' */
 /* line 134, ../scss/excelsior/components/_fonts.scss */
 .icon-phone-1:before {
   content: '\e800'; }
 
-/* 'εáÇ' */
+/* '' */
 /* line 135, ../scss/excelsior/components/_fonts.scss */
 .icon-search:before {
-  content: '≡ƒöì'; }
+  content: '🔍'; }
 
 /* '\1f50d' */
 /* line 136, ../scss/excelsior/components/_fonts.scss */
 .icon-search-1:before {
   content: '\e801'; }
 
-/* 'εáü' */
+/* '' */
 /* line 137, ../scss/excelsior/components/_fonts.scss */
 .icon-search-2:before {
   content: '\e802'; }
 
-/* 'εáé' */
+/* '' */
 /*
  * Bootstrap v2.3.1
  *
