@@ -80,6 +80,13 @@ module.exports = function(grunt) {
             dist: {
                 src: ['css/excelsior.css', 'css/off-canvas.css']
             }
+        },
+        zip: {
+            ewf: {
+              src: ['css/', 'js/', 'images/', 'fonts/'],
+              dest: 'ewf.zip',
+              exclude: ['.DS_Store', '.db']
+            }
         }
     });
 
@@ -89,12 +96,16 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-csscss');
+    grunt.loadNpmTasks('grunt-wx-zipdir');
 
     // Development setup
     grunt.registerTask('dev', 'Development build', ['compass:dev', 'jshint']);
 
     // Production setup
     grunt.registerTask('prod', 'Production build', ['compass:clean', 'compass:prod', 'compass:dev', 'jshint', 'uglify']);
+
+    // Zip Build
+    grunt.registerTask('zip', 'Zip up the project', ['zip']);
 
     // Default task (Force to development build)
     grunt.registerTask('default', 'dev');
