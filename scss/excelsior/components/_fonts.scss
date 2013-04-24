@@ -103,35 +103,7 @@
 /* Uncomment for 3D effect */
 /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
-
-.icon-up-dir:before { content: '\25b4'; }
-.icon-right-dir:before { content: '\25b8'; }
-.icon-down-dir:before { content: '\25be'; }
-.icon-left-dir:before { content: '\25c2'; }
-.icon-cancel:before { content: '\2715'; }
-.icon-list:before { content: '\e005'; }
-.icon-comment-1:before { content: '\e718'; }
-.icon-comment-alt:before { content: '\e71a'; }
-.icon-chat:before { content: '\e720'; }
-.icon-down-open:before { content: '\e75c'; }
-.icon-left-open:before { content: '\e75d'; }
-.icon-right-open:before { content: '\e75e'; }
-.icon-up-open:before { content: '\e75f'; }
-.icon-down-open-mini:before { content: '\e760'; }
-.icon-left-open-mini:before { content: '\e761'; }
-.icon-right-open-mini:before { content: '\e762'; }
-.icon-up-open-mini:before { content: '\e763'; }
-.icon-down-open-big:before { content: '\e764'; }
-.icon-left-open-big:before { content: '\e765'; }
-.icon-right-open-big:before { content: '\e766'; }
-.icon-up-open-big:before { content: '\e767'; }
-.icon-phone-squared:before { content: '\f098'; }
-.icon-comment-empty:before { content: '\f0e5'; }
-.icon-chat-empty:before { content: '\f0e6'; }
-.icon-comment:before { content: '\f4ac'; }
-.icon-search-3:before { content: '\f50d'; }
-.icon-phone:before { content: '\1f4de'; }
-.icon-phone-1:before { content: '\e800'; }
-.icon-search:before { content: '\1f50d'; }
-.icon-search-1:before { content: '\e801'; }
-.icon-search-2:before { content: '\e802'; }
+.icon-down-open:before { content: $icon-down-open; } /* down open arrow */
+.icon-left-open:before { content: $icon-left-open; } /* left open arrow */
+.icon-right-open:before { content: $icon-right-open; } /* right open arrow */
+.icon-up-open:before { content: $icon-up-open; } /* up open arrow */

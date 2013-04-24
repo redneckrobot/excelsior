@@ -7018,130 +7018,26 @@ body .joyride-close-tip:hover,
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
 
-/* line 107, ../scss/excelsior/components/_fonts.scss */
-.icon-up-dir:before {
-  content: '\25b4'; }
-
-/* line 108, ../scss/excelsior/components/_fonts.scss */
-.icon-right-dir:before {
-  content: '\25b8'; }
-
-/* line 109, ../scss/excelsior/components/_fonts.scss */
-.icon-down-dir:before {
-  content: '\25be'; }
-
-/* line 110, ../scss/excelsior/components/_fonts.scss */
-.icon-left-dir:before {
-  content: '\25c2'; }
-
-/* line 111, ../scss/excelsior/components/_fonts.scss */
-.icon-cancel:before {
-  content: '\2715'; }
-
-/* line 112, ../scss/excelsior/components/_fonts.scss */
-.icon-list:before {
-  content: '\e005'; }
-
-/* line 113, ../scss/excelsior/components/_fonts.scss */
-.icon-comment-1:before {
-  content: '\e718'; }
-
-/* line 114, ../scss/excelsior/components/_fonts.scss */
-.icon-comment-alt:before {
-  content: '\e71a'; }
-
-/* line 115, ../scss/excelsior/components/_fonts.scss */
-.icon-chat:before {
-  content: '\e720'; }
-
-/* line 116, ../scss/excelsior/components/_fonts.scss */
+/* line 106, ../scss/excelsior/components/_fonts.scss */
 .icon-down-open:before {
-  content: '\e75c'; }
+  content: "\e75c"; }
 
-/* line 117, ../scss/excelsior/components/_fonts.scss */
+/* down open arrow */
+/* line 107, ../scss/excelsior/components/_fonts.scss */
 .icon-left-open:before {
-  content: '\e75d'; }
+  content: "\e75d"; }
 
-/* line 118, ../scss/excelsior/components/_fonts.scss */
+/* left open arrow */
+/* line 108, ../scss/excelsior/components/_fonts.scss */
 .icon-right-open:before {
-  content: '\e75e'; }
+  content: "\e75e"; }
 
-/* line 119, ../scss/excelsior/components/_fonts.scss */
+/* right open arrow */
+/* line 109, ../scss/excelsior/components/_fonts.scss */
 .icon-up-open:before {
-  content: '\e75f'; }
+  content: "\e75f"; }
 
-/* line 120, ../scss/excelsior/components/_fonts.scss */
-.icon-down-open-mini:before {
-  content: '\e760'; }
-
-/* line 121, ../scss/excelsior/components/_fonts.scss */
-.icon-left-open-mini:before {
-  content: '\e761'; }
-
-/* line 122, ../scss/excelsior/components/_fonts.scss */
-.icon-right-open-mini:before {
-  content: '\e762'; }
-
-/* line 123, ../scss/excelsior/components/_fonts.scss */
-.icon-up-open-mini:before {
-  content: '\e763'; }
-
-/* line 124, ../scss/excelsior/components/_fonts.scss */
-.icon-down-open-big:before {
-  content: '\e764'; }
-
-/* line 125, ../scss/excelsior/components/_fonts.scss */
-.icon-left-open-big:before {
-  content: '\e765'; }
-
-/* line 126, ../scss/excelsior/components/_fonts.scss */
-.icon-right-open-big:before {
-  content: '\e766'; }
-
-/* line 127, ../scss/excelsior/components/_fonts.scss */
-.icon-up-open-big:before {
-  content: '\e767'; }
-
-/* line 128, ../scss/excelsior/components/_fonts.scss */
-.icon-phone-squared:before {
-  content: '\f098'; }
-
-/* line 129, ../scss/excelsior/components/_fonts.scss */
-.icon-comment-empty:before {
-  content: '\f0e5'; }
-
-/* line 130, ../scss/excelsior/components/_fonts.scss */
-.icon-chat-empty:before {
-  content: '\f0e6'; }
-
-/* line 131, ../scss/excelsior/components/_fonts.scss */
-.icon-comment:before {
-  content: '\f4ac'; }
-
-/* line 132, ../scss/excelsior/components/_fonts.scss */
-.icon-search-3:before {
-  content: '\f50d'; }
-
-/* line 133, ../scss/excelsior/components/_fonts.scss */
-.icon-phone:before {
-  content: '\1f4de'; }
-
-/* line 134, ../scss/excelsior/components/_fonts.scss */
-.icon-phone-1:before {
-  content: '\e800'; }
-
-/* line 135, ../scss/excelsior/components/_fonts.scss */
-.icon-search:before {
-  content: '\1f50d'; }
-
-/* line 136, ../scss/excelsior/components/_fonts.scss */
-.icon-search-1:before {
-  content: '\e801'; }
-
-/* line 137, ../scss/excelsior/components/_fonts.scss */
-.icon-search-2:before {
-  content: '\e802'; }
-
+/* up open arrow */
 /*
  * Bootstrap v2.3.1
  *
@@ -9267,7 +9163,7 @@ a:focus {
 
   /* line 583, ../scss/excelsior/components/_navigation.scss */
   .global-nav .icon-right-open.active:before {
-    content: '\e75c'; }
+    content: "\e75c"; }
 
   /* line 587, ../scss/excelsior/components/_navigation.scss */
   .global-nav .nav-container ul li a.active {
