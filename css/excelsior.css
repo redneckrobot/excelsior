@@ -8847,7 +8847,7 @@ a:focus {
     float: left;
     margin: 0; }
     /* line 140, ../scss/excelsior/components/_navigation.scss */
-    .gov-bar input[type=search] {
+    .gov-bar input[type="search"] {
       border-radius: 5px 0 0 5px;
       background-clip: padding-box;
       padding-left: 10px;
@@ -8857,13 +8857,12 @@ a:focus {
       box-sizing: border-box;
       height: 37px; }
     /* line 149, ../scss/excelsior/components/_navigation.scss */
-    .gov-bar input[type=submit] {
+    .gov-bar input[type="submit"] {
       background-color: #505050;
       background-color: #505050;
       background-image: -webkit-linear-gradient(top, #999999, #505050);
       background-image: linear-gradient(to bottom, #999999, #505050);
       background-repeat: repeat-x;
-      background: #505050;
       border-radius: 0 5px 5px 0;
       background-clip: padding-box;
       border: 1px solid #666;

@@ -137,7 +137,7 @@
     float: left;
     margin: 0;
 
-    &[type=search] {
+    &[type="search"] {
       @include border-radius(5px 0 0 5px);
       padding-left: 10px;
       width: 70%;
@@ -146,10 +146,10 @@
       height: 37px;
     }
 
-    &[type=submit] {
+    &[type="submit"] {
       background-color: #505050;
       @include gradient-vertical(#999, #505050);
-      background: #505050;
+      // background: #505050;
       @include border-radius(0 5px 5px 0);
       border: 1px solid #666;
       border-left: 0;
