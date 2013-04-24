@@ -12,7 +12,7 @@ javascripts_dir = "js"
 output_style= :compressed
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
-relative_assets = true
+#relative_assets = true
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
 line_comments = false
@@ -24,7 +24,7 @@ line_comments = false
 # and then run:
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
 
-# Since Compass doesn't allow us to name our files ourselves (if you know a way PLEASE TELL :) ) we create a folder called css-min, copy the files from there to /css with a .min added to them and then hopefully we delete the temp folder
+# Since Compass doesn't allow us to name our files ourselves (if you know a way PLEASE TELL :) )
 require 'fileutils'
 
 on_stylesheet_saved do |file|
