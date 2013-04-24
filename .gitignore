@@ -10,7 +10,6 @@
 *~
 *.sass-cache
 *.sublime-*
-*.rb
 
 
 # OS or Editor folders

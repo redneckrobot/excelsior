@@ -21,26 +21,6 @@ module.exports = function(grunt) {
             }
         },
 
-        less: {
-            development: {
-                files: {
-                    'css/excelsior.css': 'less/excelsior.less',
-                    'css/off-canvas.css': 'less/off-canvas.less',
-                    'css/site.css': 'less/site.less'
-                }
-            },
-            production: {
-                options: {
-                    yuicompress: true
-                },
-                files: {
-                    'css/excelsior.min.css': 'less/excelsior.less',
-                    'css/off-canvas.min.css': 'less/off-canvas.less',
-                    'css/site.min.css': 'less/site.less'
-                }
-            }
-        },
-
         jshint: {
             files: ['js/excelsior/excelsior.js', 'js/excelsior/off-canvas.js', 'js/excelsior/respCharts.js', 'js/excelsior/responsive-tables.js', 'js/site.js'],
             options: {
@@ -66,18 +46,44 @@ module.exports = function(grunt) {
                 }
             },
             src: {
-                files: ['less/excelsior.less', 'less/off-canvas.less', 'less/site.less', 'less/excelsior/*.less', 'less/excelsior/components/*.less'],
-                tasks: ['less']
+                files: ['scss/*.scss'],
+                tasks: ['compass:dev']
+            }
+        },
+
+        compass: {
+            clean: {
+              options: {
+                clean: true
+              }
+            },
+            prod: {
+              options: {
+                config: 'config-scss-prod.rb',
+                force: true
+              }
+            },
+            dev: {
+              options: {
+                config: 'config-scss-dev.rb',
+                force: true
+              }
             }
         }
     });
 
     // Load the plugins
-    grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    // Default tasks
-    grunt.registerTask('default', ['less', 'jshint', 'uglify']);
+    // Development setup
+    grunt.registerTask('dev', 'Development build', ['compass:dev', 'jshint']);
+
+    // Production setup
+    grunt.registerTask('prod', 'Production build', ['compass:clean', 'compass:prod', 'compass:dev', 'jshint', 'uglify']);
+
+    // Default task (Force to development build)
+    grunt.registerTask('default', 'dev');
 };
