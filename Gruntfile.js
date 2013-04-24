@@ -21,26 +21,6 @@ module.exports = function(grunt) {
             }
         },
 
-        less: {
-            development: {
-                files: {
-                    'css/excelsior.css': 'less/excelsior.less',
-                    'css/off-canvas.css': 'less/off-canvas.less',
-                    'css/site.css': 'less/site.less'
-                }
-            },
-            production: {
-                options: {
-                    yuicompress: true
-                },
-                files: {
-                    'css/excelsior.min.css': 'less/excelsior.less',
-                    'css/off-canvas.min.css': 'less/off-canvas.less',
-                    'css/site.min.css': 'less/site.less'
-                }
-            }
-        },
-
         jshint: {
             files: ['js/excelsior/excelsior.js', 'js/excelsior/off-canvas.js', 'js/excelsior/respCharts.js', 'js/excelsior/responsive-tables.js', 'js/site.js'],
             options: {
@@ -105,7 +85,7 @@ module.exports = function(grunt) {
     grunt.registerTask('dev', 'Development build', ['compass:dev', 'jshint']);
 
     // Production setup
-    grunt.registerTask('prod', 'Production build', ['compass:clean', 'compass:prod', 'jshint', 'uglify']);
+    grunt.registerTask('prod', 'Production build', ['compass:clean', 'compass:prod', ,'compass:dev', 'jshint', 'uglify']);
 
     // Default task (Force to development build)
     grunt.registerTask('default', 'dev');
