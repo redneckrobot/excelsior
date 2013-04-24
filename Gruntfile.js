@@ -96,6 +96,9 @@ module.exports = function(grunt) {
     // Production setup
     grunt.registerTask('prod', 'Production build', ['compass:clean', 'compass:prod', 'compass:dev', 'jshint', 'uglify']);
 
+    // RUN ALL THE TASKS!!
+    grunt.registerTask('sink', 'Kitchen Sink', ['compass:clean', 'compass:prod', 'compass:dev', 'csscss', 'jshint', 'uglify']);
+
     // Default task (Force to development build)
     grunt.registerTask('default', 'dev');
 };
