@@ -91,7 +91,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-csscss');
 
     // Development setup
-    grunt.registerTask('dev', 'Development build', ['compass:dev', 'jshint', 'csscss']);
+    grunt.registerTask('dev', 'Development build', ['compass:dev', 'jshint']);
 
     // Production setup
     grunt.registerTask('prod', 'Production build', ['compass:clean', 'compass:prod', 'compass:dev', 'jshint', 'uglify']);
