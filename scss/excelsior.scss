@@ -1,7 +1,7 @@
-@charset "utf-8";
+@charset "UTF-8";
 // Do not change the order of these files:
-@import "foundation/normalize.css";
-@import "foundation/foundation.css";
+@import "foundation/_normalize.scss";
+@import "foundation/_foundation.scss";
 @import "excelsior/_variables.scss";
 @import "excelsior/_mixins.scss";
 @import "excelsior/_foundation-override.scss";
