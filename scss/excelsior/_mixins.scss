@@ -26,7 +26,7 @@
           transition: $transition;
 }
 
-/* Ugh, is there a better way to handle these next two? */
+// Ugh, is there a better way to handle these next two?
 @mixin transition-two($transition1, $transition2) {
   -webkit-transition: $transition1, $transition2;
           transition: $transition1, $transition2;
