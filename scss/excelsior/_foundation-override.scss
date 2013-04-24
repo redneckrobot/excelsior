@@ -313,21 +313,21 @@ section .title a,
 
 .accordion section.auto .title:after,
 .accordion section.section .title:after {
-  content: "\e75e";
+  content: $icon-down-open;
   position: absolute;
   top: 6px;
   right: 18px;
   font-family: $font-icons;
   font-style: normal;
   font-weight: normal;
-  @include rotate(90deg);
+  //@include rotate(90deg);
 }
 
 .accordion section.auto.active .title:after,
 .accordion section.section.active .title:after {
   top: 8px;
   right: 18px;
-  @include rotate(270deg);
+  @include rotate(180deg);
 }
 
 @media screen and (max-width: 47.9em) {
@@ -339,21 +339,21 @@ section .title a,
   /* Same styles as above */
   .auto section.auto .title:after,
   .auto section.section .title:after {
-    content: "\e75e";
+    content: $icon-down-open;
     position: absolute;
     top: 8px;
     right: 18px;
     font-family: $font-icons;
     font-style: normal;
     font-weight: normal;
-    @include rotate(90deg);
+    //@include rotate(90deg);
   }
 
   .auto section.auto.active .title:after,
   .auto section.section.active .title:after {
     top: 6px;
     right: 18px;
-    @include rotate(270deg);
+    @include rotate(180deg);
   }
 }
 

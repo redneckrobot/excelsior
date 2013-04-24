@@ -6551,25 +6551,22 @@ section .title a,
 /* line 315, ../scss/excelsior/_foundation-override.scss */
 .accordion section.auto .title:after,
 .accordion section.section .title:after {
-  content: "\e75e";
+  content: "\e75c";
   position: absolute;
   top: 6px;
   right: 18px;
   font-family: "Fontello";
   font-style: normal;
-  font-weight: normal;
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg); }
+  font-weight: normal; }
 
 /* line 327, ../scss/excelsior/_foundation-override.scss */
 .accordion section.auto.active .title:after,
 .accordion section.section.active .title:after {
   top: 8px;
   right: 18px;
-  -webkit-transform: rotate(270deg);
-  -ms-transform: rotate(270deg);
-  transform: rotate(270deg); }
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg); }
 
 @media screen and (max-width: 47.9em) {
   /* line 335, ../scss/excelsior/_foundation-override.scss */
@@ -6580,25 +6577,22 @@ section .title a,
   /* line 341, ../scss/excelsior/_foundation-override.scss */
   .auto section.auto .title:after,
   .auto section.section .title:after {
-    content: "\e75e";
+    content: "\e75c";
     position: absolute;
     top: 8px;
     right: 18px;
     font-family: "Fontello";
     font-style: normal;
-    font-weight: normal;
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg); }
+    font-weight: normal; }
 
   /* line 353, ../scss/excelsior/_foundation-override.scss */
   .auto section.auto.active .title:after,
   .auto section.section.active .title:after {
     top: 6px;
     right: 18px;
-    -webkit-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    transform: rotate(270deg); } }
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); } }
 @media only screen and (max-width: 47.9em) {
   /* line 362, ../scss/excelsior/_foundation-override.scss */
   .orbit-timer, .orbit-slide-number {
