@@ -83,9 +83,9 @@ module.exports = function(grunt) {
         },
         zip: {
             ewf: {
-              src: ['css/', 'js/', 'images/', 'fonts/'],
+              src: ['css/', 'js/', 'images/', 'fonts/', 'index.html', 'license.md', 'README.md'],
               dest: 'ewf.zip',
-              exclude: ['.DS_Store', '.db']
+              exclude: ['.DS_Store', '.db', 'images/excelsior-long-500.png']
             }
         }
     });
