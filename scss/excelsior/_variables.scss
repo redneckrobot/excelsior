@@ -1,0 +1,22 @@
+// Fonts
+$font-sans-fallback: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$font-sans: "SourceSansPro", $font-sans-fallback;
+$font-sans-bold: "SourceSansProBold", $font-sans-fallback;
+$font-sans-italic: "SourceSansProItalic", $font-sans-fallback;
+$font-sans-bold-italic: "SourceSansProBoldItalic", $font-sans-fallback;
+$font-serif: "Merriweather", Georgia, serif;
+$font-icons: "Fontello";
+$icon-down-open: '\e75c'; // down open arrow
+$icon-left-open: '\e75d'; // left open arrow
+$icon-right-open: '\e75e'; // right open arrow
+$icon-up-open: '\e75f'; // up open arrow
+
+// Color
+
+$primary-color: #2ba6cb;
+$secondary-color: #e9e9e9;
+$alert-color: #c60f13;
+$success-color: #5da423;
+
+// Navigation
+$nav-bar-height: 48px;

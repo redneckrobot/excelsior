@@ -10,8 +10,9 @@
 *~
 *.sass-cache
 *.sublime-*
-*.rb
 
+# Ignored Folders
+css
 
 # OS or Editor folders
 .DS_Store
@@ -25,4 +26,4 @@ sass
 stylesheets
 
 # Grunt Build
-node_modules/*
+node_modules

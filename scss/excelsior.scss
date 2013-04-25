@@ -1,0 +1,24 @@
+@charset "UTF-8";
+// Do not change the order of these files:
+@import "foundation/_normalize.scss";
+@import "foundation/_foundation.scss";
+@import "excelsior/_variables.scss";
+@import "excelsior/_mixins.scss";
+@import "excelsior/_foundation-override.scss";
+@import "excelsior/components/_global.scss";
+@import "excelsior/components/_visibility.scss";
+@import "excelsior/components/_fonts.scss";
+
+// These files can be re-arranged as necessary, but test any changes
+@import "excelsior/components/_tables.scss";
+@import "excelsior/components/_alerts.scss";
+@import "excelsior/components/_block-to-stack.scss";
+@import "excelsior/components/_buttons.scss";
+@import "excelsior/components/_forms.scss"; // Must come after `buttons`
+@import "excelsior/components/_footer.scss";
+@import "excelsior/components/_lightbox.scss";
+@import "excelsior/components/_lists.scss";
+@import "excelsior/components/_images.scss";
+@import "excelsior/components/_navigation.scss";
+@import "excelsior/components/_sticky_header.scss";
+@import "excelsior/components/_components.scss";

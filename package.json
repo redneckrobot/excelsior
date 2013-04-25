@@ -9,8 +9,16 @@
   "devDependencies": {
     "grunt": "0.4.1",
     "grunt-contrib-jshint": "0.4.3",
-    "grunt-contrib-less": "0.5.0",
     "grunt-contrib-watch": "0.3.1",
-    "grunt-contrib-uglify": "0.2.0"
-  }
+    "grunt-contrib-uglify": "0.2.0",
+    "grunt-contrib-compass": "0.2.0",
+    "grunt-csscss": "0.4.0",
+    "grunt-wx-zipdir": "~0.3.1" 
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/nys-its/excelsior/blob/master/license.md"
+    }
+  ]
 }
