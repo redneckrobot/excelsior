@@ -86,7 +86,7 @@ module.exports = function(grunt) {
               // Defined the directory itself and excluded specific items since files can be included directly
               src: ['.'],
               dest: 'excelsior.zip',
-              exclude: ['.DS_Store', '.db', '.git/', '.sass-cache/', 'node_modules/', 'scss', 'images-source', 'Gruntfile.js', '.gitignore', '.editorconfig', 'config-sass-dev.rb', 'config-sass-prod.rb', 'ewf.zip', 'package.json']
+              exclude: ['.DS_Store', '.db', '.git/', '.sass-cache/', 'node_modules/', 'scss', 'css/site.css', 'css/site.min.css', 'js/site.js', 'js/site.min.js', 'images-source', 'Gruntfile.js', '.gitignore', '.editorconfig', 'config-sass-dev.rb', 'config-sass-prod.rb', 'ewf.zip', 'package.json']
             }
         }
     });
