@@ -1,6 +1,6 @@
 /**
  * Responsive Table
- * Author: NYS ITS, https://github.com/nys-its/RWD-Demo
+ * Author: NYS ITS, https://github.com/nys-its/excelsior
  * Date: March 2013
  * Dependencies: jQuery 1.9 or Zepto 1.0, jQuery UI widget factory 1.8.16
  * Based on https://github.com/filamentgroup/RWD-Table-Patterns
