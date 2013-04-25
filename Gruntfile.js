@@ -85,7 +85,7 @@ module.exports = function(grunt) {
             ewf: {
               // Defined the directory itself and excluded specific items since files can be included directly
               src: ['.'],
-              dest: 'ewf.zip',
+              dest: 'excelsior.zip',
               exclude: ['.DS_Store', '.db', '.git/', '.sass-cache/', 'node_modules/', 'scss', 'images-source', 'Gruntfile.js', '.gitignore', '.editorconfig', 'config-sass-dev.rb', 'config-sass-prod.rb', 'ewf.zip', 'package.json']
             }
         }
