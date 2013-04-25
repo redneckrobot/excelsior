@@ -82,7 +82,7 @@ module.exports = function(grunt) {
             }
         },
         zipdir: {
-            ewf: {
+            excelsior: {
               // Defined the directory itself and excluded specific items since files can be included directly
               src: ['.'],
               dest: 'excelsior.zip',
