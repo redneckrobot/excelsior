@@ -81,11 +81,12 @@ module.exports = function(grunt) {
                 src: ['css/excelsior.css', 'css/off-canvas.css']
             }
         },
-        zip: {
+        zipdir: {
             ewf: {
-              src: ['css/', 'js/', 'images/', 'fonts/', 'index.html', 'license.md', 'README.md'],
+              // Defined the directory itself and excluded specific items since files can be included directly
+              src: ['.'],
               dest: 'ewf.zip',
-              exclude: ['.DS_Store', '.db', 'images/excelsior-long-500.png']
+              exclude: ['.DS_Store', '.db', '.git/', '.sass-cache/', 'node_modules/', 'scss', 'images-source', 'Gruntfile.js', '.gitignore', '.editorconfig', 'config-sass-dev.rb', 'config-sass-prod.rb', 'ewf.zip', 'package.json']
             }
         }
     });
@@ -105,10 +106,10 @@ module.exports = function(grunt) {
     grunt.registerTask('prod', 'Production build', ['compass:clean', 'compass:prod', 'compass:dev', 'uglify']);
 
     // Zip Build
-    grunt.registerTask('zip', 'Zip up the project', ['zip']);
+    grunt.registerTask('zip', 'Zip up the project', ['zipdir']);
 
     // RUN ALL THE TASKS!!
-    grunt.registerTask('sink', 'Kitchen Sink', ['compass:clean', 'compass:prod', 'compass:dev', 'csscss', 'jshint', 'uglify', 'zip']);
+    grunt.registerTask('sink', 'Kitchen Sink', ['compass:clean', 'compass:prod', 'compass:dev', 'csscss', 'jshint', 'uglify', 'zipdir']);
 
     // Default task (Force to development build)
     grunt.registerTask('default', 'dev');
