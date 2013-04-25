@@ -6,21 +6,33 @@ module.exports = function(grunt) {
 
         uglify: {
             options: {
-                banner: '/*! <%= pkg.name %> */\n',
+                banner: '/*! <%= pkg.title %> v<%= pkg.version %> | (c) <%= grunt.template.today("yyyy") %> NYS ITS | <%= pkg.repository.url %> | <%= pkg.license.type %>: <%= pkg.license.url %> */\n',
                 mangle: false, // Don't change variable and function names
-                report: 'gzip'  // Print size savings to the command line
+                report: 'gzip' // Print size savings to the command line
             },
-            my_target: {
-                files: {
-                    'js/excelsior/excelsior.min.js': ['js/excelsior/excelsior.js'],
-                    'js/excelsior/off-canvas.min.js': ['js/excelsior/off-canvas.js'],
-                    'js/excelsior/respCharts.min.js': ['js/excelsior/respCharts.js'],
-                    'js/excelsior/responsive-tables.min.js': ['js/excelsior/responsive-tables.js'],
-                    'js/site.min.js': ['js/site.js']
-                }
+            ewf_core: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: '.',
+                        src: ['js/excelsior/*.js'],
+                        dest:'.',
+                        ext: '.min.js'
+                    }
+                ]
+            },
+            optional_js: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: '.',
+                        src: ['js/*.js'],
+                        dest:'.',
+                        ext: '.min.js'
+                    }
+                ]
             }
         },
-
         jshint: {
             files: ['js/excelsior/excelsior.js', 'js/excelsior/off-canvas.js', 'js/excelsior/respCharts.js', 'js/excelsior/responsive-tables.js', 'js/site.js'],
             options: {
@@ -81,12 +93,14 @@ module.exports = function(grunt) {
                 src: ['css/excelsior.css', 'css/off-canvas.css']
             }
         },
-        zipdir: {
-            excelsior: {
-              // Defined the directory itself and excluded specific items since files can be included directly
-              src: ['.'],
-              dest: 'excelsior.zip',
-              exclude: ['.DS_Store', '.db', '.git/', '.sass-cache/', 'node_modules/', 'scss', 'images-source', 'Gruntfile.js', '.gitignore', '.editorconfig', 'config-sass-dev.rb', 'config-sass-prod.rb', 'ewf.zip', 'package.json']
+        compress: {
+            main: {
+                options: {
+                    archive: 'excelsior.zip',
+                    pretty: true
+                },
+                dest: 'excelsior/',
+                src: ['**', '!.DS_Store', '!.db', '!.git/', '!.sass-cache/**','!node_modules/**', '!scss/**', '!js/site*.*', '!images/excelsior-long-500.png', '!images-source/**', '!Gruntfile.js', '!.gitignore', '!.editorconfig', '!config-scss-dev.rb', '!config-scss-prod.rb', '!excelsior.zip', '!package.json']
             }
         }
     });
@@ -96,20 +110,20 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-csscss');
-    grunt.loadNpmTasks('grunt-wx-zipdir');
 
-    // Development setup
+    // Development
     grunt.registerTask('dev', 'Development build', ['compass:dev', 'jshint']);
 
-    // Production setup
+    // Production
     grunt.registerTask('prod', 'Production build', ['compass:clean', 'compass:prod', 'compass:dev', 'uglify']);
 
-    // Zip Build
-    grunt.registerTask('zip', 'Zip up the project', ['zipdir']);
+    // Packager
+    grunt.registerTask('package', 'Package up the project', ['compass:clean', 'compass:prod', 'compass:dev', 'uglify', 'compress']);
 
     // RUN ALL THE TASKS!!
-    grunt.registerTask('sink', 'Kitchen Sink', ['compass:clean', 'compass:prod', 'compass:dev', 'csscss', 'jshint', 'uglify', 'zipdir']);
+    grunt.registerTask('sink', 'Kitchen Sink', ['compass:clean', 'compass:prod', 'compass:dev', 'csscss', 'jshint', 'uglify', 'compress']);
 
     // Default task (Force to development build)
     grunt.registerTask('default', 'dev');

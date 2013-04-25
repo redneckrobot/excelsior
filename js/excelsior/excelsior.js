@@ -1,6 +1,6 @@
 /**
  * @fileOverview Excelsior Framework common functions
- * @author <a href="https://github.com/nys-its/excelsior-web-framework">NYS-ITS</a>
+ * @author <a href="https://github.com/nys-its/excelsior">NYS-ITS</a>
  * @version 0.1.0
  */
 

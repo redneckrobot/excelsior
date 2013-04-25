@@ -1,7 +1,8 @@
 {
   "name": "excelsior",
-  "version": "0.1.0",
-  "description": "The Excelsior Web Framework (EWF) is a way to fast-track your project's user interface development. EWF is a collaboratively built front-end framework that can enable NYS web projects to start on a solid mobile-first responsive foundation.",
+  "title": "Excelsior Web Framework",
+  "version": "0.1.2",
+  "description": "The Excelsior Web Framework (EWF) is a way to fast-track your project's user interface development. Excelsior is a collaboratively built front-end framework that can enable NYS web projects to start on a solid mobile-first responsive foundation.",
   "repository": {
     "type": "git",
     "url": "https://github.com/nys-its/excelsior.git"
@@ -13,12 +14,10 @@
     "grunt-contrib-uglify": "0.2.0",
     "grunt-contrib-compass": "0.2.0",
     "grunt-csscss": "0.4.0",
-    "grunt-wx-zipdir": "~0.3.1" 
+    "grunt-contrib-compress": "0.5.0"
   },
-  "licenses": [
-    {
+  "license": {
       "type": "MIT",
       "url": "https://github.com/nys-its/excelsior/blob/master/license.md"
     }
-  ]
 }
