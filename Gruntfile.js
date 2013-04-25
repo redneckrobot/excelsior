@@ -102,7 +102,7 @@ module.exports = function(grunt) {
     grunt.registerTask('dev', 'Development build', ['compass:dev', 'jshint']);
 
     // Production setup
-    grunt.registerTask('prod', 'Production build', ['compass:clean', 'compass:prod', 'compass:dev', 'jshint', 'uglify']);
+    grunt.registerTask('prod', 'Production build', ['compass:clean', 'compass:prod', 'compass:dev', 'uglify']);
 
     // Zip Build
     grunt.registerTask('zip', 'Zip up the project', ['zip']);
