@@ -155,9 +155,6 @@ module.exports = function(grunt) {
     // Packager
     grunt.registerTask('package', 'Package up the project', ['compass:clean', 'compass:excelsior_prod', 'compass:excelsior_dev', 'uglify', 'concat', 'compress']);
 
-    // RUN ALL THE TASKS!!
-    grunt.registerTask('sink', 'Kitchen Sink', ['compass:clean', 'compass:excelsior_prod', 'compass:excelsior_dev', 'compass:app_prod', 'compass:app_dev', 'csscss', 'jshint', 'uglify', 'compress']);
-
     // Default task (Force to development build)
     grunt.registerTask('default', 'dev');
 };
