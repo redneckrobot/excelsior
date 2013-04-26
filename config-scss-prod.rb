@@ -30,7 +30,7 @@ require 'fileutils'
 on_stylesheet_saved do |file|
   if File.exists?(file)
     filename = File.basename(file, File.extname(file))
-    FileUtils.cp(file, "css/"+ filename + ".min" + File.extname(file))
+    FileUtils.cp(file, "excelsior/css/"+ filename + ".min" + File.extname(file))
     puts "Renaming To: #{filename + ".min" + File.extname(file)}"
   end
 end
