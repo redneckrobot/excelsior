@@ -12,7 +12,7 @@
 *.sublime-*
 
 # Ignored Folders
-css
+excelsior/css
 
 # OS or Editor folders
 .DS_Store
