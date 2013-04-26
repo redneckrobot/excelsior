@@ -97,7 +97,7 @@ module.exports = function(grunt) {
                 }
             }
         },
-        csscss: {
+        /*csscss: {
             options: {
                 colorize: true,
                 verbose: true
@@ -106,7 +106,7 @@ module.exports = function(grunt) {
             dist: {
                 src: ['excelsior/css/excelsior.css', 'excelsior/css/off-canvas.css']
             }
-        },
+        },*/
         compress: {
             createZipPackage: {
                 options: {
@@ -144,7 +144,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-csscss');
+    //grunt.loadNpmTasks('grunt-csscss'); //TODO: try to fix Ruby 2.0 error on windows
 
     // Development
     grunt.registerTask('dev', 'Development build', ['compass:excelsior_dev', 'compass:app_dev', 'jshint']);
