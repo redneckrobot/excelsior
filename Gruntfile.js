@@ -15,7 +15,7 @@ module.exports = function(grunt) {
                     {
                         expand: true,
                         cwd: '.',
-                        src: ['js/excelsior/*.js'],
+                        src: ['excelsior/js/core/*.js', '!excelsior/js/core/*.min.js'],
                         dest:'.',
                         ext: '.min.js'
                     }
@@ -26,7 +26,7 @@ module.exports = function(grunt) {
                     {
                         expand: true,
                         cwd: '.',
-                        src: ['js/*.js'],
+                        src: ['app/js/*.js', '!app/js/*.min.js'],
                         dest:'.',
                         ext: '.min.js'
                     }
@@ -34,7 +34,7 @@ module.exports = function(grunt) {
             }
         },
         jshint: {
-            files: ['js/excelsior/excelsior.js', 'js/excelsior/off-canvas.js', 'js/excelsior/respCharts.js', 'js/excelsior/responsive-tables.js', 'js/site.js'],
+            files: ['excelsior/js/core/*.js', '!excelsior/js/core/*.min.js', 'app/js/*.js', '!app/js/*.min.js'],
             options: {
                 curly: true,
                 eqeqeq: true,
@@ -51,14 +51,14 @@ module.exports = function(grunt) {
         watch: {
             scripts: {
                 // files: ['<%= jshint.files %>'], //TODO: Why doesn't this work?
-                files: ['js/excelsior/excelsior.js', 'js/excelsior/off-canvas.js', 'js/excelsior/respCharts.js', 'js/excelsior/responsive-tables.js', 'js/site.js'],
+                files: ['excelsior/js/core/*.js', '!excelsior/js/core/*.min.js', 'app/js/*.js', '!app/js/*.min.js'],
                 tasks: ['jshint'],
                 options: {
                     interrupt: true
                 }
             },
-            src: {
-                files: ['scss/*.scss'],
+            scss: {
+                files: ['excelsior/scss/*.scss'],
                 tasks: ['compass:dev']
             }
         },
@@ -69,20 +69,35 @@ module.exports = function(grunt) {
                     clean: true
                 }
             },
-            prod: {
+            excelsior_prod: {
                 options: {
+                    basePath: 'excelsior/',
                     config: 'config-scss-prod.rb',
                     force: true
                 }
             },
-            dev: {
+            excelsior_dev: {
                 options: {
+                    basePath: 'excelsior/',
+                    config: 'config-scss-dev.rb',
+                    force: true
+                }
+            },
+            app_prod: {
+                options: {
+                    basePath: 'app/',
+                    config: 'config-scss-prod.rb',
+                    force: true
+                }
+            },
+            app_dev: {
+                options: {
+                    basePath: 'app/',
                     config: 'config-scss-dev.rb',
                     force: true
                 }
             }
         },
-
         csscss: {
             options: {
                 colorize: true,
@@ -90,7 +105,7 @@ module.exports = function(grunt) {
                 //, require: 'config-scss-dev.rb'
             },
             dist: {
-                src: ['css/excelsior.css', 'css/off-canvas.css']
+                src: ['excelsior/css/excelsior.css', 'excelsior/css/off-canvas.css']
             }
         },
         compress: {
@@ -100,7 +115,12 @@ module.exports = function(grunt) {
                     pretty: true
                 },
                 dest: 'excelsior/',
-                src: ['**', '!.DS_Store', '!.db', '!.git/', '!.sass-cache/**','!node_modules/**', '!scss/**', '!js/site*.*', '!images/excelsior-long-500.png', '!images-source/**', '!Gruntfile.js', '!.gitignore', '!.editorconfig', '!config-scss-dev.rb', '!config-scss-prod.rb', '!excelsior.zip', '!package.json']
+                src: ['**', '!.DS_Store', '!.db', '!.git/', '!.sass-cache/**','!node_modules/**', '!excelsior/scss/**', '!app/js/site*.*', '!excelsior/images/excelsior-long-500.png', '!excelsior/images/src/**', '!Gruntfile.js', '!.gitignore', '!.editorconfig', '!config-scss-dev.rb', '!config-scss-prod.rb', '!excelsior.zip', '!package.json']
+            }
+        },
+        clean: {
+            build: {
+                src: ['excelsior/js/core/*.min.js', 'excelsior/css/*.min.css', 'excelsior/.sass-cache/', 'excelsior/*.rb', 'excelsior.zip']
             }
         }
     });
@@ -111,19 +131,20 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-compress');
+    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-csscss');
 
     // Development
-    grunt.registerTask('dev', 'Development build', ['compass:dev', 'jshint']);
+    grunt.registerTask('dev', 'Development build', ['compass:excelsior_dev', 'compass:app_dev', 'jshint']);
 
     // Production
-    grunt.registerTask('prod', 'Production build', ['compass:clean', 'compass:prod', 'compass:dev', 'uglify']);
+    grunt.registerTask('prod', 'Production build', ['compass:clean', 'compass:excelsior_prod', 'compass:excelsior_dev', 'compass:app_prod', 'compass:app_dev', 'uglify']);
 
     // Packager
-    grunt.registerTask('package', 'Package up the project', ['compass:clean', 'compass:prod', 'compass:dev', 'uglify', 'compress']);
+    grunt.registerTask('pkg', 'Package up the project', ['compass:clean', 'compass:excelsior_prod', 'compass:excelsior_dev', 'uglify', 'compress']);
 
     // RUN ALL THE TASKS!!
-    grunt.registerTask('sink', 'Kitchen Sink', ['compass:clean', 'compass:prod', 'compass:dev', 'csscss', 'jshint', 'uglify', 'compress']);
+    grunt.registerTask('sink', 'Kitchen Sink', ['compass:clean', 'compass:excelsior_prod', 'compass:excelsior_dev', 'compass:app_prod', 'compass:app_dev', 'csscss', 'jshint', 'uglify', 'compress']);
 
     // Default task (Force to development build)
     grunt.registerTask('default', 'dev');
