@@ -20,7 +20,7 @@ module.exports = function(grunt) {
                     }
                 ]
             },
-            optional_js: {
+            app_js: {
                 files: [
                     {
                         expand: true,
@@ -108,7 +108,7 @@ module.exports = function(grunt) {
             }
         },
         compress: {
-            main: {
+            createZipPackage: {
                 options: {
                     archive: 'excelsior.zip',
                     pretty: true
@@ -121,29 +121,17 @@ module.exports = function(grunt) {
         },
         concat: {
             options: {
-                banner: '/*! <%= pkg.title %> v<%= pkg.version %> | (c) <%= grunt.template.today("yyyy") %> NYS ITS | <%= pkg.repository.url %> | <%= pkg.license.type %>: <%= pkg.license.url %> */\n',
+                banner: '/*! <%= pkg.title %> v<%= pkg.version %> | (c) <%= grunt.template.today("yyyy") %> NYS ITS | <%= pkg.repository.url %> | <%= pkg.license.type %>: <%= pkg.license.url %> */\n'
             },
-            devExcelsior: {
-                src: ['excelsior/css/excelsior.css'],
-                dest: 'excelsior/css/excelsior.css'
-            },
-            devOffCanvas: {
-                src: ['excelsior/css/off-canvas.css'],
-                dest: 'excelsior/css/off-canvas.css'
-            },
-            prodExcelsior: {
-                src: ['excelsior/css/excelsior.min.css'],
-                dest: 'excelsior/css/excelsior.min.css'
-            },
-            prodOffCanvas: {
-                src: ['excelsior/css/off-canvas.min.css'],
-                dest: 'excelsior/css/off-canvas.min.css'
+            addBanners: {
+                files: [
+                        {expand: true, src: ['excelsior/css/*.css'], dest: '.'}
+                ]
             }
-
         },
         clean: {
-            build: {
-                src: ['excelsior/js/core/*.min.js', 'excelsior/css/*.min.css', 'excelsior/.sass-cache/', 'excelsior/*.rb', 'excelsior.zip']
+            generatedFiles: {
+                src: ['excelsior/js/core/*.min.js', 'excelsior/css/*', 'excelsior/.sass-cache/', 'excelsior/*.rb', 'excelsior.zip']
             }
         }
     });
@@ -165,7 +153,7 @@ module.exports = function(grunt) {
     grunt.registerTask('prod', 'Production build', ['compass:clean', 'compass:excelsior_prod', 'compass:excelsior_dev', 'compass:app_prod', 'compass:app_dev', 'uglify', 'concat']);
 
     // Packager
-    grunt.registerTask('package', 'Package up the project', ['compass:clean', 'compass:excelsior_prod', 'compass:excelsior_dev', 'uglify', 'compress']);
+    grunt.registerTask('package', 'Package up the project', ['compass:clean', 'compass:excelsior_prod', 'compass:excelsior_dev', 'uglify', 'concat', 'compress']);
 
     // RUN ALL THE TASKS!!
     grunt.registerTask('sink', 'Kitchen Sink', ['compass:clean', 'compass:excelsior_prod', 'compass:excelsior_dev', 'compass:app_prod', 'compass:app_dev', 'csscss', 'jshint', 'uglify', 'compress']);
