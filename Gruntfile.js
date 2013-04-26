@@ -9,7 +9,7 @@ module.exports = function(grunt) {
                 mangle: false, // Don't change variable and function names
                 report: 'gzip' // Print size savings to the command line
             },
-            ewf_core: {
+            excelsior_js: {
                 files: [
                     {
                         expand: true,
@@ -46,7 +46,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-
         watch: {
             scripts: {
                 // files: ['<%= jshint.files %>'], //TODO: Why doesn't this work?
@@ -56,12 +55,11 @@ module.exports = function(grunt) {
                     interrupt: true
                 }
             },
-            scss: {
-                files: ['excelsior/scss/*.scss'],
-                tasks: ['compass:dev']
+            sass: {
+                files: ['excelsior/scss/**.scss', 'app/scss/**.scss'],
+                tasks: ['compass:excelsior_dev', 'compass:app_dev']
             }
         },
-
         compass: {
             clean: {
                 options: {
@@ -97,16 +95,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-        /*csscss: {
-            options: {
-                colorize: true,
-                verbose: true
-                //, require: 'config-scss-dev.rb'
-            },
-            dist: {
-                src: ['excelsior/css/excelsior.css', 'excelsior/css/off-canvas.css']
-            }
-        },*/
         compress: {
             createZipPackage: {
                 options: {
@@ -131,7 +119,7 @@ module.exports = function(grunt) {
         },
         clean: {
             generatedFiles: {
-                src: ['excelsior/js/core/*.min.js', 'excelsior/css/*', 'excelsior/.sass-cache/', 'excelsior/*.rb', 'excelsior.zip']
+                src: ['excelsior/js/core/*.min.js', 'excelsior/css/*', 'excelsior/.sass-cache/', 'app/.sass-cache/', 'excelsior.zip']
             }
         }
     });
