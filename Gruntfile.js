@@ -3,7 +3,6 @@ module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-
         uglify: {
             options: {
                 banner: '/*! <%= pkg.title %> v<%= pkg.version %> | (c) <%= grunt.template.today("yyyy") %> NYS ITS | <%= pkg.repository.url %> | <%= pkg.license.type %>: <%= pkg.license.url %> */\n',
@@ -120,6 +119,28 @@ module.exports = function(grunt) {
                 ]
             }
         },
+        concat: {
+            options: {
+                banner: '/*! <%= pkg.title %> v<%= pkg.version %> | (c) <%= grunt.template.today("yyyy") %> NYS ITS | <%= pkg.repository.url %> | <%= pkg.license.type %>: <%= pkg.license.url %> */\n',
+            },
+            devExcelsior: {
+                src: ['excelsior/css/excelsior.css'],
+                dest: 'excelsior/css/excelsior.css'
+            },
+            devOffCanvas: {
+                src: ['excelsior/css/off-canvas.css'],
+                dest: 'excelsior/css/off-canvas.css'
+            },
+            prodExcelsior: {
+                src: ['excelsior/css/excelsior.min.css'],
+                dest: 'excelsior/css/excelsior.min.css'
+            },
+            prodOffCanvas: {
+                src: ['excelsior/css/off-canvas.min.css'],
+                dest: 'excelsior/css/off-canvas.min.css'
+            }
+
+        },
         clean: {
             build: {
                 src: ['excelsior/js/core/*.min.js', 'excelsior/css/*.min.css', 'excelsior/.sass-cache/', 'excelsior/*.rb', 'excelsior.zip']
@@ -134,13 +155,14 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-csscss');
 
     // Development
     grunt.registerTask('dev', 'Development build', ['compass:excelsior_dev', 'compass:app_dev', 'jshint']);
 
     // Production
-    grunt.registerTask('prod', 'Production build', ['compass:clean', 'compass:excelsior_prod', 'compass:excelsior_dev', 'compass:app_prod', 'compass:app_dev', 'uglify']);
+    grunt.registerTask('prod', 'Production build', ['compass:clean', 'compass:excelsior_prod', 'compass:excelsior_dev', 'compass:app_prod', 'compass:app_dev', 'uglify', 'concat']);
 
     // Packager
     grunt.registerTask('package', 'Package up the project', ['compass:clean', 'compass:excelsior_prod', 'compass:excelsior_dev', 'uglify', 'compress']);
