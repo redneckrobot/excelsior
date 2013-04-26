@@ -114,8 +114,10 @@ module.exports = function(grunt) {
                     archive: 'excelsior.zip',
                     pretty: true
                 },
-                dest: 'excelsior/',
-                src: ['**', '!.DS_Store', '!.db', '!.git/', '!.sass-cache/**','!node_modules/**', '!excelsior/scss/**', '!app/js/site*.*', '!excelsior/images/excelsior-long-500.png', '!excelsior/images/src/**', '!Gruntfile.js', '!.gitignore', '!.editorconfig', '!config-scss-dev.rb', '!config-scss-prod.rb', '!excelsior.zip', '!package.json']
+                files: [
+                    {src: ['**', '!.DS_Store', '!.db', '!.git/', '!.sass-cache/**', '!app/**', '!node_modules/**', '!excelsior/scss/**', '!app/js/site*.*', '!excelsior/images/excelsior-long-500.png', '!excelsior/images/src/**', '!Gruntfile.js', '!.gitignore', '!.editorconfig', '!config-scss-dev.rb', '!config-scss-prod.rb', '!excelsior.zip', '!package.json'], dest: 'excelsior/'},
+                    {expand: true, src: ['app/**'], dest: 'excelsior/', ext: '.txt'}
+                ]
             }
         },
         clean: {
@@ -141,7 +143,7 @@ module.exports = function(grunt) {
     grunt.registerTask('prod', 'Production build', ['compass:clean', 'compass:excelsior_prod', 'compass:excelsior_dev', 'compass:app_prod', 'compass:app_dev', 'uglify']);
 
     // Packager
-    grunt.registerTask('pkg', 'Package up the project', ['compass:clean', 'compass:excelsior_prod', 'compass:excelsior_dev', 'uglify', 'compress']);
+    grunt.registerTask('package', 'Package up the project', ['compass:clean', 'compass:excelsior_prod', 'compass:excelsior_dev', 'uglify', 'compress']);
 
     // RUN ALL THE TASKS!!
     grunt.registerTask('sink', 'Kitchen Sink', ['compass:clean', 'compass:excelsior_prod', 'compass:excelsior_dev', 'compass:app_prod', 'compass:app_dev', 'csscss', 'jshint', 'uglify', 'compress']);
