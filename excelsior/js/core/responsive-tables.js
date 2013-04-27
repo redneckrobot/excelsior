@@ -2,7 +2,7 @@
  * Responsive Table
  * Author: NYS ITS, https://github.com/nys-its/excelsior
  * Date: March 2013
- * Dependencies: jQuery 1.9 or Zepto 1.0, jQuery UI widget factory 1.8.16
+ * Dependencies: jQuery 1.9.1 or Zepto 1.0, jQuery UI widget factory 1.8.16
  * Based on https://github.com/filamentgroup/RWD-Table-Patterns
  */
 (function() {
@@ -152,7 +152,7 @@
           $dropdown = $('<div class="rt-table-menu" id="' + tableId + '-check-container"></div>');
           $dropdown.insertBefore($table);
         }
-        $dropdown.prepend('<a href="#" data-dropdown="drop-' + tableId + '" class="small button dropdown radius">Columns</a>');
+        $dropdown.prepend('<a href="#" data-dropdown="drop-' + tableId + '" class="small button dropdown radius">Select Columns</a>');
         $dropdown.append('<ul id="drop-' + tableId + '" class="f-dropdown rt-table-dropdown"></ul>');
       }
 
