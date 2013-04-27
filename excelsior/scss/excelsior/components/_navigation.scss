@@ -19,21 +19,22 @@
  }
 
 .skip-to {
-  position: absolute;
-  clip: rect(0, 0, 0, 0);
-  background: rgba(0,0,0,0.5);
-  @include border-radius(3px);
-  border: 1px solid #FFF;
-  display: inline-block;
-  padding: 5px;
-  top: 10px;
-  left: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: inline-block;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid $primary-color;
+    @include border-radius(3px);
+    clip: rect(0, 0, 0, 0);
+    font-size: 1.4em;
 }
 
 .skip-to:focus {
-  clip: auto;
-  outline: 1px solid #FFF;
-  z-index: 100;
+    clip: auto;
+    outline: 1px solid $primary-color;
+    z-index: 100;
 }
 
 .gov-pull-down-container {

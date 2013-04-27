@@ -1,5 +1,6 @@
 # Require any additional compass plugins here.
 require 'breakpoint'
+require 'sass-media_query_combiner'
 
 # Set this to the root of your project when deployed:
 #http_path = "/"

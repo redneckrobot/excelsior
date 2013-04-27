@@ -3,6 +3,9 @@
 @import "excelsior/_variables.scss";
 @import "excelsior/_mixins.scss";
 
+$off-canvas-medium-width: 48em;
+$off-canvas-large-width: 60em;
+
 @media only screen {
 
     html,
@@ -14,7 +17,7 @@
     body.off-canvas {
         padding-top: $nav-bar-height;
 
-        @include breakpoint(48em) {
+        @include breakpoint($off-canvas-medium-width) {
             padding-top: 0;
         }
     }
@@ -52,7 +55,7 @@
             width: 100%;
             z-index: 0;
 
-            @include breakpoint(48em) {
+            @include breakpoint($off-canvas-medium-width) {
                 height: 46px;
                 overflow: visible;
                 z-index: 30;
@@ -72,22 +75,38 @@
                 height: inherit;
                 overflow-y: scroll;
 
-                @include breakpoint(60em) {
+                @include breakpoint($off-canvas-medium-width) {
+                    overflow: hidden;
+
+                    ul {
+                        min-height: auto;
+                    }
+                }
+
+                @include breakpoint($off-canvas-large-width) {
                     @include border-radius(4px);
                 }
 
                 & > ul {
                     min-height: 1000px;
+
+                    @include breakpoint($off-canvas-medium-width) {
+                        min-height: auto;
+                    }
                 }
             }
 
             ul {
                 margin-left: 16%;
 
+                @include breakpoint($off-canvas-medium-width) {
+                    margin-left: 0;
+                }
+
                 li {
                     padding-left: 3%;
 
-                    @include breakpoint(48em) {
+                    @include breakpoint($off-canvas-medium-width) {
                         padding-left: 0;
                     }
                 }
@@ -102,29 +121,43 @@
                     background: #333 !important;
                     @include transition(left 0.2s ease);
 
-                    @include breakpoint(48em) {
+                    @include breakpoint($off-canvas-medium-width) {
                         position: absolute;
                         top: 50px !important;
                         left: 0;
                         background: #454545 !important; /* M */
-                        border-radius: 4px !important; /* Do not use mixin here */
-                        background-clip: padding-box !important;
+                        border-radius: 0;
                         overflow: hidden;
                         visibility: hidden;
                         @include transition(left 0s ease);
                     }
 
+                    @include breakpoint($off-canvas-large-width) {
+                        border-radius: 4px !important; /* Do not use mixin here */
+                        background-clip: padding-box !important;
+                    }
+
                     li {
                         padding-left: 2% !important;
 
-                        @include breakpoint(48em) {
+                        @include breakpoint($off-canvas-medium-width) {
                             border-right: 1px solid #000;
                             border-left: 1px solid #666;
                         }
 
                         &:first {
-                            @include breakpoint(48em) {
+                            @include breakpoint($off-canvas-medium-width) {
                                 border-left: none;
+                            }
+                        }
+                    }
+
+                    @include breakpoint($off-canvas-medium-width) {
+                        &.active-menu {
+                            visibility: visible;
+
+                            li {
+                                padding: 0 !important;
                             }
                         }
                     }
@@ -134,7 +167,7 @@
             .menu-controls {
                 height: 53px;
 
-                @include breakpoint(48em) {
+                @include breakpoint($off-canvas-medium-width) {
                     display: none;
                 }
 
@@ -154,7 +187,7 @@
                 z-index: 1;
 
                 li {
-                    @include breakpoint(48em) {
+                    @include breakpoint($off-canvas-medium-width) {
                         padding-left: 0;
                         border-bottom: 0;
 
@@ -178,7 +211,7 @@
             top: 0;
             width: 100%;
 
-            @include breakpoint(48em) {
+            @include breakpoint($off-canvas-medium-width) {
                 min-height: auto;
                 top: -23px;
                 left: 0;
@@ -197,7 +230,7 @@
         .site-bar,
         .global-nav,
         .page {
-            @include breakpoint(48em) {
+            @include breakpoint($off-canvas-medium-width) {
                 position: relative;
             }
         }
@@ -209,7 +242,7 @@
             }
 
             .site-bar {
-                @include breakpoint(48em) {
+                @include breakpoint($off-canvas-medium-width) {
                     top: 0;
                 }
             }
@@ -229,7 +262,7 @@
             .site-bar,
             .global-nav,
             .page {
-                @include breakpoint(48em) {
+                @include breakpoint($off-canvas-medium-width) {
                     left: auto;
                     position: relative;
                 }
@@ -240,7 +273,7 @@
                 position: absolute;
                 right: 5%;
 
-                @include breakpoint(48em) {
+                @include breakpoint($off-canvas-medium-width) {
                     position: relative;
                     right: auto;
                 }
@@ -253,7 +286,7 @@
             .page {
                 box-shadow: 5px 49px 8px #000;
 
-                @include breakpoint(48em) {
+                @include breakpoint($off-canvas-medium-width) {
                     box-shadow: none;
                 }
             }
@@ -261,7 +294,7 @@
             .footer {
                 left: -82%;
 
-                @include breakpoint(48em) {
+                @include breakpoint($off-canvas-medium-width) {
                     left: auto;
                 }
             }
@@ -271,32 +304,3 @@
     } // end .off-canvas
 
 } // end @media only screen
-
-/* Medium Displays: 768px - 1279px */
-@media only screen and (min-width: 48em) {
-
-    .off-canvas {
-
-        .global-nav .nav-container,
-        &.active-site-menu .global-nav .nav-container {
-            overflow: hidden;
-        }
-
-        .global-nav .nav-container > ul,
-        &.active-site-menu .global-nav .nav-container ul {
-            min-height: auto;
-        }
-
-        .global-nav ul {
-            margin-left: 0;
-
-            ul.active-menu {
-                visibility: visible;
-
-                li {
-                    padding: 0 !important;
-                }
-            }
-        }
-    }
-}

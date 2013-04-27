@@ -113,8 +113,14 @@ module.exports = function(grunt) {
             },
             addBanners: {
                 files: [
-                        {expand: true, src: ['excelsior/css/*.css'], dest: '.'}
+                    {expand: true, src: ['excelsior/css/*.css'], dest: '.'}
                 ]
+            },
+            dist: {
+              files: {
+                'excelsior/css/excelsior.min.css': ['excelsior/scss/foundation/normalize.min.css', 'excelsior/scss/foundation/foundation.min.css', 'excelsior/css/excelsior.min.css'],
+                'excelsior/css/excelsior.css': ['excelsior/scss/foundation/normalize.css', 'excelsior/scss/foundation/foundation.css', 'excelsior/css/excelsior.css']
+              }
             }
         },
         clean: {
