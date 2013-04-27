@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "breakpoint";
 @import "excelsior/_variables.scss";
 @import "excelsior/_mixins.scss";
 
@@ -12,6 +13,10 @@
 
   body.off-canvas {
     padding-top: $nav-bar-height;
+
+    @include breakpoint(48em) {
+        padding-top: 0;
+    }
   }
 
   .off-canvas {
@@ -27,25 +32,31 @@
     }
 
     .gov-bar {
-      position: absolute;
-      width: 100%;
-    }
+        position: absolute;
+        width: 100%;
 
-    .gov-bar form  {
-      margin: 0;
+        form {
+            margin: 0;
+        }
     }
 
     .site-bar {
-      position: absolute;
-      width: 100%;
+        position: absolute;
+        width: 100%;
     }
 
     .global-nav {
-      position: fixed;
-      top: 0;
-      height: 100%;
-      width: 100%;
-      z-index: 0;
+        position: fixed;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+
+        @include breakpoint(48em) {
+            height: 46px;
+            overflow: visible;
+            z-index: 30;
+        }
     }
 
     .global-nav .sub-menu-title {
@@ -59,8 +70,12 @@
     }
 
     .global-nav .nav-container {
-      height: inherit;
-      overflow-y: scroll;
+        height: inherit;
+        overflow-y: scroll;
+
+        @include breakpoint(60em) {
+            @include border-radius(4px);
+        }
     }
 
     .global-nav .nav-container > ul {
@@ -72,54 +87,102 @@
     }
 
     .global-nav ul li {
-      padding-left: 3%;
+        padding-left: 3%;
+
+        @include breakpoint(48em) {
+            padding-left: 0;
+        }
     }
 
     .global-nav ul ul {
-      background: #333 !important;
-      display: block;
-      height: 100%;
-      left: 100%;
-      position: fixed;
-      top: 53px;
-      width: 100%;
-      background: #333;
-      @include transition(left 0.2s ease);
+        position: fixed;
+        top: 53px;
+        left: 100%;
+        display: block;
+        height: 100%;
+        width: 100%;
+        background: #333 !important;
+        @include transition(left 0.2s ease);
+
+        @include breakpoint(48em) {
+            position: absolute;
+            top: 50px !important;
+            left: 0;
+            background: #454545 !important; /* M */
+            border-radius: 4px !important; /* Do not use mixin here */
+            background-clip: padding-box !important;
+            overflow: hidden;
+            visibility: hidden;
+            @include transition(left 0s ease);
+        }
     }
 
     .global-nav ul ul li {
-      padding-left: 2% !important;
+        padding-left: 2% !important;
+
+        @include breakpoint(48em) {
+            border-right: 1px solid #000;
+            border-left: 1px solid #666;
+        }
+
+        &:first {
+            @include breakpoint(48em) {
+                border-left: none;
+            }
+        }
     }
 
     .global-nav .menu-controls {
-      height: 53px;
+        height: 53px;
+
+        @include breakpoint(48em) {
+            display: none;
+        }
     }
 
     .global-nav .menu-controls .menu-back {
-      float: right;
-      @include gradient-vertical(#999, #505050);
-      @include border-radius(5px);
-      color: #fff;
-      margin: 10px;
-      padding: 7px 7px 7px 1px;
-      visibility: hidden;
+        float: right;
+        @include gradient-vertical(#999, #505050);
+        @include border-radius(5px);
+        color: #fff;
+        margin: 10px;
+        padding: 7px 7px 7px 1px;
+        visibility: hidden;
     }
 
     &.active-sub-menu .global-nav .menu-controls .menu-back {
-      visibility: visible;
+        visibility: visible;
     }
 
     .global-nav .active-menu {
-      left: 0;
-      z-index: 1;
+        left: 0;
+        z-index: 1;
+
+        li {
+            @include breakpoint(48em) {
+                padding-left: 0;
+                border-bottom: 0;
+
+                a {
+                    border-radius: 4px;
+                    background: #454545 !important;
+                }
+            }
+        }
     }
 
     .page {
-      position: relative;
-      height: auto;
-      min-height: 100%;
-      top: 0;
-      width: 100%;
+        position: relative;
+        height: auto;
+        min-height: 100%;
+        top: 0;
+        width: 100%;
+
+        @include breakpoint(48em) {
+            min-height: auto;
+            top: -23px;
+            left: 0;
+        }
     }
 
     .gov-pull-down,
@@ -130,24 +193,58 @@
       @include transition-three(top 0.2s ease, left 0.2s ease, height 0.2s ease);
     }
 
-    &.active-gov-bar .gov-pull-down-container,
-    &.active-gov-bar .site-bar {
-      top: 88px;
+    &.active-gov-bar {
+        .gov-pull-down-container,
+        .site-bar {
+           top: 88px;
+        }
+
+        .site-bar {
+            @include breakpoint(48em) {
+                top: 0;
+            }
+        }
     }
 
-    &.active-site-menu .gov-pull-down,
-    &.active-site-menu .gov-pull-down-container,
+    &.active-site-menu {
+        .gov-pull-down,
+        .gov-pull-down-container,
+        .gov-bar,
+        .site-bar,
+        .page {
+          position: fixed;
+          left: -82%;
+        }
+    }
+
+    .gov-bar,
+    .site-bar,
+    .global-nav,
+    .page {
+        @include breakpoint(48em) {
+            position: relative;
+        }
+    }
+
     &.active-site-menu .gov-bar,
     &.active-site-menu .site-bar,
+    &.active-site-menu .global-nav,
     &.active-site-menu .page {
-      position: fixed;
-      left: -82%;
+        @include breakpoint(48em) {
+            left: auto;
+            position: relative;
+        }
     }
 
     &.active-site-menu .global-nav .icon-right-open:before {
       padding-top: 3px;
       position: absolute;
       right: 5%;
+
+      @include breakpoint(48em) {
+        position: relative;
+        right: auto;
+      }
     }
 
     &.active-site-menu .mobile-menu-button {
@@ -159,77 +256,24 @@
     }
 
     &.active-site-menu .footer {
-      left: -82%;
-    }
-  }
-}
-
-@media only screen and (min-width: 48em) {
-  .off-canvas {
-
-    &.active-site-menu .global-nav .icon-right-open:before {
-      position: relative;
-      right: auto;
+        left: -82%;
+        @include breakpoint(48em) {
+            left: auto;
+        }
     }
 
     &.active-site-menu .page {
-      box-shadow: none;
+        @include breakpoint(48em) {
+            box-shadow: none;
+        }
     }
-
-    &.active-site-menu .footer {
-      left: auto;
-    }
-
   }
-}
-
-// 960px and up
-@media only screen and (min-width: 60em) {
-    .global-nav .nav-container {
-        @include border-radius(4px);
-    }
 }
 
 /* Medium Displays: 768px - 1279px */
 @media only screen and (min-width: 48em) {
 
-  body.off-canvas {
-    padding-top: 0;
-  }
-
   .off-canvas {
-    .gov-bar,
-    .site-bar,
-    .global-nav,
-    .page {
-        position: relative;
-    }
-
-    &.active-site-menu .gov-bar,
-    &.active-site-menu .site-bar,
-    &.active-site-menu .global-nav,
-    &.active-site-menu .page {
-        left: auto;
-        position: relative;
-    }
-
-    &.active-gov-bar .site-bar {
-        top: 0;
-    }
-
-    .global-nav {
-      height: 46px;
-      overflow: visible;
-      z-index: 30;
-    }
-
-    .global-nav ul li {
-      padding-left: 0;
-    }
-
-    .global-nav .menu-controls {
-      display: none;
-    }
 
     .global-nav .nav-container,
     &.active-site-menu .global-nav .nav-container {
@@ -246,49 +290,11 @@
       margin-left: 0;
     }
 
-    .global-nav ul ul {
-      position: absolute;
-      top: 50px !important;
-      left: 0;
-      background: #454545 !important; /* M */
-      border-radius: 4px !important; /* Do not use mixin here */
-      background-clip: padding-box !important;
-      overflow: hidden;
-      visibility: hidden;
-      @include transition(left 0s ease);
-    }
-
-    .global-nav ul ul li {
-      border-right: 1px solid #000;
-      border-left: 1px solid #666;
-    }
-
-    .global-nav ul ul li:first {
-      border-left: none;
-    }
-
     .global-nav ul ul.active-menu {
-      visibility: visible;
-    }
-
-    .global-nav ul ul.active-menu li {
-      padding: 0 !important;
-    }
-
-    .global-nav .active-menu li {
-      padding-left: 0;
-      border-bottom: 0;
-    }
-
-    .global-nav .active-menu li a {
-      border-radius: 4px;
-      background: #454545 !important;
-    }
-
-    .page {
-      min-height: auto;
-      top: -23px;
-      left: 0;
+        visibility: visible;
+        li {
+            padding: 0 !important;
+        }
     }
   }
 }
