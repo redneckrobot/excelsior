@@ -7,7 +7,9 @@
  */
 (function() {
   $.widget('EWF.responsiveTable', {
-    options: {},
+    options: {
+        dropdownLabel: 'Select Columns'
+    },
 
     // Set up the widget
     _create: function() {
@@ -19,6 +21,7 @@
           $bodyRows = $tbody.find('tr'),
           tableId = $table.attr('id'),
           totalMinWidth = 0,
+          opts = self.options,
           $dropdown;
 
       /**
@@ -152,7 +155,7 @@
           $dropdown = $('<div class="rt-table-menu" id="' + tableId + '-check-container"></div>');
           $dropdown.insertBefore($table);
         }
-        $dropdown.prepend('<a href="#" data-dropdown="drop-' + tableId + '" class="small button dropdown radius">Select Columns</a>');
+        $dropdown.prepend('<a href="#" data-dropdown="drop-' + tableId + '" class="small button dropdown radius">' + opts.dropdownLabel + '</a>');
         $dropdown.append('<ul id="drop-' + tableId + '" class="f-dropdown rt-table-dropdown"></ul>');
       }
 
