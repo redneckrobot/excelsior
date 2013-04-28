@@ -120,14 +120,9 @@ module.exports = function(grunt) {
                     }
                 ]
             },
-            dist: {
+            excelsior: {
                 files: {
-                    'excelsior/css/excelsior.css': ['excelsior/css/temp-excelsior.css']
-                }
-            },
-            preMinify: {
-                files: {
-                    'excelsior/css/temp-excelsior.css': ['excelsior/scss/foundation/normalize.css',
+                    'excelsior/css/excelsior-core.css': ['excelsior/scss/foundation/normalize.css',
                                                          'excelsior/scss/foundation/foundation.css',
                                                          'excelsior/css/excelsior.css']
               }
@@ -135,7 +130,7 @@ module.exports = function(grunt) {
         },
         cssmin: {
             excelsior_core: {
-                src: 'excelsior/css/temp-excelsior.css',
+                src: 'excelsior/css/excelsior-core.css',
                 dest: 'excelsior/css/excelsior.min.css'
             },
             excelsior_offCanvas: {
@@ -146,9 +141,18 @@ module.exports = function(grunt) {
         clean: {
             generatedFiles: {
                 src: ['excelsior/js/core/*.min.js', 'excelsior/css/*', 'excelsior/.sass-cache/', 'app/.sass-cache/', 'excelsior.zip']
+            }
+        },
+        rename: {
+            pre: {
+                files: [
+                    {src: 'excelsior/css/excelsior.css', dest: 'excelsior/css/excelsior-core.css'}
+                ]
             },
-            tempFiles: {
-                src: ['excelsior/css/temp-*.css']
+            post: {
+                files: [
+                    {src: 'excelsior/css/excelsior-core.css', dest: 'excelsior/css/excelsior.css'}
+                ]
             }
         }
     });
@@ -161,17 +165,18 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-css');
+    grunt.loadNpmTasks('grunt-css'); // cssmin
+    grunt.loadNpmTasks('grunt-contrib-rename');
     //grunt.loadNpmTasks('grunt-csscss'); //TODO: try to fix Ruby 2.0 error on windows
 
     // Development
-    grunt.registerTask('dev', 'Development build', ['compass:excelsior_dev', 'compass:app_dev', 'jshint', 'concat:preMinify', 'cssmin', 'concat:dist', 'concat:addBanners', 'clean:tempFiles']);
+    grunt.registerTask('dev', 'Development build', ['compass:excelsior_dev', 'compass:app_dev', 'jshint', 'rename:pre', 'concat:excelsior', 'cssmin', 'concat:addBanners', 'rename:post']);
 
     // Production
-    grunt.registerTask('prod', 'Production build', ['compass:clean', 'compass:excelsior_prod', 'compass:app_prod', 'uglify', 'concat:preMinify', 'cssmin', 'concat:dist', 'concat:addBanners', 'clean:tempFiles']);
+    grunt.registerTask('prod', 'Production build', ['compass:clean', 'compass:excelsior_prod', 'compass:app_prod', 'uglify', 'rename:pre', 'concat:excelsior', 'cssmin', 'concat:addBanners', 'rename:post']);
 
     // Packager
-    grunt.registerTask('package', 'Package up the project', ['compass:clean', 'compass:excelsior_prod', 'compass:excelsior_dev', 'uglify', 'cssmin', 'concat', 'clean', 'compress']);
+    grunt.registerTask('package', 'Package up the project', ['compass:clean', 'compass:excelsior_prod', 'compass:excelsior_dev', 'uglify', 'rename:pre', 'concat:excelsior', 'cssmin', 'concat:addBanners', 'rename:post', 'clean', 'compress']);
 
     // Default task (Force to development build)
     grunt.registerTask('default', 'dev');
