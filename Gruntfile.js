@@ -123,8 +123,8 @@ module.exports = function(grunt) {
             excelsior: {
                 files: {
                     'excelsior/css/excelsior-core.css': ['excelsior/scss/foundation/normalize.css',
-                                                    'excelsior/scss/foundation/foundation.css',
-                                                    'excelsior/css/excelsior-core.css']
+                                                         'excelsior/scss/foundation/foundation.css',
+                                                         'excelsior/css/excelsior-core.css']
               }
             }
         },
@@ -150,12 +150,12 @@ module.exports = function(grunt) {
             }
         },
         rename: {
-            preConcat: {
+            beforeConcat: {
                 files: [
                     {src: 'excelsior/css/excelsior.css', dest: 'excelsior/css/excelsior-core.css'}
                 ]
             },
-            postConcat: {
+            afterConcat: {
                 files: [
                     {src: 'excelsior/css/excelsior-core.css', dest: 'excelsior/css/excelsior.css'}
                 ]
@@ -176,13 +176,13 @@ module.exports = function(grunt) {
     //grunt.loadNpmTasks('grunt-csscss'); //TODO: try to fix Ruby 2.0 error on windows
 
     // Development
-    grunt.registerTask('dev', 'Development build', ['compass:excelsior_dev', 'compass:app_dev', 'jshint', 'rename:preConcat', 'concat:excelsior', 'cssmin', 'concat:addBanners', 'rename:postConcat']);
+    grunt.registerTask('dev', 'Development build', ['compass:excelsior_dev', 'compass:app_dev', 'jshint', 'rename:beforeConcat', 'concat:excelsior', 'cssmin', 'concat:addBanners', 'rename:afterConcat']);
 
     // Production
-    grunt.registerTask('prod', 'Production build', ['compass:clean', 'compass:excelsior_prod', 'compass:app_prod', 'uglify', 'rename:preConcat', 'concat:excelsior', 'cssmin', 'concat:addBanners', 'rename:postConcat']);
+    grunt.registerTask('prod', 'Production build', ['compass:clean', 'compass:excelsior_prod', 'compass:app_prod', 'uglify', 'rename:beforeConcat', 'concat:excelsior', 'cssmin', 'concat:addBanners', 'rename:afterConcat']);
 
     // Packager
-    grunt.registerTask('package', 'Package up the project', ['compass:clean', 'compass:excelsior_prod', 'compass:excelsior_dev', 'uglify', 'rename:preConcat', 'concat:excelsior', 'cssmin', 'concat:addBanners', 'rename:postConcat', 'clean', 'compress']);
+    grunt.registerTask('package', 'Package up the project', ['compass:clean', 'compass:excelsior_prod', 'compass:excelsior_dev', 'uglify', 'rename:beforeConcat', 'concat:excelsior', 'cssmin', 'concat:addBanners', 'rename:afterConcat', 'clean', 'compress']);
 
     // Default task (Force to development build)
     grunt.registerTask('default', 'dev');
