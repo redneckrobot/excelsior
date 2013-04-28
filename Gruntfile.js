@@ -113,19 +113,52 @@ module.exports = function(grunt) {
             },
             addBanners: {
                 files: [
-                    {expand: true, src: ['excelsior/css/*.css'], dest: '.'}
+                    {
+                        expand: true,
+                        src: ['excelsior/css/*.css'],
+                        dest: '.'
+                    }
                 ]
             },
             dist: {
               files: {
-                'excelsior/css/excelsior.min.css': ['excelsior/scss/foundation/normalize.min.css', 'excelsior/scss/foundation/foundation.min.css', 'excelsior/css/excelsior.min.css'],
-                'excelsior/css/excelsior.css': ['excelsior/scss/foundation/normalize.css', 'excelsior/scss/foundation/foundation.css', 'excelsior/css/excelsior.css']
+                // Copy temporarily so we can write to the same file name
+                'excelsior/css/temp-excelsior.css': ['excelsior/css/excelsior.css'],
+                // Unminified files
+                'excelsior/css/excelsior.css': ['excelsior/scss/foundation/normalize.css',
+                                                'excelsior/scss/foundation/foundation.css',
+                                                'excelsior/css/temp-excelsior.css'],
+                // Minified files
+                'excelsior/css/excelsior.min.css': ['excelsior/css/temp-normalize.min.css',
+                                                    'excelsior/css/temp-foundation.min.css',
+                                                    'excelsior/css/temp-excelsior.min.css']
               }
+            }
+        },
+        cssmin: {
+            normalize: {
+                src: 'excelsior/scss/foundation/normalize.css',
+                dest: 'excelsior/css/temp-normalize.min.css'
+            },
+            foundation_core: {
+                src: 'excelsior/scss/foundation/foundation.css',
+                dest: 'excelsior/css/temp-foundation.min.css'
+            },
+            excelsior_core: {
+                src: 'excelsior/css/excelsior.css',
+                dest: 'excelsior/css/temp-excelsior.min.css'
+            },
+            excelsior_offCanvas: {
+                src: 'excelsior/css/off-canvas.css',
+                dest: 'excelsior/css/off-canvas.min.css'
             }
         },
         clean: {
             generatedFiles: {
                 src: ['excelsior/js/core/*.min.js', 'excelsior/css/*', 'excelsior/.sass-cache/', 'app/.sass-cache/', 'excelsior.zip']
+            },
+            generatedFiles_dev: {
+                src: ['excelsior/css/temp-*.css']
             }
         }
     });
@@ -139,15 +172,16 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-concat');
     //grunt.loadNpmTasks('grunt-csscss'); //TODO: try to fix Ruby 2.0 error on windows
+    grunt.loadNpmTasks('grunt-css');
 
     // Development
-    grunt.registerTask('dev', 'Development build', ['compass:excelsior_dev', 'compass:app_dev', 'jshint']);
+    grunt.registerTask('dev', 'Development build', ['compass:excelsior_dev', 'compass:app_dev', 'jshint', 'cssmin', 'concat', 'clean:generatedFiles_dev']);
 
     // Production
-    grunt.registerTask('prod', 'Production build', ['compass:clean', 'compass:excelsior_prod', 'compass:excelsior_dev', 'compass:app_prod', 'compass:app_dev', 'uglify', 'concat']);
+    grunt.registerTask('prod', 'Production build', ['compass:clean', 'compass:excelsior_prod', 'compass:app_prod', 'uglify', 'cssmin', 'concat', 'clean:generatedFiles_dev']);
 
     // Packager
-    grunt.registerTask('package', 'Package up the project', ['compass:clean', 'compass:excelsior_prod', 'compass:excelsior_dev', 'uglify', 'concat', 'compress']);
+    grunt.registerTask('package', 'Package up the project', ['compass:clean', 'compass:excelsior_prod', 'compass:excelsior_dev', 'uglify', 'cssmin', 'concat', 'clean', 'compress']);
 
     // Default task (Force to development build)
     grunt.registerTask('default', 'dev');
