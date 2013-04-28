@@ -50,16 +50,6 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 40, ../scss/foundation/components/_global.scss */
-#map_canvas img,
-#map_canvas embed,
-#map_canvas object,
-.map_canvas img,
-.map_canvas embed,
-.map_canvas object {
-  max-width: none !important;
-}
-
 /* line 45, ../scss/foundation/components/_global.scss */
 .left {
   float: left !important;

@@ -17,8 +17,7 @@
     "grunt-contrib-clean": "0.4.1",
     "grunt-csscss": "0.4.0",
     "grunt-contrib-concat": "0.3.0",
-    "grunt-contrib-mincss": "0.3.2",
-    "grunt-css": "~0.5.4"
+    "grunt-css": "0.5.4"
   },
   "license": {
     "type": "MIT",
