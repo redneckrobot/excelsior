@@ -1,294 +1,306 @@
 @charset "UTF-8";
+@import "breakpoint";
 @import "excelsior/_variables.scss";
 @import "excelsior/_mixins.scss";
 
+$off-canvas-medium-width: 48em;
+$off-canvas-large-width: 60em;
+
 @media only screen {
 
-  html,
-  body {
-    background: #282828;
-    height: 100%;
-  }
-
-  body.off-canvas {
-    padding-top: $nav-bar-height;
-  }
-
-  .off-canvas {
-
-    .gov-pull-down-container {
-      position: absolute;
-      top: 0;
+    html,
+    body {
+        background: #282828;
+        height: 100%;
     }
 
-    .gov-pull-down {
-      height: 40px;
-      width: 44px;
+    body.off-canvas {
+        padding-top: $nav-bar-height;
+
+        @include breakpoint($off-canvas-medium-width) {
+            padding-top: 0;
+        }
     }
 
-    .gov-bar {
-      position: absolute;
-      width: 100%;
-    }
+    .off-canvas {
 
-    .gov-bar form  {
-      margin: 0;
-    }
+        .gov-pull-down-container {
+            position: absolute;
+            top: 0;
+        }
 
-    .site-bar {
-      position: absolute;
-      width: 100%;
-    }
+        .gov-pull-down {
+            height: 40px;
+            width: 44px;
+        }
 
-    .global-nav {
-      position: fixed;
-      top: 0;
-      height: 100%;
-      width: 100%;
-      z-index: 0;
-    }
+        .gov-bar {
+            position: absolute;
+            width: 100%;
 
-    .global-nav .sub-menu-title {
-      display: inline-block;
-      color: #AAA;
-      font-size: 1.45em;
-      position: relative;
-      left: 20%;
-      line-height: $nav-bar-height;
-      padding-top: 0.15em;
-    }
+            form {
+                margin: 0;
+            }
+        }
 
-    .global-nav .nav-container {
-      height: inherit;
-      overflow-y: scroll;
-    }
+        .site-bar {
+            position: absolute;
+            width: 100%;
+        }
 
-    .global-nav .nav-container > ul {
-      min-height: 1000px;
-    }
+        .global-nav {
+            position: fixed;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 0;
 
-    .global-nav ul {
-      margin-left: 16%;
-    }
+            @include breakpoint($off-canvas-medium-width) {
+                height: 46px;
+                overflow: visible;
+                z-index: 30;
+            }
 
-    .global-nav ul li {
-      padding-left: 3%;
-    }
+            .sub-menu-title {
+                display: inline-block;
+                color: #AAA;
+                font-size: 1.45em;
+                position: relative;
+                left: 20%;
+                line-height: $nav-bar-height;
+                padding-top: 0.15em;
+            }
 
-    .global-nav ul ul {
-      background: #333 !important;
-      display: block;
-      height: 100%;
-      left: 100%;
-      position: fixed;
-      top: 53px;
-      width: 100%;
-      background: #333;
-      @include transition(left 0.2s ease);
-    }
+            .nav-container {
+                height: inherit;
+                overflow-y: scroll;
 
-    .global-nav ul ul li {
-      padding-left: 2% !important;
-    }
+                @include breakpoint($off-canvas-medium-width) {
+                    overflow: hidden;
 
-    .global-nav .menu-controls {
-      height: 53px;
-    }
+                    ul {
+                        min-height: auto;
+                    }
+                }
 
-    .global-nav .menu-controls .menu-back {
-      float: right;
-      @include gradient-vertical(#999, #505050);
-      @include border-radius(5px);
-      color: #fff;
-      margin: 10px;
-      padding: 7px 7px 7px 1px;
-      visibility: hidden;
-    }
+                @include breakpoint($off-canvas-large-width) {
+                    @include border-radius(4px);
+                }
 
-    &.active-sub-menu .global-nav .menu-controls .menu-back {
-      visibility: visible;
-    }
+                & > ul {
+                    min-height: 1000px;
 
-    .global-nav .active-menu {
-      left: 0;
-      z-index: 1;
-    }
+                    @include breakpoint($off-canvas-medium-width) {
+                        min-height: auto;
+                    }
+                }
+            }
 
-    .page {
-      position: relative;
-      height: auto;
-      min-height: 100%;
-      top: 0;
-      width: 100%;
-    }
+            ul {
+                margin-left: 16%;
 
-    .gov-pull-down,
-    .gov-pull-down-container,
-    .gov-bar,
-    .site-bar,
-    .page {
-      @include transition-three(top 0.2s ease, left 0.2s ease, height 0.2s ease);
-    }
+                @include breakpoint($off-canvas-medium-width) {
+                    margin-left: 0;
+                }
 
-    &.active-gov-bar .gov-pull-down-container,
-    &.active-gov-bar .site-bar {
-      top: 88px;
-    }
+                li {
+                    padding-left: 3%;
 
-    &.active-site-menu .gov-pull-down,
-    &.active-site-menu .gov-pull-down-container,
-    &.active-site-menu .gov-bar,
-    &.active-site-menu .site-bar,
-    &.active-site-menu .page {
-      position: fixed;
-      left: -82%;
-    }
+                    @include breakpoint($off-canvas-medium-width) {
+                        padding-left: 0;
+                    }
+                }
 
-    &.active-site-menu .global-nav .icon-right-open:before {
-      padding-top: 3px;
-      position: absolute;
-      right: 5%;
-    }
+                ul {
+                    position: fixed;
+                    top: 53px;
+                    left: 100%;
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    background: #333 !important;
+                    @include transition(left 0.2s ease);
 
-    &.active-site-menu .mobile-menu-button {
-      box-shadow: inset 6px 0px 8px -2px #000;
-    }
+                    @include breakpoint($off-canvas-medium-width) {
+                        position: absolute;
+                        top: 50px !important;
+                        left: 0;
+                        background: #454545 !important; /* M */
+                        border-radius: 0;
+                        overflow: hidden;
+                        visibility: hidden;
+                        @include transition(left 0s ease);
+                    }
 
-    &.active-site-menu .page {
-      box-shadow: 5px 49px 8px #000;
-    }
+                    @include breakpoint($off-canvas-large-width) {
+                        border-radius: 4px !important; /* Do not use mixin here */
+                        background-clip: padding-box !important;
+                    }
 
-    &.active-site-menu .footer {
-      left: -82%;
-    }
-  }
-}
+                    li {
+                        padding-left: 2% !important;
 
-@media only screen and (min-width: 48em) {
-  .off-canvas {
+                        @include breakpoint($off-canvas-medium-width) {
+                            border-right: 1px solid #000;
+                            border-left: 1px solid #666;
+                        }
 
-    &.active-site-menu .global-nav .icon-right-open:before {
-      position: relative;
-      right: auto;
-    }
+                        &:first {
+                            @include breakpoint($off-canvas-medium-width) {
+                                border-left: none;
+                            }
+                        }
+                    }
 
-    &.active-site-menu .page {
-      box-shadow: none;
-    }
+                    @include breakpoint($off-canvas-medium-width) {
+                        &.active-menu {
+                            visibility: visible;
 
-    &.active-site-menu .footer {
-      left: auto;
-    }
+                            li {
+                                padding: 0 !important;
+                            }
+                        }
+                    }
+                }
+            }
 
-  }
-}
+            .menu-controls {
+                height: 53px;
 
-// 960px and up
-@media only screen and (min-width: 60em) {
-    .global-nav .nav-container {
-        @include border-radius(4px);
-    }
-}
+                @include breakpoint($off-canvas-medium-width) {
+                    display: none;
+                }
 
-/* Medium Displays: 768px - 1279px */
-@media only screen and (min-width: 48em) {
+                .menu-back {
+                    float: right;
+                    @include gradient-vertical(#999, #505050);
+                    @include border-radius(5px);
+                    color: #fff;
+                    margin: 10px;
+                    padding: 7px 7px 7px 1px;
+                    visibility: hidden;
+                }
+            }
 
-  body.off-canvas {
-    padding-top: 0;
-  }
+            .active-menu {
+                left: 0;
+                z-index: 1;
 
-  .off-canvas {
-    .gov-bar,
-    .site-bar,
-    .global-nav,
-    .page {
-        position: relative;
-    }
+                li {
+                    @include breakpoint($off-canvas-medium-width) {
+                        padding-left: 0;
+                        border-bottom: 0;
 
-    &.active-site-menu .gov-bar,
-    &.active-site-menu .site-bar,
-    &.active-site-menu .global-nav,
-    &.active-site-menu .page {
-        left: auto;
-        position: relative;
-    }
+                        a {
+                            border-radius: 4px;
+                            background: #454545 !important;
+                        }
+                    }
+                }
+            }
+        } // end .global-nav
 
-    &.active-gov-bar .site-bar {
-        top: 0;
-    }
+        &.active-sub-menu .global-nav .menu-controls .menu-back {
+            visibility: visible;
+        }
 
-    .global-nav {
-      height: 46px;
-      overflow: visible;
-      z-index: 30;
-    }
+        .page {
+            position: relative;
+            height: auto;
+            min-height: 100%;
+            top: 0;
+            width: 100%;
 
-    .global-nav ul li {
-      padding-left: 0;
-    }
+            @include breakpoint($off-canvas-medium-width) {
+                min-height: auto;
+                top: -23px;
+                left: 0;
+            }
+        }
 
-    .global-nav .menu-controls {
-      display: none;
-    }
+        .gov-pull-down,
+        .gov-pull-down-container,
+        .gov-bar,
+        .site-bar,
+        .page {
+            @include transition-three(top 0.2s ease, left 0.2s ease, height 0.2s ease);
+        }
 
-    .global-nav .nav-container,
-    &.active-site-menu .global-nav .nav-container {
-      overflow: hidden;
-    }
+        .gov-bar,
+        .site-bar,
+        .global-nav,
+        .page {
+            @include breakpoint($off-canvas-medium-width) {
+                position: relative;
+            }
+        }
 
-    .global-nav .nav-container > ul,
-    &.active-site-menu .global-nav .nav-container ul {
-      min-height: auto;
-    }
+        &.active-gov-bar {
+            .gov-pull-down-container,
+            .site-bar {
+                top: 88px;
+            }
 
-    .global-nav ul,
-    &.active-site-menu .global-nav ul {
-      margin-left: 0;
-    }
+            .site-bar {
+                @include breakpoint($off-canvas-medium-width) {
+                    top: 0;
+                }
+            }
+        }
 
-    .global-nav ul ul {
-      position: absolute;
-      top: 50px !important;
-      left: 0;
-      background: #454545 !important; /* M */
-      border-radius: 4px !important; /* Do not use mixin here */
-      background-clip: padding-box !important;
-      overflow: hidden;
-      visibility: hidden;
-      @include transition(left 0s ease);
-    }
+        &.active-site-menu {
+            .gov-pull-down,
+            .gov-pull-down-container,
+            .gov-bar,
+            .site-bar,
+            .page {
+              position: fixed;
+              left: -82%;
+            }
 
-    .global-nav ul ul li {
-      border-right: 1px solid #000;
-      border-left: 1px solid #666;
-    }
+            .gov-bar,
+            .site-bar,
+            .global-nav,
+            .page {
+                @include breakpoint($off-canvas-medium-width) {
+                    left: auto;
+                    position: relative;
+                }
+            }
 
-    .global-nav ul ul li:first {
-      border-left: none;
-    }
+            .global-nav .icon-right-open:before {
+                padding-top: 3px;
+                position: absolute;
+                right: 5%;
 
-    .global-nav ul ul.active-menu {
-      visibility: visible;
-    }
+                @include breakpoint($off-canvas-medium-width) {
+                    position: relative;
+                    right: auto;
+                }
+            }
 
-    .global-nav ul ul.active-menu li {
-      padding: 0 !important;
-    }
+            .mobile-menu-button {
+                box-shadow: inset 6px 0px 8px -2px #000;
+            }
 
-    .global-nav .active-menu li {
-      padding-left: 0;
-      border-bottom: 0;
-    }
+            .page {
+                box-shadow: 5px 49px 8px #000;
 
-    .global-nav .active-menu li a {
-      border-radius: 4px;
-      background: #454545 !important;
-    }
+                @include breakpoint($off-canvas-medium-width) {
+                    box-shadow: none;
+                }
+            }
 
-    .page {
-      min-height: auto;
-      top: -23px;
-      left: 0;
-    }
-  }
-}
+            .footer {
+                left: -82%;
+
+                @include breakpoint($off-canvas-medium-width) {
+                    left: auto;
+                }
+            }
+
+        } // end &.active-site-menu
+
+    } // end .off-canvas
+
+} // end @media only screen
