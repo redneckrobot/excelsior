@@ -713,8 +713,6 @@ display: none;
   }
 }
 
-
-
 /* Large Displays: 1280px - 1440px */
 @media only screen and (min-width: 80em) {
   .gov-bar {
@@ -729,40 +727,4 @@ display: none;
   }
 }
 
-//TODO: Do we need any of these? They were pulled from styles.css. May have only been used for Go Responsive and/or DTA prototype
-/* gov widget */
-.govwidget{
-  width: 100%;
-  min-width: 240px;
-  max-width: 450px;
-  background-image: linear-gradient(bottom, rgb(4,47,90) 20%, rgb(10,70,130) 60%, rgb(4,47,90) 82%);
-  background-image: -webkit-linear-gradient(bottom, rgb(4,47,90) 20%, rgb(10,70,130) 60%, rgb(4,47,90) 82%);
-  border-radius: 4px;
-  text-align: center;
-}
-.govheading{
-  background: url(../prototypes/dta/images/stateseal.png) 0.3em 0.3em no-repeat;
-}
-.govheading a{
-  color: #fff;
-  text-transform: uppercase;
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  font-family: times new roman;
-  font-size: 120%;
-  text-shadow: 0.2em 0.2em 0.2em #333;
-  padding: 0.8em 0 0.4em 0;
-}
-
-.govheading span{
-  display: block;
-}
-.govbutton{
-  margin: 0 0.5em;
-}
-.govbutton a{
-  background: #002d56;
-  line-height: 0;
-}
 

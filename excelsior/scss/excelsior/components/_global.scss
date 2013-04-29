@@ -18,6 +18,12 @@
     padding-right: 0 !important;
 }
 
+.margin-top-small {
+    @include breakpoint(48em) {
+        margin-top: 1em;
+    }
+}
+
 .margin-top-xlarge {
     margin-top: 2em;
 }
@@ -45,4 +51,11 @@
 // Prevents text from being selected (e.g., when the user is meant to swipe)
 .unselectable {
     @include user-select(none);
+}
+
+// IE10 Metro responsive
+// Required for Windows 8 Metro split-screen snapping with IE10
+// Source: http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
+@-ms-viewport{
+    width: device-width;
 }

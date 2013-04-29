@@ -1,60 +1,54 @@
 /* css for block to stack */
 @media only screen {
 
-	.block {
-		margin-bottom: 1.2em;
-	}
+    .block {
+        margin-bottom: 1.2em;
+    }
 
-	.block h4 {
-		color: #2ba6cb;
-	}
+    .block h4 {
+        color: #2ba6cb;
+    }
 
-	.block p {
-		margin-bottom: 0.5em;
-	}
+    .block p {
+        margin-bottom: 0.5em;
+    }
 
-	.block .crop {
-		float: left;
-		overflow: hidden;
-		width: 70px;
-		height: 70px;
-		margin: 0 0.7em 0 0;
-		padding: 0;
-	}
+    .block .crop {
+        float: left;
+        overflow: hidden;
+        width: 70px;
+        height: 70px;
+        margin: 0 0.7em 0 0;
+        padding: 0;
 
-	.crop img {
-		width: 300px;
-		height: 70px;
-		max-width: none;
-	}
+        @include breakpoint(48em) {
+            float: left;
+            overflow: hidden;
+            margin: 0 0 0.4em 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
 
-}
+    .crop img {
+        width: 300px;
+        height: 70px;
+        max-width: none;
 
-@media only screen and (min-width: 48em) {
+        @include breakpoint(48em) {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+        }
+    }
 
-	.block .crop {
-		float: left;
-		overflow: hidden;
-		margin: 0 0 0.4em 0;
-		width: 100%;
-		height: 100%;
-	}
-
-	.crop img {
-		width: auto;
-		height: auto;
-		max-width: 100%;
-	}
-
-	.crop .img1 {
-		margin-left: 0;
-	}
-
-	.crop .img2 {
-		margin-left: 0;
-	}
-
-	.crop .img3 {
-		margin-left: 0;
-	}
+    .crop {
+        @include breakpoint(48em) {
+            .img1,
+            .img2,
+            .img3 {
+                margin-left: 0;
+            }
+        }
+    }
 }

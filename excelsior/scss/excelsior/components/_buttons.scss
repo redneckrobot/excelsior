@@ -8,11 +8,10 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
-
 .button,
 input.button, // Foundation specificity
 button.button {
-  padding: 6px 12px;
+    padding: 6px 12px;
 }
 
 .button:hover,
@@ -21,93 +20,93 @@ button.button {
 .button.active,
 .button.disabled,
 .button[disabled] {
-  color: #333333;
-  background-color: #e6e6e6;
+    color: #333333;
+    background-color: #e6e6e6;
 }
 
 .button:active,
 .button.active {
-  background-color: #cccccc \9;
+    background-color: #cccccc \9;
 }
 
 .button:hover,
 .button:focus {
-  color: #333333;
-  text-decoration: none;
-  background-position: 0 -15px;
-  @include transition(background-position 0.1s linear);
+    color: #333333;
+    text-decoration: none;
+    background-position: 0 -15px;
+    @include transition(background-position 0.1s linear);
 }
 
 .button:focus {
-  outline: thin dotted #333;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
 }
 
 .button.active,
 .button:active {
-  background-image: none;
-  outline: 0;
-  box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+    background-image: none;
+    outline: 0;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
 }
 
 .button.disabled,
 .button[disabled] {
-  cursor: default;
-  background-image: none;
-  opacity: 0.65;
-  box-shadow: none;
+    cursor: default;
+    background-image: none;
+    opacity: 0.65;
+    box-shadow: none;
 }
 
 .button.large {
-  padding: 11px 19px;
-  font-size: 17.5px;
-  @include border-radius(6px);
+    padding: 11px 19px;
+    font-size: 17.5px;
+    @include border-radius(6px);
 }
 
 .button.large [class^="icon-"],
 .button.large [class*=" icon-"] {
-  margin-top: 4px;
+    margin-top: 4px;
 }
 
 .button.small {
-  padding: 2px 10px;
-  font-size: 11.9px;
-  @include border-radius(3px);
+    padding: 2px 10px;
+    font-size: 11.9px;
+    @include border-radius(3px);
 }
 
 .button.small [class^="icon-"],
 .button.small [class*=" icon-"] {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .button.tiny [class^="icon-"],
 .button.tiny [class*=" icon-"] {
-  margin-top: -1px;
+    margin-top: -1px;
 }
 
 .button.tiny {
-  padding: 0 6px;
-  font-size: 10.5px;
-  @include border-radius(3px);
+    padding: 0 6px;
+    font-size: 10.5px;
+    @include border-radius(3px);
 }
 
 .button-block {
-  display: block;
-  width: 100%;
-  padding-left: 0;
-  padding-right: 0;
-  @include box-sizing(border-box);
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    @include box-sizing(border-box);
 }
 
 .button-block + .button-block {
-  margin-top: 5px;
+    margin-top: 5px;
 }
 
 input[type="submit"].button-block,
 input[type="reset"].button-block,
 input[type="button"].button-block {
-  width: 100%;
+    width: 100%;
 }
 
 .button.success.active,
@@ -116,15 +115,15 @@ input[type="button"].button-block {
 .button.green.active,
 .button-info.active,
 .button-inverse.active {
-  color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.75);
 }
 
 .button.success {
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  @include gradient-vertical(#0088cc, #0044cc);
-  border-color: #0044cc #0044cc #002a80;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    @include gradient-vertical(#0088cc, #0044cc);
+    border-color: #0044cc #0044cc #002a80;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
 
 .button.success:hover,
@@ -133,8 +132,8 @@ input[type="button"].button-block {
 .button.success.active,
 .button.success.disabled,
 .button.success[disabled] {
-  color: #ffffff;
-  background-color: #0044cc;
+    color: #ffffff;
+    background-color: #0044cc;
 }
 
 .button.success:active,
@@ -143,12 +142,12 @@ input[type="button"].button-block {
 }
 
 .button-warning {
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #faa732;
-  @include gradient-vertical(#fbb450, #f89406);
-  border-color: #f89406 #f89406 #ad6704;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #faa732;
+    @include gradient-vertical(#fbb450, #f89406);
+    border-color: #f89406 #f89406 #ad6704;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
 
 .button-warning:hover,
@@ -157,24 +156,24 @@ input[type="button"].button-block {
 .button-warning.active,
 .button-warning.disabled,
 .button-warning[disabled] {
-  color: #ffffff;
-  background-color: #f89406;
+    color: #ffffff;
+    background-color: #f89406;
 }
 
 .lt-ie9 .button-warning:active,
 .ie9 .button-warning:active,
 .ie9 .button-warning.active,
 .lt-ie9 .button-warning.active {
-  background-color: #c67605;
+    background-color: #c67605;
 }
 
 .button.alert {
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #da4f49;
-  @include gradient-vertical(#ee5f5b, #bd362f);
-  border-color: #bd362f #bd362f #802420;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #da4f49;
+    @include gradient-vertical(#ee5f5b, #bd362f);
+    border-color: #bd362f #bd362f #802420;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
 
 .button.alert:hover,
@@ -183,24 +182,24 @@ input[type="button"].button-block {
 .button.alert.active,
 .button.alert.disabled,
 .button.alert[disabled] {
-  color: #ffffff;
-  background-color: #bd362f;
+    color: #ffffff;
+    background-color: #bd362f;
 }
 
 .lt-ie9 .button.alert:active,
 .ie9 .button.alert:active,
 .lt-ie9 .button.alert.active,
 .ie9 .button.alert.active {
-  background-color: #942a25;
+    background-color: #942a25;
 }
 
 .button.green {
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #5bb75b;
-  @include gradient-vertical(#62c462, #51a351);
-  border-color: #51a351 #51a351 #387038;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #5bb75b;
+    @include gradient-vertical(#62c462, #51a351);
+    border-color: #51a351 #51a351 #387038;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
 
 .button.green:hover,
@@ -209,22 +208,22 @@ input[type="button"].button-block {
 .button.green.active,
 .button.green.disabled,
 .button.green[disabled] {
-  color: #ffffff;
-  background-color: #51a351;
+    color: #ffffff;
+    background-color: #51a351;
 }
 
 .button.green:active,
 .button.green.active {
-  background-color: #408140 \9;
+    background-color: #408140 \9;
 }
 
 .button-info {
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  @include gradient-vertical(#5bc0de, #2f96b4);
-  background-color: #49afcd;
-  border-color: #2f96b4 #2f96b4 #1f6377;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    @include gradient-vertical(#5bc0de, #2f96b4);
+    background-color: #49afcd;
+    border-color: #2f96b4 #2f96b4 #1f6377;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
 
 .button-info:hover,
@@ -233,24 +232,24 @@ input[type="button"].button-block {
 .button-info.active,
 .button-info.disabled,
 .button-info[disabled] {
-  color: #ffffff;
-  background-color: #2f96b4;
+    color: #ffffff;
+    background-color: #2f96b4;
 }
 
 .lt-ie9 .button-info:active,
 .ie9 .button-info:active,
 .lt-ie9 .button-info.active,
 .ie9 .button-info.active {
-  background-color: #24748c;
+    background-color: #24748c;
 }
 
 .button-inverse {
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  @include gradient-vertical(#444444, #222222);
-  background-color: #363636;
-  border-color: #222222 #222222 #000000;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    @include gradient-vertical(#444444, #222222);
+    background-color: #363636;
+    border-color: #222222 #222222 #000000;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
 
 .button-inverse:hover,
@@ -259,87 +258,87 @@ input[type="button"].button-block {
 .button-inverse.active,
 .button-inverse.disabled,
 .button-inverse[disabled] {
-  color: #ffffff;
-  background-color: #222222;
+    color: #ffffff;
+    background-color: #222222;
 }
 
 .lt-ie9 .button-inverse:active,
 .ie9 .button-inverse:active,
 .lt-ie9 .button-inverse.active,
 .ie9 .button-inverse.active {
-  background-color: #080808;
+    background-color: #080808;
 }
 
 button.button::-moz-focus-inner,
 input[type="submit"].button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
+    padding: 0;
+    border: 0;
 }
 
 .button-link,
 .button-link:active,
 .button-link[disabled] {
-  background-color: transparent;
-  background-image: none;
-  box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
 }
 
 .button-link {
-  border-color: transparent;
-  cursor: pointer;
-  color: #0088cc;
-  border-radius: 0;
+    border-color: transparent;
+    cursor: pointer;
+    color: #0088cc;
+    border-radius: 0;
 }
 
 .button-link:hover,
 .button-link:focus {
-  color: #005580;
-  text-decoration: underline;
-  background-color: transparent;
+    color: #005580;
+    text-decoration: underline;
+    background-color: transparent;
 }
 
 .button-link[disabled]:hover,
 .button-link[disabled]:focus {
-  color: #333333;
-  text-decoration: none;
+    color: #333333;
+    text-decoration: none;
 }
 
 // Close button
 
 .close {
-  float: right;
-  font-family: $font-sans-fallback;
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 20px;
-  color: #000000;
-  text-shadow: 0 1px 0 #ffffff;
-  opacity: 0.2;
-  border: none; // Foundation override
-  text-decoration: none;
+    float: right;
+    font-family: $font-sans-fallback;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #000000;
+    text-shadow: 0 1px 0 #ffffff;
+    opacity: 0.2;
+    border: none; // Foundation override
+    text-decoration: none;
 }
 
 .close:hover,
 .close:focus {
-  color: #000000;
-  text-decoration: none;
-  cursor: pointer;
-  opacity: 0.4;
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.4;
 }
 
 button.close {
-  padding: 0;
-  cursor: pointer;
-  background: transparent;
-  border: 0;
-  -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
 }
 
 .button-for-touch {
-  display: inline-block;
+    display: inline-block;
 }
 
 .touch .button-for-touch {
   @include button;
-  padding: 6px 12px;
+    padding: 6px 12px;
 }
