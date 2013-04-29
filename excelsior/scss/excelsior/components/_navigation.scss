@@ -99,10 +99,22 @@
   }
 
   .oldie .gripper,
-  .no-rgba .gripper {
+   .gripper {
     display: none;
   }
 
+}
+
+/* Restore old look on non compliant browsers */
+.oldie .gov-pull-down-container,
+.no-rgba .gov-pull-down-container {
+    height: 40px
+}
+
+.oldie .gov-pull-down,
+.no-rgba .gov-pull-down {
+    margin-top: 0;
+    position: absolute;
 }
 
 .gov-bar {
