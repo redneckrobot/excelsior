@@ -98,11 +98,11 @@
 
   }
 
-  .oldie .gripper,
-  .no-rgba .gripper {
-    display: none;
-  }
+}
 
+.oldie .gripper,
+.no-rgba .gripper {
+display: none;
 }
 
 /* Restore old look on non compliant browsers */
