@@ -41,7 +41,7 @@
   background: #036;
   @include border-radius(0 0 5px 5px);
   box-shadow: 1px 0px 2px #000;
-  height: 40px;
+  height: 53px;
   width: 44px;
   margin: 0 5px 8px;
   padding: 0 4px 4px 4px;
@@ -56,12 +56,65 @@
   border-top: none;
   display: block;
   height: 100%;
-  width: 100%;
-  position: absolute;
-  text-indent: -9999px;
+  margin-top: 4px;
+  position: relative;
   top: 0px;
+  width: 100%;
   z-index: 50;
   @include transition(top 0.2s ease);
+
+  .accessibility-text {
+    text-indent: -9999px;
+    position: absolute;
+  }
+
+  %gripper-line {
+    @include rgba-fallback($pulldown-line-dark, rgba(0,0,0, 0.4));
+    height: 1px;
+    position: absolute;
+    width: 81%;
+
+    &:after {
+        @include rgba-fallback($pulldown-line-light, rgba(255,255,255, 0.15));
+        content: "";
+        display: block;
+        height: 1px;
+        position: absolute;
+        top: 1px;
+        width: 100%;
+    }
+
+  }
+
+  .gripper {
+    top: 39px;
+    @extend %gripper-line;
+
+    span {
+        @extend %gripper-line;
+        top: 4px;
+        width: 100%;
+    }
+
+  }
+
+}
+
+.oldie .gripper,
+.no-rgba .gripper {
+display: none;
+}
+
+/* Restore old look on non compliant browsers */
+.oldie .gov-pull-down-container,
+.no-rgba .gov-pull-down-container {
+    height: 40px
+}
+
+.oldie .gov-pull-down,
+.no-rgba .gov-pull-down {
+    margin-top: 0;
+    position: absolute;
 }
 
 .gov-bar {
