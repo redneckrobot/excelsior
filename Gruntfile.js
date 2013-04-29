@@ -61,37 +61,29 @@ module.exports = function(grunt) {
             }
         },
         compass: {
+            options: {
+                require: ['breakpoint', 'sass-media_query_combiner'],
+                cssDir: 'css',
+                sassDir: 'scss',
+                imagesDir: 'images',
+                javascriptsDir: 'js',
+                outputStyle: 'nested',
+                relativeAssets: true,
+                force: true
+            },
             clean: {
                 options: {
                     clean: true
                 }
             },
-            excelsior_prod: {
+            excelsior: {
                 options: {
-                    basePath: 'excelsior/',
-                    config: 'config-scss-prod.rb',
-                    force: true
+                    basePath: 'excelsior/'
                 }
             },
-            excelsior_dev: {
+            app: {
                 options: {
-                    basePath: 'excelsior/',
-                    config: 'config-scss-dev.rb',
-                    force: true
-                }
-            },
-            app_prod: {
-                options: {
-                    basePath: 'app/',
-                    config: 'config-scss-prod.rb',
-                    force: true
-                }
-            },
-            app_dev: {
-                options: {
-                    basePath: 'app/',
-                    config: 'config-scss-dev.rb',
-                    force: true
+                    basePath: 'app/'
                 }
             }
         },
@@ -102,16 +94,16 @@ module.exports = function(grunt) {
                     pretty: true
                 },
                 files: [
-                    {src: ['**', '!.DS_Store', '!.db', '!.git/', '!.sass-cache/**', '!app/**', '!node_modules/**', '!excelsior/scss/**', '!app/js/site*.*', '!excelsior/images/excelsior-long-500.png', '!excelsior/images/src/**', '!Gruntfile.js', '!.gitignore', '!.editorconfig', '!config-scss-dev.rb', '!config-scss-prod.rb', '!excelsior.zip', '!package.json'], dest: 'excelsior/'},
+                    {src: ['**', '!.DS_Store', '!.db', '!.git/', '!.sass-cache/**', '!app/**', '!node_modules/**', '!excelsior/scss/**', '!app/js/site*.*', '!excelsior/images/excelsior-long-500.png', '!excelsior/images/source/**', '!Gruntfile.js', '!.gitignore', '!.editorconfig', '!config-scss-dev.rb', '!config-scss-prod.rb', '!excelsior.zip', '!package.json'], dest: 'excelsior/'},
                     {expand: true, src: ['app/**'], dest: 'excelsior/', ext: '.txt'}
                 ]
             }
         },
         concat: {
-            options: {
-                banner: '/*! <%= pkg.title %> v<%= pkg.version %> | (c) <%= grunt.template.today("yyyy") %> NYS ITS | <%= pkg.repository.url %> | <%= pkg.license.type %>: <%= pkg.license.url %> */\n'
-            },
             addBanners: {
+                options: {
+                    banner: '/*! <%= pkg.title %> v<%= pkg.version %> | (c) <%= grunt.template.today("yyyy") %> NYS ITS | <%= pkg.repository.url %> | <%= pkg.license.type %>: <%= pkg.license.url %> */\n'
+                },
                 files: [
                     {
                         expand: true,
@@ -122,9 +114,11 @@ module.exports = function(grunt) {
             },
             excelsior: {
                 files: {
-                    'excelsior/css/excelsior-core.css': ['excelsior/scss/foundation/normalize.css',
-                                                         'excelsior/scss/foundation/foundation.css',
-                                                         'excelsior/css/excelsior-core.css']
+                    'excelsior/css/excelsior-core.css': [
+                        'excelsior/scss/foundation/normalize.css',
+                        'excelsior/scss/foundation/foundation.css',
+                        'excelsior/css/excelsior-core.css'
+                    ]
               }
             }
         },
@@ -171,18 +165,52 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-css'); // cssmin
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-rename');
     //grunt.loadNpmTasks('grunt-csscss'); //TODO: try to fix Ruby 2.0 error on windows
 
     // Development
-    grunt.registerTask('dev', 'Development build', ['compass:excelsior_dev', 'compass:app_dev', 'jshint', 'rename:beforeConcat', 'concat:excelsior', 'cssmin', 'concat:addBanners', 'rename:afterConcat']);
+    grunt.registerTask('dev', 'Development build',
+        [
+            'compass:excelsior',
+            'compass:app',
+            'jshint',
+            'rename:beforeConcat',
+            'concat:excelsior',
+            'rename:afterConcat'
+        ]
+    );
 
     // Production
-    grunt.registerTask('prod', 'Production build', ['compass:clean', 'compass:excelsior_prod', 'compass:app_prod', 'uglify', 'rename:beforeConcat', 'concat:excelsior', 'cssmin', 'concat:addBanners', 'rename:afterConcat']);
+    grunt.registerTask('prod', 'Production build',
+        [
+            'compass:clean',
+            'compass:excelsior',
+            'compass:app',
+            'uglify',
+            'rename:beforeConcat',
+            'concat:excelsior',
+            'cssmin',
+            'concat:addBanners',
+            'rename:afterConcat'
+        ]
+    );
 
     // Packager
-    grunt.registerTask('package', 'Package up the project', ['compass:clean', 'compass:excelsior_prod', 'compass:excelsior_dev', 'uglify', 'rename:beforeConcat', 'concat:excelsior', 'cssmin', 'concat:addBanners', 'rename:afterConcat', 'clean', 'compress']);
+    grunt.registerTask('package', 'Package up the project',
+        [
+            'compass:clean',
+            'compass:excelsior',
+            'uglify',
+            'rename:beforeConcat',
+            'concat:excelsior',
+            'cssmin',
+            'concat:addBanners',
+            'rename:afterConcat',
+            'clean:tempFiles',
+            'compress'
+        ]
+    );
 
     // Default task (Force to development build)
     grunt.registerTask('default', 'dev');
