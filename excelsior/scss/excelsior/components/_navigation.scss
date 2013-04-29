@@ -68,27 +68,38 @@
     position: absolute;
   }
 
-  %tab-puller-line {
-    background: $pulldown-line-dark;
-    border-bottom: 1px solid $pulldown-line-light;
-    height: 2px;
+  %gripper-line {
+    @include rgba-fallback($pulldown-line-dark, rgba(0,0,0, 0.4));
+    height: 1px;
     position: absolute;
     width: 81%;
+
+    &:after {
+        @include rgba-fallback($pulldown-line-light, rgba(255,255,255, 0.15));
+        content: "";
+        display: block;
+        height: 1px;
+        position: absolute;
+        top: 1px;
+        width: 100%;
+    }
+
   }
 
-  .tab-puller {
+  .gripper {
     top: 39px;
-    @extend %tab-puller-line;
+    @extend %gripper-line;
 
     span {
-        @extend %tab-puller-line;
+        @extend %gripper-line;
         top: 4px;
         width: 100%;
     }
 
   }
 
-  .oldie .tab-puller {
+  .oldie .gripper,
+  .no-rgba .gripper {
     display: none;
   }
 
