@@ -68,24 +68,30 @@
     position: absolute;
   }
 
-  .top-line {
-    top: 39px;
-  }
-
-  .bottom-line {
-    top: 43px;
-  }
-
-  .pull-bar {
-    background: #09223d;
-    border-bottom: 1px solid #144e8c;
-    display: inline-block;
+  %tab-puller-line {
+    background: $pulldown-line-dark;
+    border-bottom: 1px solid $pulldown-line-light;
     height: 2px;
-    left: 0;
     position: absolute;
     width: 81%;
+  }
+
+  .tab-puller {
+    top: 39px;
+    @extend %tab-puller-line;
+
+    span {
+        @extend %tab-puller-line;
+        top: 4px;
+        width: 100%;
+    }
 
   }
+
+  .oldie .tab-puller {
+    display: none;
+  }
+
 }
 
 .gov-bar {
