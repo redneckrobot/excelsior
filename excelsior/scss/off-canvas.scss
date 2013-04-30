@@ -172,12 +172,13 @@ $off-canvas-large-width: 60em;
                 }
 
                 .menu-back {
-                    float: right;
                     @include gradient-vertical(#999, #505050);
                     @include border-radius(5px);
                     color: #fff;
                     margin: 10px;
                     padding: 7px 7px 7px 1px;
+                    position: absolute
+                    right: 0;
                     visibility: hidden;
                 }
             }
