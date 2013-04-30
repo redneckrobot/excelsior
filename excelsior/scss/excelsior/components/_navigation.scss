@@ -219,13 +219,6 @@
     z-index: 30;
     @include transition(top 0.2s ease);
 
-    .site-title {
-        display: inline-block;
-        float: left;
-        height: 48px;
-        width: 80%;
-    }
-
     a.site-logo {
         color: #fff;
         float: left;
@@ -237,10 +230,9 @@
     }
 
     .site-functions {
-        float: left;
-        height: 48px;
-        overflow: auto;
-        width: 20%;
+        position: absolute;
+        top: -1px;
+        right: 0;
 
         .site-search {
             background: #fff;
@@ -326,8 +318,10 @@
         margin: 0;
 
         li {
-            float: left;
+            background: #454545;
             border-left: 1px solid #666;
+            @include gradient-vertical(#5f5f5f, #282828);
+            float: left;
         }
 
         .mobile-search-button {
