@@ -165,7 +165,7 @@ module.exports = function(grunt) {
             },
             addBanner: {
                 options: {
-                    banner: '/*! <%= pkg.title %> v<%= pkg.version %> | (c) <%= grunt.template.today("yyyy") %> NYS ITS | <%= pkg.repository.url %> | <%= pkg.license.type %>: <%= pkg.license.url %> */\n\n'
+                    banner: '/*! <%= pkg.title %> v<%= pkg.version %> | (c) <%= grunt.template.today("yyyy") %> NYS ITS | <%= pkg.repository.url %> | License (<%= pkg.license.type %>): <%= pkg.license.url %> */\n\n'
                 },
                 files: [
                     {

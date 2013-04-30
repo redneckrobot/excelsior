@@ -2,7 +2,7 @@
  * Excelsior Web Framework v0.1.2
  * (c) 2013 NYS ITS
  * https://github.com/nys-its/excelsior.git
- * MIT: https://github.com/nys-its/excelsior/blob/master/license.md
+ * License (MIT): https://github.com/nys-its/excelsior/blob/master/license.md
  */
 
 /*global EWF: false */
