@@ -229,6 +229,39 @@
         line-height: 48px;
     }
 
+    a.site-logo.two-line-title {
+        display: block;
+        height: 48px;
+
+        span:first-of-type {
+            margin-top: -8px;
+        }
+
+        span {
+            display: block;
+            float: left;
+            height: 16px;
+            width: 100%;
+        }
+    }
+
+    a.site-logo.two-line-title {
+        @include breakpoint($mobile-desktop-split) {
+            font-size: 1.5em;
+
+            span {
+                padding-bottom: 5px;
+                height: 24px;
+            }
+
+            span:first-of-type {
+                margin-top: -15px;
+            }
+        }
+    }
+
+
+
     .site-functions {
         position: absolute;
         top: -1px;
