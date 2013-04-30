@@ -8,7 +8,7 @@ module.exports = function(grunt) {
                 mangle: false, // Don't change variable and function names
                 report: 'gzip' // Print size savings to the command line
             },
-            excelsior_js: {
+            excelsior: {
                 files: [
                     {
                         cwd: 'excelsior/js/core/',
@@ -22,7 +22,7 @@ module.exports = function(grunt) {
                     }
                 ]
             },
-            app_js: {
+            project: {
                 files: [
                     {
                         cwd: 'project-assets/js/',
@@ -76,7 +76,7 @@ module.exports = function(grunt) {
                 ],
                 tasks: [
                     'compass:excelsior',
-                    'compass:projectAssets'
+                    'compass:project'
                 ]
             }
         },
@@ -104,7 +104,7 @@ module.exports = function(grunt) {
                     basePath: 'excelsior/'
                 }
             },
-            projectAssets: {
+            project: {
                 options: {
                     basePath: 'project-assets/'
                 }
@@ -199,7 +199,7 @@ module.exports = function(grunt) {
                 ]
 
             },
-            projectAssets: {
+            project: {
                 files: [
                     {
                         cwd: 'project-assets/css/',
@@ -236,7 +236,7 @@ module.exports = function(grunt) {
     grunt.registerTask('dev', 'Development build',
         [
             'compass:excelsior', // Create Excelsior CSS files
-            'compass:projectAssets', // Create Project CSS files
+            'compass:project', // Create Project CSS files
             'jshint', // detect errors in Excelsior & Project JS
             'concat:excelsior' // Combine excelsior.css with foundation and normalize
         ]
