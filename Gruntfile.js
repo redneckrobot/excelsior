@@ -71,8 +71,8 @@ module.exports = function(grunt) {
             },
             sass: {
                 files: [
-                    'excelsior/scss/**.scss',
-                    'project-assets/scss/**.scss'
+                    'excelsior/scss/**/*.scss',
+                    'project-assets/scss/**/*.scss'
                 ],
                 tasks: [
                     'compass:excelsior',
