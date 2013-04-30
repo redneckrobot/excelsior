@@ -28,7 +28,7 @@ module.exports = function(grunt) {
                     {
                         expand: true,
                         cwd: '.',
-                        src: ['app/js/*.js', '!app/js/*.min.js'],
+                        src: ['project-assets/js/*.js', '!project-assets/js/*.min.js'],
                         dest:'.',
                         ext: '.min.js'
                     }
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
             }
         },
         jshint: {
-            files: ['excelsior/js/core/*.js', '!excelsior/js/core/*.min.js', 'app/js/*.js', '!app/js/*.min.js'],
+            files: ['excelsior/js/core/*.js', '!excelsior/js/core/*.min.js', 'project-assets/js/*.js', '!project-assets/js/*.min.js'],
             options: {
                 curly: true,
                 eqeqeq: true,
@@ -52,14 +52,14 @@ module.exports = function(grunt) {
         watch: {
             scripts: {
                 // files: ['<%= jshint.files %>'], //TODO: Why doesn't this work?
-                files: ['excelsior/js/core/*.js', '!excelsior/js/core/*.min.js', 'app/js/*.js', '!app/js/*.min.js'],
+                files: ['excelsior/js/core/*.js', '!excelsior/js/core/*.min.js', 'project-assets/js/*.js', '!project-assets/js/*.min.js'],
                 tasks: ['jshint'],
                 options: {
                     interrupt: true
                 }
             },
             sass: {
-                files: ['excelsior/scss/**.scss', 'app/scss/**.scss'],
+                files: ['excelsior/scss/**.scss', 'project-assets/scss/**.scss'],
                 tasks: ['compass:excelsior_dev', 'compass:app_dev']
             }
         },
@@ -86,7 +86,7 @@ module.exports = function(grunt) {
             },
             app: {
                 options: {
-                    basePath: 'app/'
+                    basePath: 'project-assets/'
                 }
             }
         },
@@ -97,8 +97,8 @@ module.exports = function(grunt) {
                     pretty: true
                 },
                 files: [
-                    {src: ['**', '!.DS_Store', '!.db', '!.git/', '!.sass-cache/**', '!app/**', '!node_modules/**', '!excelsior/scss/**', '!app/js/site*.*', '!excelsior/images/excelsior-long-500.png', '!excelsior/images/source/**', '!Gruntfile.js', '!.gitignore', '!.editorconfig', '!config-scss-dev.rb', '!config-scss-prod.rb', '!excelsior.zip', '!package.json'], dest: 'excelsior/'},
-                    {expand: true, src: ['app/**'], dest: 'excelsior/', ext: '.txt'}
+                    {src: ['**', '!.DS_Store', '!.db', '!.git/', '!.sass-cache/**', '!project-assets/**', '!node_modules/**', '!excelsior/scss/**', '!project-assets/js/site*.*', '!excelsior/images/excelsior-long-500.png', '!excelsior/images/source/**', '!Gruntfile.js', '!.gitignore', '!.editorconfig', '!config-scss-dev.rb', '!config-scss-prod.rb', '!excelsior.zip', '!package.json'], dest: 'excelsior/'},
+                    {expand: true, src: ['project-assets/**'], dest: 'excelsior/', ext: '.txt'}
                 ]
             }
         },
@@ -140,7 +140,7 @@ module.exports = function(grunt) {
         },
         clean: {
             generatedFiles: {
-                src: ['excelsior/js/core/*.min.js', 'excelsior/css/*', 'excelsior/.sass-cache/', 'app/.sass-cache/', 'excelsior.zip']
+                src: ['excelsior/js/core/*.min.js', 'excelsior/css/*', 'excelsior/.sass-cache/', 'project-assets/.sass-cache/', 'excelsior.zip']
             },
             tempFiles: {
                 src: ['excelsior/css/excelsior-core.css']
