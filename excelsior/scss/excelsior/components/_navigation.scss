@@ -1,22 +1,11 @@
-/* POC Styles */
-
-  html,
-  body {
-    background: #282828;
-  }
-
-  a:focus {
-    outline: 1px dotted #fc6;
-  }
-
-  /* Highjacked icon font to create after arrows */
-  .icon-sub-menu:after {
+// Sub menu item arrows
+.icon-sub-menu:after {
     content: $icon-right-open;
     float: right;
     font-size: 1.2em;
     line-height: inherit;
     margin: -0.3em 0 0 8px;
- }
+}
 
 .skip-to {
     position: absolute;
@@ -38,83 +27,78 @@
 }
 
 .gov-pull-down-container {
-  background: #036;
-  @include border-radius(0 0 5px 5px);
-  box-shadow: 1px 0px 2px #000;
-  height: 53px;
-  width: 44px;
-  margin: 0 5px 8px;
-  padding: 0 4px 4px 4px;
-  position: relative;
-  z-index: 35;
-  @include transition(top 0.2s ease);
+    background: #036;
+    @include border-radius(0 0 5px 5px);
+    box-shadow: 1px 0px 2px #000;
+    height: 53px;
+    width: 44px;
+    margin: 0 5px 8px;
+    padding: 0 4px 4px 4px;
+    position: relative;
+    z-index: 35;
+    @include transition(top 0.2s ease);
 }
 
 .gov-pull-down {
-  background: url(../images/nys-small.png) no-repeat 1px 4px transparent;
-  background-size: 32px 32px;
-  border-top: none;
-  display: block;
-  height: 100%;
-  margin-top: 4px;
-  position: relative;
-  top: 0px;
-  width: 100%;
-  z-index: 50;
-  @include transition(top 0.2s ease);
+    background: url(../images/nys-small.png) no-repeat 1px 4px transparent;
+    background-size: 32px 32px;
+    border-top: none;
+    display: block;
+    height: 100%;
+    margin-top: 4px;
+    position: relative;
+    top: 0px;
+    width: 100%;
+    z-index: 50;
+    @include transition(top 0.2s ease);
 
-  .accessibility-text {
-    text-indent: -9999px;
-    position: absolute;
-  }
+    .accessibility-text {
+        text-indent: -9999px;
+        position: absolute;
+    }
 
-  %gripper-line {
-    @include rgba-fallback($pulldown-line-dark, rgba(0,0,0, 0.4));
-    height: 1px;
-    position: absolute;
-    width: 81%;
-
-    &:after {
-        @include rgba-fallback($pulldown-line-light, rgba(255,255,255, 0.15));
-        content: "";
-        display: block;
+    %gripper-line {
+        @include rgba-fallback($pulldown-line-dark, rgba(0,0,0, 0.4));
         height: 1px;
         position: absolute;
-        top: 1px;
-        width: 100%;
+        width: 81%;
+
+        &:after {
+            @include rgba-fallback($pulldown-line-light, rgba(255,255,255, 0.15));
+            content: "";
+            display: block;
+            height: 1px;
+            position: absolute;
+            top: 1px;
+            width: 100%;
+        }
     }
 
-  }
-
-  .gripper {
-    top: 39px;
-    @extend %gripper-line;
-
-    span {
+    .gripper {
+        top: 39px;
         @extend %gripper-line;
-        top: 4px;
-        width: 100%;
+
+        span {
+            @extend %gripper-line;
+            top: 4px;
+            width: 100%;
+        }
+    }
+}
+
+.no-rgba {
+    .gripper {
+        display: none;
     }
 
-  }
+    .gov-pull-down-container {
+        height: 40px
+    }
 
-}
-
-.oldie .gripper,
-.no-rgba .gripper {
-display: none;
-}
-
-/* Restore old look on non compliant browsers */
-.oldie .gov-pull-down-container,
-.no-rgba .gov-pull-down-container {
-    height: 40px
-}
-
-.oldie .gov-pull-down,
-.no-rgba .gov-pull-down {
-    margin-top: 0;
-    position: absolute;
+    .gov-pull-down {
+        margin-top: 0;
+        position: absolute;
+    }
 }
 
 .gov-bar {
@@ -159,28 +143,28 @@ display: none;
     overflow: auto;
   }
 
-  form {
-    overflow: auto;
-    padding: 0.1em 0.5em 0 0.5em;
-    width: 100%;
+    form {
+        overflow: auto;
+        padding: 0.1em 0.5em 0 0.5em;
+        width: 100%;
 
-    .gov-search-button {
-      float: right;
-      font-size: 0.95em;
-      width: 26%;
-    }
+        .gov-search-button {
+            float: right;
+            font-size: 0.95em;
+            width: 26%;
+        }
 
-    legend,
-    label {
-      display: none;
-    }
+        legend,
+        label {
+            display: none;
+        }
 
-    fieldset {
-      border: 0;
-      margin: 0;
-      padding: 0;
+        fieldset {
+            border: 0;
+            margin: 0;
+            padding: 0;
+        }
     }
-  }
 
   input {
     @include border-radius(4px);
