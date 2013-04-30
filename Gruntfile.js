@@ -133,6 +133,8 @@ module.exports = function(grunt) {
                             '!.sass-cache/**',
                             '!node_modules/**',
                             '!excelsior/.sass-cache/**',
+                            '!excelsior/css/excelsior.css',
+                            '!excelsior/css/off-canvas.css',
                             '!excelsior/scss/**',
                             '!excelsior/images/excelsior-long-500.png',
                             '!excelsior/images/source/**'
