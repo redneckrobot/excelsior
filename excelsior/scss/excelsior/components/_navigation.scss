@@ -434,19 +434,19 @@
 
 
 /* Active Govenor Banner */
-.active-gov-bar .gov-bar {
+.active-top-bar .gov-bar {
     height: 88px;
 }
 
-.active-gov-bar .site-bar {
+.active-top-bar .site-bar {
     top: 88px;
 }
 
-.active-gov-bar .pull-down-container {
+.active-top-bar .pull-down-container {
     top: 88px;
 }
 
-.active-gov-bar .pull-down {
+.active-top-bar .pull-down {
     background: url(../images/close.svg) no-repeat 5px 7px transparent;
     background-size: 28px 28px;
 }
@@ -494,7 +494,7 @@
   }
 
   .gov-bar,
-  .active-gov-bar .gov-bar,
+  .active-top-bar .gov-bar,
   .gov-bar a {
     height: 28px;
   }
@@ -550,11 +550,11 @@
   }
 
   /* Active Gov Bar Search Box */
-  .active-gov-bar-search a.gov-link-3 {
+  .active-top-bar-search a.gov-link-3 {
       display: none;
   }
 
-  .active-gov-bar-search .gov-bar form {
+  .active-top-bar-search .gov-bar form {
       display: block;
   }
 
@@ -568,7 +568,7 @@
   }
 
   .site-bar,
-  .active-gov-bar .site-bar {
+  .active-top-bar .site-bar {
     top: 0;
     @include transition(top 0s ease);
     z-index: 0;
