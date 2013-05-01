@@ -117,7 +117,7 @@
   a {
     color: #FFF;
 
-    &.top-link-1 {
+    &.gov-link-1 {
       float: left;
       font-size: 1.3em;
       text-align: center;
@@ -125,7 +125,7 @@
       margin: 12px 0.2em 0 0.5em;
     }
 
-    &.top-link-2 {
+    &.gov-link-2 {
       float: right;
       background: url(../images/hamburger-no-dots.svg) no-repeat 2px 0px transparent;
       background-size: 24px;
@@ -135,13 +135,13 @@
       padding: 6px 0.2em 2px 32px;
     }
 
-    &.top-link-3 {
+    &.gov-link-3 {
       display: none;
       text-indent: -9999px;
     }
   }
 
-  .group-links {
+  .state-links {
     overflow: auto;
   }
 
@@ -499,12 +499,12 @@
     height: 28px;
   }
 
-  .gov-bar .group-links {
+  .gov-bar .state-links {
     display: inline-block;
     float: left;
   }
 
-  .gov-bar a.top-link-1 {
+  .gov-bar a.gov-link-1 {
     background: url(../images/nys-banner-img.png) no-repeat 0 0 transparent;
     display: inline-block;
     float: left;
@@ -513,8 +513,8 @@
     width: 185px;
   }
 
-  .gov-bar a.top-link-2,
-  .gov-bar a.top-link-2:hover {
+  .gov-bar a.gov-link-2,
+  .gov-bar a.gov-link-2:hover {
     background: url(../images/nys-banner-img.png) no-repeat 0 -28px transparent;
     border: 0;
     float: left;
@@ -524,11 +524,11 @@
     width: 130px;
   }
 
-  .gov-bar a.top-link-2:hover {
+  .gov-bar a.gov-link-2:hover {
     background-color: transparent;
   }
 
-  .gov-bar a.top-link-3 {
+  .gov-bar a.gov-link-3 {
     background: url(../images/nys-banner-img.png) no-repeat 0 -56px transparent;
     display: inline-block;
     float: right;
@@ -550,7 +550,7 @@
   }
 
   /* Active Gov Bar Search Box */
-  .active-top-bar-search a.top-link-3 {
+  .active-top-bar-search a.gov-link-3 {
       display: none;
   }
 
@@ -714,7 +714,7 @@
     background: #036;
   }
 
-  .gov-bar .top-wrap,
+  .gov-bar .gov-wrap,
   .site-bar .site-wrap,
   .global-nav,
   .page .content-section,
