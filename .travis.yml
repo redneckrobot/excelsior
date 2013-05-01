@@ -5,4 +5,6 @@ node_js:
 before_script:
   - gem update --system
   - gem install compass
+  - gem install breakpoint
+  - gem install sass-media_query_combiner
   - npm install -g grunt-cli
