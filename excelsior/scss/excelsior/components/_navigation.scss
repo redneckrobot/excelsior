@@ -104,46 +104,46 @@
 }
 
 .gov-bar {
-  position: absolute;
-  top: 0;
-  height: 0;
-  background: #036;
-  @include gradient-vertical(#002851, #036);
-  overflow: hidden;
-  @include transition(height 0.2s ease);
-  width: 100%;
-  z-index: 40;
+    position: absolute;
+    top: 0;
+    height: 0;
+    background: #036;
+    @include gradient-vertical(#002851, #036);
+    overflow: hidden;
+    @include transition(height 0.2s ease);
+    width: 100%;
+    z-index: 40;
 
-  a {
-    color: #FFF;
-
-    &.gov-link-1 {
-      float: left;
-      font-size: 1.3em;
-      text-align: center;
-      padding-bottom: 5px;
-      margin: 12px 0.2em 0 0.5em;
-    }
-
-    &.gov-link-2 {
-      float: right;
-      background: url(../images/hamburger-no-dots.svg) no-repeat 2px 0px transparent;
-      background-size: 24px;
+    a {
       color: #FFF;
-      font-size: 1em;
-      margin: 5px 0.4em;
-      padding: 6px 0.2em 2px 32px;
+
+        &.gov-link-1 {
+            float: left;
+            font-size: 1.3em;
+            text-align: center;
+            padding-bottom: 5px;
+            margin: 12px 0.2em 0 0.5em;
+        }
+
+        &.gov-link-2 {
+            float: right;
+            background: url(../images/hamburger-no-dots.svg) no-repeat 2px 0px transparent;
+            background-size: 24px;
+            color: #FFF;
+            font-size: 1em;
+            margin: 5px 0.4em;
+            padding: 6px 0.2em 2px 32px;
+        }
+
+        &.gov-link-3 {
+            display: none;
+            text-indent: -9999px;
+        }
     }
 
-    &.gov-link-3 {
-      display: none;
-      text-indent: -9999px;
+    .state-links {
+        overflow: auto;
     }
-  }
-
-  .state-links {
-    overflow: auto;
-  }
 
     form {
         overflow: auto;
@@ -168,43 +168,43 @@
         }
     }
 
-  input {
-    @include border-radius(4px);
-    -webkit-appearance: none;
-    border: 1px solid #666;
-    padding: 0;
-    display: block;
-    float: left;
-    margin: 0;
+    input {
+        @include border-radius(4px);
+        -webkit-appearance: none;
+        border: 1px solid #666;
+        padding: 0;
+        display: block;
+        float: left;
+        margin: 0;
 
-    &[type="search"] {
-      @include border-radius(5px 0 0 5px);
-      padding-left: 10px;
-      width: 70%;
-      color: #333;
-      @include box-sizing(border-box);
-      height: 37px;
+        &[type="search"] {
+            @include border-radius(5px 0 0 5px);
+            padding-left: 10px;
+            width: 70%;
+            color: #333;
+            @include box-sizing(border-box);
+            height: 37px;
+        }
+
+        &[type="submit"] {
+            background-color: #505050;
+            @include gradient-vertical(#999, #505050);
+            // background: #505050;
+            @include border-radius(0 5px 5px 0);
+            border: 1px solid #666;
+            border-left: 0;
+            color: #FFF;
+            height:37px;
+            line-height: 37px;
+            width: 30%;
+            margin-top:0;
+        }
     }
 
-    &[type="submit"] {
-      background-color: #505050;
-      @include gradient-vertical(#999, #505050);
-      // background: #505050;
-      @include border-radius(0 5px 5px 0);
-      border: 1px solid #666;
-      border-left: 0;
-      color: #FFF;
-      height:37px;
-      line-height: 37px;
-      width: 30%;
-      margin-top:0;
+    .search-container {
+        height: 37px;
+        margin: 1px 2px 0 0;
     }
-  }
-
-  .search-container {
-    height: 37px;
-    margin: 1px 2px 0 0;
-  }
 
 } // end .gov-bar
 
