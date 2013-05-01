@@ -28,7 +28,7 @@
 }
 
 
-.gov-pull-down-container {
+.pull-down-container {
     background: #036;
     @include border-radius(0 0 5px 5px);
     box-shadow: 1px 0px 2px #000;
@@ -41,7 +41,7 @@
     @include transition(top 0.2s ease);
 }
 
-.gov-pull-down {
+.pull-down {
     background: url(../images/nys-small.png) no-repeat 1px 4px transparent;
     background-size: 32px 32px;
     border-top: none;
@@ -93,11 +93,11 @@
         display: none;
     }
 
-    .gov-pull-down-container {
+    .pull-down-container {
         height: 40px
     }
 
-    .gov-pull-down {
+    .pull-down {
         margin-top: 0;
         position: absolute;
     }
@@ -441,11 +441,11 @@
     top: 88px;
 }
 
-.active-gov-bar .gov-pull-down-container {
+.active-gov-bar .pull-down-container {
     top: 88px;
 }
 
-.active-gov-bar .gov-pull-down {
+.active-gov-bar .pull-down {
     background: url(../images/close.svg) no-repeat 5px 7px transparent;
     background-size: 28px 28px;
 }

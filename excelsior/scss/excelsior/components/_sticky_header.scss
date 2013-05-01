@@ -1,4 +1,4 @@
-.sticky-header .gov-pull-down-container {
+.sticky-header .pull-down-container {
 	position: fixed;
 	top: 0;
 	z-index: 3005;
@@ -18,6 +18,6 @@
 	top: 88px !important;
 }
 
-.sticky-header.active-gov-bar .gov-pull-down-container {
+.sticky-header.active-gov-bar .pull-down-container {
 	top: 88px;
 }
