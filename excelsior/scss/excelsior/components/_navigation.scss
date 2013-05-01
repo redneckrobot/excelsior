@@ -482,12 +482,14 @@
     @include transition(height 0s ease);
 
     input[type="search"] {
-      height: 25px;
+      height: 23px;
+      margin-top:1px;
     }
 
     input[type="submit"] {
       height: 23px;
-      line-height: 2em;
+      font-size:1.2em;
+      line-height: 1.7em;
       margin-top: 1px;
     }
 
@@ -537,7 +539,7 @@
   }
 
   .gov-bar .search-container {
-    margin: -1px 9px 0 0;
+    margin-right:9px;
   }
 
   .gov-bar form {
