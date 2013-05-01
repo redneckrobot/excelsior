@@ -1,10 +1,17 @@
+---
 language: node_js
 node_js:
-  - "0.8"
-  - "0.10"
+- '0.8'
+- '0.10'
 before_script:
-  - gem update --system
-  - gem install compass
-  - gem install breakpoint
-  - gem install sass-media_query_combiner
-  - npm install -g grunt-cli
+- gem update --system
+- gem install compass
+- gem install breakpoint
+- gem install sass-media_query_combiner
+- npm install -g grunt-cli
+evn:
+  global:
+  - secure: |-
+      jFSrI3dy4at009WH8VowY9cYZKa1tFnsGOQp+ISLbcDuY8RzfW9NUg6hWR0L
+      l8+yWm9qmhjazKdlNLwjgMYkRE4thhUX6DvzdHKnxluzkwyEYX/JG/vH0Kxf
+      3llL58C/zJN3Xk//tQUGvQX7sicpmh5AIYJdHw5o0R7fj4fY6VE=
