@@ -266,7 +266,7 @@ $(document).ready(function(){
   // Standard Gov Banner display code
   $('#gov-link-3').on(EWF.activateEventName, function(e) {
     e.preventDefault();
-    EWF.$body.addClass('active-top-bar-search');
+    EWF.$body.addClass('active-gov-bar-search');
   });
 
   // Active Elements
