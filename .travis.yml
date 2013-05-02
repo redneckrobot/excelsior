@@ -18,4 +18,4 @@ env:
       pB3SvWOC74aK53nMevkEoi7faqnnL7ziJSLUZ9E55N2JxosOUpU=
 after_success:
   - chmod -R 777 .travis-build.sh
-  - ls -la
+  - ./.travis-build.sh
