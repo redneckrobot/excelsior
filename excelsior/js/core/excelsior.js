@@ -8,7 +8,7 @@
 /**
  * @fileOverview Excelsior Framework common functions
  * @author <a href="https://github.com/nys-its/excelsior">NYS-ITS</a>
- * @version 0.1.0
+ * @version 0.1.2
  */
 
 /**
@@ -21,7 +21,8 @@ var EWF = {
     $body: null,
     $html: null,
     $window: null,
-    imagePath: 'excelsior/images/' // Relative to project root
+    projectRoot: 'excelsior/',
+    imagePath: 'excelsior/images/'
 };
 
 /**
@@ -50,6 +51,7 @@ EWF.init = function _init () {
     }
 
     // Preload assets
+    EWF.fixImagePath();
 
     // Images referenced by CSS that aren't visible at page load but will likely appear in normal usage
     EWF.preloader.add('<img src="' + EWF.imagePath + 'close.svg" alt="">');
@@ -66,6 +68,33 @@ $(document).ready(function(){EWF.init();});
 /**
  * Client- and environment-related properties
  */
+
+/**
+ * Relative image path
+ */
+EWF.fixImagePath = function _fixImagePath() {
+    var currentUrl = document.location.pathname,
+        slashRegex = /\//g,
+        index, numSubDirectories, i;
+
+    index = currentUrl.indexOf(EWF.projectRoot);
+
+    if (currentUrl < 0) { // Cannot determine relative path
+        return false;
+    }
+
+    // Trim path down to just the Excelsior
+    currentUrl = currentUrl.substr(index);
+
+    if (slashRegex.test(currentUrl)) {
+        // Add a dot-dot-slash for each sub directory we're in
+        numSubDirectories = currentUrl.match(slashRegex).length - 1;
+        for (i = 0; i < numSubDirectories; i++) {
+            EWF.imagePath = '../' + EWF.imagePath;
+        }
+    }
+};
+
 (function () {
   // Determine click type
   if (Modernizr.touch) {
