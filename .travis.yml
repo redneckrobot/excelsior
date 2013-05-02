@@ -10,12 +10,12 @@ before_script:
 - npm install -g grunt-cli
 script:
 - grunt package
+after_success:
+- chmod -R 777 .travis-build.sh
+- ./.travis-build.sh
 env:
   global:
   - secure: |-
-      AJAiEfkWrEX3dm1yyeRE5KSGh/WmGMZNOPlKqu/I+8aoBbLlPTnP0Oevyg7P
-      QjiyCUrcScZeIJK4FCdIlbXr9jYDjXWjDlzCOQSmNMJug09LN0r5N96BTRLF
-      pB3SvWOC74aK53nMevkEoi7faqnnL7ziJSLUZ9E55N2JxosOUpU=
-after_success:
-  - chmod -R 777 .travis-build.sh
-  - ./.travis-build.sh
+      mNo6ienZHJY7f8iYhoceHwv9Rgv2EAT/PAa/mb+wAEQE/PBAdqnw1gokelt+
+      17TOJYf2en6WHHItbBy9ynSjvzH5s+lywljmuUJa7jeoy9y20HmiOMAQ+Nc2
+      btPHn8FFTT7ltmzz5Mnn26CftYyuaPzwuq2oip3GmPRXxHqkFsk=
