@@ -16,5 +16,5 @@ env:
       QjiyCUrcScZeIJK4FCdIlbXr9jYDjXWjDlzCOQSmNMJug09LN0r5N96BTRLF
       pB3SvWOC74aK53nMevkEoi7faqnnL7ziJSLUZ9E55N2JxosOUpU=
 after_success:
-  - chmod -R 777 ./travis-build.sh
-  - .travis-build.sh
+  - chmod -R 777 .travis-build.sh
+  - ./travis-build.sh
