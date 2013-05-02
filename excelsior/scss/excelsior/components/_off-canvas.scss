@@ -1,13 +1,3 @@
-@charset "UTF-8";
-@import "breakpoint";
-@import "excelsior/_variables.scss";
-@import "excelsior/_mixins.scss";
-
-$off-canvas-medium-width: 48em;
-$off-canvas-large-width: 60em;
-
-@media only screen {
-
     html,
     body {
         background: #282828;
@@ -303,5 +293,3 @@ $off-canvas-large-width: 60em;
         } // end &.active-site-menu
 
     } // end .off-canvas
-
-} // end @media only screen
