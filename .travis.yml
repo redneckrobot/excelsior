@@ -9,9 +9,10 @@ before_script:
 - gem install breakpoint
 - gem install sass-media_query_combiner
 - npm install -g grunt-cli
-evn:
+env:
   global:
   - secure: |-
-      jFSrI3dy4at009WH8VowY9cYZKa1tFnsGOQp+ISLbcDuY8RzfW9NUg6hWR0L
-      l8+yWm9qmhjazKdlNLwjgMYkRE4thhUX6DvzdHKnxluzkwyEYX/JG/vH0Kxf
-      3llL58C/zJN3Xk//tQUGvQX7sicpmh5AIYJdHw5o0R7fj4fY6VE=
+      AJAiEfkWrEX3dm1yyeRE5KSGh/WmGMZNOPlKqu/I+8aoBbLlPTnP0Oevyg7P
+      QjiyCUrcScZeIJK4FCdIlbXr9jYDjXWjDlzCOQSmNMJug09LN0r5N96BTRLF
+      pB3SvWOC74aK53nMevkEoi7faqnnL7ziJSLUZ9E55N2JxosOUpU=
+after_success: ./travis-build.sh
