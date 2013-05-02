@@ -19,4 +19,8 @@
 @import "excelsior/components/_lists.scss";
 @import "excelsior/components/_images.scss";
 @import "excelsior/components/_navigation.scss";
-@import "excelsior/components/_sticky_header.scss";
+@import "excelsior/components/_sticky-header.scss";
+
+
+// Do not change the order of these files:
+@import "excelsior/components/_off-canvas.scss";
