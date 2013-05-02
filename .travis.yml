@@ -1,7 +1,6 @@
 ---
 language: node_js
 node_js:
-- '0.8'
 - '0.10'
 before_script:
 - gem update --system
@@ -17,4 +16,4 @@ env:
       pB3SvWOC74aK53nMevkEoi7faqnnL7ziJSLUZ9E55N2JxosOUpU=
 after_success:
   - chmod -R 777 .travis-build.sh
-  - ls
+  - ls -la
