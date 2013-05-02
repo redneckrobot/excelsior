@@ -12,9 +12,9 @@ cd ${TRAVIS_BRANCH}
 echo "Travis Build " >> .lastBuild
 echo date >> .lastBuild
 
-git add -f .
-git commit -m "TRAVIS BUILD $TRAVIS_BUILD_NUMBER"
-git push -fq origin ${TRAVIS_BRANCH} > /dev/null
+#git add -f .
+#git commit -m "TRAVIS BUILD $TRAVIS_BUILD_NUMBER"
+#git push -fq origin ${TRAVIS_BRANCH} > /dev/null
 
 echo -e "Travis is done"
 
