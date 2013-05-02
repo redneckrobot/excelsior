@@ -24,12 +24,12 @@ $off-canvas-large-width: 60em;
 
     .off-canvas {
 
-        .gov-pull-down-container {
+        .pull-down-container {
             position: absolute;
             top: 0;
         }
 
-        .gov-pull-down {
+        .pull-down {
             height: 40px;
             width: 44px;
         }
@@ -219,8 +219,8 @@ $off-canvas-large-width: 60em;
             }
         }
 
-        .gov-pull-down,
-        .gov-pull-down-container,
+        .pull-down,
+        .pull-down-container,
         .gov-bar,
         .site-bar,
         .page {
@@ -237,7 +237,7 @@ $off-canvas-large-width: 60em;
         }
 
         &.active-gov-bar {
-            .gov-pull-down-container,
+            .pull-down-container,
             .site-bar {
                 top: 88px;
             }
@@ -250,8 +250,8 @@ $off-canvas-large-width: 60em;
         }
 
         &.active-site-menu {
-            .gov-pull-down,
-            .gov-pull-down-container,
+            .pull-down,
+            .pull-down-container,
             .gov-bar,
             .site-bar,
             .page {
