@@ -1076,7 +1076,12 @@
     <!-- <script src="../../excelsior/js/vendor/jquery-ui.widget.min.js"></script> -->
     <!-- <script src="../../excelsior/js/core/responsive-tables.min.js"></script> -->
 
-    <script>$(document).foundation();</script>
+    <script>
+    $(document).foundation();
+    $('#start-jr').on('click', function() {
+        $(document).foundation('joyride','start');
+      });
+    </script>
 
     <!--
     ========================
