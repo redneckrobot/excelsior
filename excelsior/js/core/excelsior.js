@@ -21,7 +21,7 @@ var EWF = {
     $body: null,
     $html: null,
     $window: null,
-    imagePath: 'excelsior/images/' // Relative to project root
+    imagePath: '/excelsior/excelsior/images/' // Relative to project root
 };
 
 /**
