@@ -1,5 +1,8 @@
 // Foundation Overrides
 
+// KNOW TO FIX OVERRIDES
+
+/*
 body {
   font-family: $font-sans;
 }
@@ -245,7 +248,7 @@ section .title a,
   background-clip: padding-box;
 }
 
-/* Same styles as above */
+// Same styles as above
 @media screen and (min-width: 48em) {
   .section-container.auto section .title,
   .section-container.auto .section .title {
@@ -308,7 +311,7 @@ section .title a,
 .accordion section.auto > .title,
 .accordion section.section > .title {
   position: relative;
-  padding-right: 26px; /* width of chevron plus its right position offset */
+  padding-right: 26px; // width of chevron plus its right position offset
 }
 
 .accordion section.auto .title:after,
@@ -336,7 +339,7 @@ section .title a,
     margin-bottom: 0.5em;
   }
 
-  /* Same styles as above */
+  // Same styles as above
   .auto section.auto .title:after,
   .auto section.section .title:after {
     content: $icon-down-open;

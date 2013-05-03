@@ -3,7 +3,7 @@
 @import "breakpoint";
 @import "excelsior/_variables.scss";
 @import "excelsior/_mixins.scss";
-//@import "excelsior/_foundation-override.scss";
+@import "excelsior/_foundation-override.scss";
 @import "excelsior/components/_global.scss";
 @import "excelsior/components/_visibility.scss";
 @import "excelsior/components/_fonts.scss";
